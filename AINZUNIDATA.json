@@ -1,93 +1,93 @@
 [
     {
         "university": "University of Auckland",
-        "rankings": {"QS_2025":65,"THE_2025":152,"ARWU_2024":"201–300"},
+        "rankings": {"QS_2026":65,"TimesHigherEducation_2025":152,"ARWU_2024":"201–300"},
         "degrees":[
-            {"programme":"Bachelor of Engineering (Honours)","field":"Engineering","location":"City (Auckland)","duration_years":4,"points":480,"fee_NZD":9583},
-            {"programme":"MBChB","field":"Medicine","location":"City (Auckland)","duration_years":6,"points":null,"fee_NZD":9500},
-            {"programme":"LLB","field":"Law","location":"City (Auckland)","duration_years":4,"points":null,"fee_NZD":9500},
-            {"programme":"Bachelor of Music","field":"Music","location":"City (Auckland)","duration_years":3,"points":null,"fee_NZD":9000},
-            {"programme":"Bachelor of Arts","field":"Arts","location":"City (Auckland)","duration_years":3,"points":null,"fee_NZD":9000},
-            {"programme":"Bachelor of Commerce","field":"Commerce","location":"City (Auckland)","duration_years":3,"points":null,"fee_NZD":9000},
-            {"programme":"Bachelor of Science","field":"Science","location":"City (Auckland)","duration_years":3,"points":null,"fee_NZD":9000}
+            {"programme":"Bachelor of Engineering (Honours)","field":"Engineering","location":"City (Auckland)","fulltime_duration_years":4,"points":480,"domestic_fee_NZD":9583},
+            {"programme":"MBChB","field":"Medicine","location":"City (Auckland)","fulltime_duration_years":6,"points":null,"domestic_fee_NZD":9500},
+            {"programme":"LLB","field":"Law","location":"City (Auckland)","fulltime_duration_years":4,"points":null,"domestic_fee_NZD":9500},
+            {"programme":"Bachelor of Music","field":"Music","location":"City (Auckland)","fulltime_duration_years":3,"points":null,"domestic_fee_NZD":9000},
+            {"programme":"Bachelor of Arts","field":"Arts","location":"City (Auckland)","fulltime_duration_years":3,"points":null,"domestic_fee_NZD":9000},
+            {"programme":"Bachelor of Commerce","field":"Commerce","location":"City (Auckland)","fulltime_duration_years":3,"points":null,"domestic_fee_NZD":9000},
+            {"programme":"Bachelor of Science","field":"Science","location":"City (Auckland)","fulltime_duration_years":3,"points":null,"domestic_fee_NZD":9000}
         ]
     },
     {
         "university": "University of Otago",
-        "rankings": {"QS_2025":197,"THE_2025":"351–400","ARWU_2024":"801–900+"},
+        "rankings": {"QS_2026":197,"THE_2025":"351–400","ARWU_2024":"401-500"},
         "degrees":[
-            {"programme":"Bachelor of Engineering","field":"Engineering","location":"Dunedin","duration_years":4,"points":null,"fee_NZD":9000},
-            {"programme":"MBChB","field":"Medicine","location":"Dunedin","duration_years":6,"points":null,"fee_NZD":41000},
-            {"programme":"LLB","field":"Law","location":"Dunedin","duration_years":4,"points":null,"fee_NZD":9000},
-            {"programme":"Bachelor of Music","field":"Music","location":"Dunedin","duration_years":3,"points":null,"fee_NZD":9000},
-            {"programme":"Bachelor of Arts","field":"Arts","location":"Dunedin","duration_years":3,"points":360,"fee_NZD":9000},
-            {"programme":"Bachelor of Commerce","field":"Commerce","location":"Dunedin","duration_years":3,"points":360,"fee_NZD":9000},
-            {"programme":"Bachelor of Science","field":"Science","location":"Dunedin","duration_years":3,"points":360,"fee_NZD":9000}
+            {"programme":"Bachelor of Engineering","field":"Engineering","location":"Dunedin","fulltime_duration_years":4,"points":null,"domestic_fee_NZD":9000},
+            {"programme":"MBChB","field":"Medicine","location":"Dunedin","fulltime_duration_years":6,"points":null,"domestic_fee_NZD":41000},
+            {"programme":"LLB","field":"Law","location":"Dunedin","fulltime_duration_years":4,"points":null,"domestic_fee_NZD":9000},
+            {"programme":"Bachelor of Music","field":"Music","location":"Dunedin","fulltime_duration_years":3,"points":null,"domestic_fee_NZD":9000},
+            {"programme":"Bachelor of Arts","field":"Arts","location":"Dunedin","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":9000},
+            {"programme":"Bachelor of Commerce","field":"Commerce","location":"Dunedin","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":9000},
+            {"programme":"Bachelor of Science","field":"Science","location":"Dunedin","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":9000}
         ]
     },
     {
         "university": "University of Canterbury",
-        "rankings": {"QS_2025":281,"THE_2025":"501–600","ARWU_2024":"401–500"},
+        "rankings": {"QS_2026":261,"THE_2025":"501–600","ARWU_2024":"401–500"},
         "degrees":[
-            {"programme":"Bachelor of Engineering (Honours)","field":"Engineering","location":"Christchurch","duration_years":4,"points":480,"fee_NZD":8000},
-            {"programme":"LLB","field":"Law","location":"Christchurch","duration_years":4,"points":null,"fee_NZD":8000},
-            {"programme":"Bachelor of Music","field":"Music","location":"Christchurch","duration_years":3,"points":360,"fee_NZD":8000},
-            {"programme":"Bachelor of Arts","field":"Arts","location":"Christchurch","duration_years":3,"points":360,"fee_NZD":8000},
-            {"programme":"Bachelor of Commerce","field":"Commerce","location":"Christchurch","duration_years":3,"points":360,"fee_NZD":8000},
-            {"programme":"Bachelor of Science","field":"Science","location":"Christchurch","duration_years":3,"points":360,"fee_NZD":8000}
+            {"programme":"Bachelor of Engineering (Honours)","field":"Engineering","location":"Christchurch","fulltime_duration_years":4,"points":480,"domestic_fee_NZD":8000},
+            {"programme":"LLB","field":"Law","location":"Christchurch","fulltime_duration_years":4,"points":null,"domestic_fee_NZD":8000},
+            {"programme":"Bachelor of Music","field":"Music","location":"Christchurch","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
+            {"programme":"Bachelor of Arts","field":"Arts","location":"Christchurch","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
+            {"programme":"Bachelor of Commerce","field":"Commerce","location":"Christchurch","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
+            {"programme":"Bachelor of Science","field":"Science","location":"Christchurch","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000}
         ]
     },
     {
         "university": "Victoria University of Wellington",
-        "rankings": {"QS_2025":240,"THE_2025":"401–500","ARWU_2024":"401–500"},
+        "rankings": {"QS_2026":240,"THE_2025":"401–500","ARWU_2024":"401–500"},
         "degrees":[
-            {"programme":"Bachelor of Engineering (Honours)","field":"Engineering","location":"Wellington","duration_years":4,"points":480,"fee_NZD":8000},
-            {"programme":"LLB","field":"Law","location":"Wellington","duration_years":4,"points":null,"fee_NZD":8000},
-            {"programme":"Bachelor of Music","field":"Music","location":"Wellington","duration_years":3,"points":360,"fee_NZD":8000},
-            {"programme":"Bachelor of Arts","field":"Arts","location":"Wellington","duration_years":3,"points":360,"fee_NZD":8000},
-            {"programme":"Bachelor of Commerce","field":"Commerce","location":"Wellington","duration_years":3,"points":360,"fee_NZD":8000},
-            {"programme":"Bachelor of Science","field":"Science","location":"Wellington","duration_years":3,"points":360,"fee_NZD":8000}
+            {"programme":"Bachelor of Engineering (Honours)","field":"Engineering","location":"Wellington","fulltime_duration_years":4,"points":480,"domestic_fee_NZD":8000},
+            {"programme":"LLB","field":"Law","location":"Wellington","fulltime_duration_years":4,"points":null,"domestic_fee_NZD":8000},
+            {"programme":"Bachelor of Music","field":"Music","location":"Wellington","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
+            {"programme":"Bachelor of Arts","field":"Arts","location":"Wellington","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
+            {"programme":"Bachelor of Commerce","field":"Commerce","location":"Wellington","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
+            {"programme":"Bachelor of Science","field":"Science","location":"Wellington","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000}
         ]
     },
     {
         "university": "University of Waikato",
-        "rankings": {"QS_2025":250,"THE_2025":"401–500","ARWU_2024":"801–900"},
+        "rankings": {"QS_2026":197,"THE_2025":"401–500","ARWU_2024":"801–900"},
         "degrees":[
-            {"programme":"Bachelor of Engineering (Honours)","field":"Engineering","location":"Hamilton","duration_years":4,"points":480,"fee_NZD":8000},
-            {"programme":"LLB","field":"Law","location":"Hamilton","duration_years":4,"points":null,"fee_NZD":8000},
-            {"programme":"Bachelor of Arts","field":"Arts","location":"Hamilton","duration_years":3,"points":360,"fee_NZD":8000},
-            {"programme":"Bachelor of Commerce","field":"Commerce","location":"Hamilton","duration_years":3,"points":360,"fee_NZD":8000},
-            {"programme":"Bachelor of Science","field":"Science","location":"Hamilton","duration_years":3,"points":360,"fee_NZD":8000}
+            {"programme":"Bachelor of Engineering (Honours)","field":"Engineering","location":"Hamilton","fulltime_duration_years":4,"points":480,"domestic_fee_NZD":8000},
+            {"programme":"LLB","field":"Law","location":"Hamilton","fulltime_duration_years":4,"points":null,"domestic_fee_NZD":8000},
+            {"programme":"Bachelor of Arts","field":"Arts","location":"Hamilton","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
+            {"programme":"Bachelor of Commerce","field":"Commerce","location":"Hamilton","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
+            {"programme":"Bachelor of Science","field":"Science","location":"Hamilton","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000}
         ]
     },
     {
         "university": "Massey University",
-        "rankings": {"QS_2025":239,"THE_2025":"501–600","ARWU_2024":"801–900"},
+        "rankings": {"QS_2026":230,"THE_2025":"501–600","ARWU_2024":"801–900"},
         "degrees":[
-            {"programme":"Bachelor of Music","field":"Music","location":"Palmerston North/Wellington/Auckland","duration_years":3,"points":360,"fee_NZD":8000},
-            {"programme":"Bachelor of Arts","field":"Arts","location":"Palmerston North/Wellington/Auckland","duration_years":3,"points":360,"fee_NZD":8000},
-            {"programme":"Bachelor of Commerce","field":"Commerce","location":"Palmerston North/Wellington/Auckland","duration_years":3,"points":360,"fee_NZD":8000},
-            {"programme":"Bachelor of Science","field":"Science","location":"Palmerston North/Wellington/Auckland","duration_years":3,"points":360,"fee_NZD":8000}
+            {"programme":"Bachelor of Music","field":"Music","location":"Palmerston North/Wellington/Auckland","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
+            {"programme":"Bachelor of Arts","field":"Arts","location":"Palmerston North/Wellington/Auckland","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
+            {"programme":"Bachelor of Commerce","field":"Commerce","location":"Palmerston North/Wellington/Auckland","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
+            {"programme":"Bachelor of Science","field":"Science","location":"Palmerston North/Wellington/Auckland","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000}
         ]
     },
     {
         "university": "Lincoln University",
-        "rankings": {"QS_2025":362,"THE_2025":"501–600","ARWU_2024":"801–900"},
+        "rankings": {"QS_2026":407,"THE_2025":"501–600","ARWU_2024":"N/A"},
         "degrees":[
-            {"programme":"Bachelor of Commerce","field":"Commerce","location":"Lincoln","duration_years":3,"points":360,"fee_NZD":8000},
-            {"programme":"Bachelor of Science","field":"Science","location":"Lincoln","duration_years":3,"points":360,"fee_NZD":8000}
+            {"programme":"Bachelor of Commerce","field":"Commerce","location":"Lincoln","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
+            {"programme":"Bachelor of Science","field":"Science","location":"Lincoln","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000}
         ]
     },
     {
         "university": "Auckland University of Technology",
-        "rankings": {"QS_2025":407,"THE_2025":"401–500","ARWU_2024":"801–900"},
+        "rankings": {"QS_2026":410,"THE_2025":"401–500","ARWU_2024":"801–900"},
         "degrees":[
-            {"programme":"Bachelor of Engineering (Honours)","field":"Engineering","location":"City (Auckland)","duration_years":4,"points":480,"fee_NZD":9200},
-            {"programme":"LLB","field":"Law","location":"City (Auckland)","duration_years":4,"points":null,"fee_NZD":9200},
-            {"programme":"Bachelor of Music","field":"Music","location":"City (Auckland)","duration_years":3,"points":360,"fee_NZD":9200},
-            {"programme":"Bachelor of Arts","field":"Arts","location":"City (Auckland)","duration_years":3,"points":360,"fee_NZD":9200},
-            {"programme":"Bachelor of Commerce","field":"Commerce","location":"City (Auckland)","duration_years":3,"points":360,"fee_NZD":9200},
-            {"programme":"Bachelor of Science","field":"Science","location":"City (Auckland)","duration_years":3,"points":360,"fee_NZD":9200}
+            {"programme":"Bachelor of Engineering (Honours)","field":"Engineering","location":"City (Auckland)","fulltime_duration_years":4,"points":480,"domestic_fee_NZD":9200},
+            {"programme":"LLB","field":"Law","location":"City (Auckland)","fulltime_duration_years":4,"points":null,"domestic_fee_NZD":9200},
+            {"programme":"Bachelor of Music","field":"Music","location":"City (Auckland)","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":9200},
+            {"programme":"Bachelor of Arts","field":"Arts","location":"City (Auckland)","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":9200},
+            {"programme":"Bachelor of Commerce","field":"Commerce","location":"City (Auckland)","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":9200},
+            {"programme":"Bachelor of Science","field":"Science","location":"City (Auckland)","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":9200}
         ]
     }
 ]
