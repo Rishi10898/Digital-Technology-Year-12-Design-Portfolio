@@ -3,13 +3,160 @@
         "university": "University of Auckland",
         "rankings": {"QS_2026":65,"TimesHigherEducation_2025":152,"ARWU_2024":"201–300"},
         "degrees":[
-            {"programme":"Bachelor of Engineering (Honours)","field":"Engineering","location":"City (Auckland)","fulltime_duration_years":4,"points":480,"domestic_fee_NZD":9583},
-            {"programme":"MBChB","field":"Medicine","location":"City (Auckland)","fulltime_duration_years":6,"points":null,"domestic_fee_NZD":9500},
-            {"programme":"LLB","field":"Law","location":"City (Auckland)","fulltime_duration_years":4,"points":null,"domestic_fee_NZD":9500},
-            {"programme":"Bachelor of Music","field":"Music","location":"City (Auckland)","fulltime_duration_years":3,"points":null,"domestic_fee_NZD":9000},
-            {"programme":"Bachelor of Arts","field":"Arts","location":"City (Auckland)","fulltime_duration_years":3,"points":null,"domestic_fee_NZD":9000},
-            {"programme":"Bachelor of Commerce","field":"Commerce","location":"City (Auckland)","fulltime_duration_years":3,"points":null,"domestic_fee_NZD":9000},
-            {"programme":"Bachelor of Science","field":"Science","location":"City (Auckland)","fulltime_duration_years":3,"points":null,"domestic_fee_NZD":9000}
+            {
+                "programme":"Bachelor of Engineering (Honours)",
+                "field":"Engineering",
+                "location":"City (Auckland)",
+                "fulltime_duration_years":4,
+                "points":480,
+                "domestic_fee_NZD":9583,
+                "Entry_Requirements": { 
+                    "NCEA": "17 external Level 3 credits in Calculus and 16 external Level 3 credits in Physics",
+                    "CIE": "Mathematics and Physics at A Levels",
+                    "IB": "Mathematics and Physics at HL Levels"
+                },
+                "Subjects_Majors_Available": [
+                    "Biomedical Engineering",
+                    "Chemical and Materials Engineering",
+                    "Civil Engineering",
+                    "Computer Systems Engineering",
+                    "Electrical and Electronic Engineering",
+                    "Engineering General",
+                    "Engineering Science",
+                    "Mechanical Engineering",
+                    "Mechatronics Engineering",
+                    "Software Engineering",
+                    "Structural Engineering"
+                ],
+                "Part_I": {
+                    "Semester_1": [
+                        {"ENGGEN 121": "Engineering Mechanics"},
+                        {"ENGGEN 140": "Fundamentals of Engineering in Society"},
+                        {"ENGSCI 111": "Mathematical Modelling 1"},
+                        {"WTRENG 100": "Waipapa Taumata Rau"},
+                        {"ACADINT A01": "Academic Integrity"},
+                        {"ENGGEN 199": "English Language Competency"}
+                    ],
+                    "Semester_2": [
+                        {"CHEMMAT 121": "Materials Science"},
+                        {"ELECTENG 101": "Electrical and Digital Systems"},
+                        {"ENGGEN 115": "Principles of Engineering Design"},
+                        {"ENGGEN 131": "Introduction to Engineering Computation and Software Development"},
+                        {"ACADINT A01": "Academic Integrity"},
+                        {"ENGGEN 199": "English Language Competency"}
+                    ],
+                "Biomedical Engineering Part II": {
+                    "Semester_1": [
+                        {"BIOMENG 221" : "Mechanics of Engineered and Biological Materials" },
+                        {"BIOSCI 107" : "Biology for Biomedical Science: Cellular Processes and Development"},
+                        {"ENGSCI 211" :"Mathematical Modelling 2"},
+                        {"ENGSCI 233" : "Computational Techniques and Computer Systems"}
+                    ],
+                    "Semester_2": [
+                        {"BIOMENG 241": "Instrumentation and Design"},
+                        {"BIOMENG 261" : "Tissue and Biomolecular Engineering"},
+                        {"ENGGEN 204" : "Professional Skills, Communication, and Collaboration"},
+                        {"MEDSCI 142" : "Biology for Biomedical Science: Organ Systems"}
+                    ]
+                },
+                "Biomedical Engineering Part III": {
+                    "Semester_1" : [
+                        {"BIOMENG 321" : "Continuum Modelling in Bioengineering"},
+                        {"BIOMENG 341" : "Bioinstumentation and Design"},
+                        {"ENGGEN 303" : "Innovation and Business Cases"},
+                        {"MEDSCI 205" : "The Physiology of Human Organ Systems"},
+                        {"Semester 1 Electives": 
+                        {"CHEM 380" : "Materials Chemistry",
+                        "ENGSCI 355" : "Simulation Modelling for Process Design",
+                        "ENGSCI 391" : "Optimisation in Operations Research",
+                        "MECHENG 313" : "Design of Real-Time Software",
+                        "MEDSCI 318" : "Pharmacokinetics and Drug Toxicity"}
+                    }    
+                    ],
+                    "Semester_2" : [
+                        {"ENGSCI 314" : "Mathematical Modelling 3ES"},
+                        {"ENGSCI 331" : "Computational Techniques 2"},
+                        {"MEDSCI 309" : "Biophysics of Nerve and Muscle"},
+                        {"Elective" : "Choose one from the list of electives"},
+                        {"Semester 2 Electives":
+                    {"CHEM 392" : "Issues in Drug Design and Development",
+                    "COMPSYS 303" : "Microcomputers and Embedded Systems",
+                    "ENGSCI 309 (Not offered in 2025)" : "Image and Digital Signal Processing",
+                    "ENGSCI 344" : "Computational Design for Physical Systems",
+                    "EXERSCI 303" : "Biomechanics 2",
+                    "MATHS 362" : "Methods in Applied Mathematics",
+                    "MECHENG 352" : "Manufacturing Systems",
+                    "MECHENG 371" : "Digital Circuit Design",
+                    "MEDSCI 312" : "Neuroendocrinology of Growth and Metabolism",
+                    "MEDSCI 314" : "Immunology"}
+                    }
+                    ]
+                },
+                "Biomedical Engineering Part IV" : {
+                    ""
+                }
+                
+            },
+            {
+                "programme":"Bachelor of Medicine and Bachelor of Surgery (MBChB)",
+                "field":"Medicine",
+                "location":"City (Auckland)",
+                "fulltime_duration_years":6,
+                "points":null,
+                "domestic_fee_NZD":9500,
+                "linkText":"Bachelor of Medicine and Bachelor of Surgery (MBChB)",
+                "link":""
+            },
+            {
+                "programme":"Bachelor of Laws (LLB)",
+                "field":"Law",
+                "location":"City (Auckland)",
+                "fulltime_duration_years":4,
+                "points":null,
+                "domestic_fee_NZD":9500,
+                "linkText":"Bachelor of Laws (LLB)",
+                "link":""
+            },
+            {
+                "programme":"Bachelor of Music (BMus)",
+                "field":"Music",
+                "location":"City (Auckland)",
+                "fulltime_duration_years":3,
+                "points":null,
+                "domestic_fee_NZD":9000,
+                "linkText":"Bachelor of Music (BMus)",
+                "link":""
+            },
+            {
+                "programme":"Bachelor of Arts (BA)",
+                "field":"Arts",
+                "location":"City (Auckland)",
+                "fulltime_duration_years":3,
+                "points":null,
+                "domestic_fee_NZD":9000,
+                "linkText":"Bachelor of Arts (BA)",
+                "link":""
+            },
+            {
+                "programme":"Bachelor of Commerce (BCom)",
+                "field":"Commerce",
+                "location":"City (Auckland)",
+                "fulltime_duration_years":3,
+                "points":null,
+                "domestic_fee_NZD":9000,
+                "linkText":"Bachelor of Commerce (BCom)",
+                "link":""
+            },
+            {
+                "programme":"Bachelor of Science (BSc)",
+                "field":"Science",
+                "location":"City (Auckland)",
+                "fulltime_duration_years":3,
+                "points":null,
+                "domestic_fee_NZD":9000,
+                "linkText":"Bachelor of Science (BSc)",
+                "link":""
+            }
         ]
     },
     {
@@ -17,8 +164,8 @@
         "rankings": {"QS_2026":197,"THE_2025":"351–400","ARWU_2024":"401-500"},
         "degrees":[
             {"programme":"Bachelor of Engineering","field":"Engineering","location":"Dunedin","fulltime_duration_years":4,"points":null,"domestic_fee_NZD":9000},
-            {"programme":"MBChB","field":"Medicine","location":"Dunedin","fulltime_duration_years":6,"points":null,"domestic_fee_NZD":41000},
-            {"programme":"LLB","field":"Law","location":"Dunedin","fulltime_duration_years":4,"points":null,"domestic_fee_NZD":9000},
+            {"programme":"Bachelor of Medicine and Bachelor of Surgery (MBChB)","field":"Medicine","location":"Dunedin","fulltime_duration_years":6,"points":null,"domestic_fee_NZD":41000},
+            {"programme":"Bachelor of Laws (LLB)","field":"Law","location":"Dunedin","fulltime_duration_years":4,"points":null,"domestic_fee_NZD":9000},
             {"programme":"Bachelor of Music","field":"Music","location":"Dunedin","fulltime_duration_years":3,"points":null,"domestic_fee_NZD":9000},
             {"programme":"Bachelor of Arts","field":"Arts","location":"Dunedin","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":9000},
             {"programme":"Bachelor of Commerce","field":"Commerce","location":"Dunedin","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":9000},
@@ -30,7 +177,7 @@
         "rankings": {"QS_2026":261,"THE_2025":"501–600","ARWU_2024":"401–500"},
         "degrees":[
             {"programme":"Bachelor of Engineering (Honours)","field":"Engineering","location":"Christchurch","fulltime_duration_years":4,"points":480,"domestic_fee_NZD":8000},
-            {"programme":"LLB","field":"Law","location":"Christchurch","fulltime_duration_years":4,"points":null,"domestic_fee_NZD":8000},
+            {"programme":"Bachelor of Laws (LLB)","field":"Law","location":"Christchurch","fulltime_duration_years":4,"points":null,"domestic_fee_NZD":8000},
             {"programme":"Bachelor of Music","field":"Music","location":"Christchurch","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
             {"programme":"Bachelor of Arts","field":"Arts","location":"Christchurch","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
             {"programme":"Bachelor of Commerce","field":"Commerce","location":"Christchurch","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
@@ -42,8 +189,8 @@
         "rankings": {"QS_2026":240,"THE_2025":"401–500","ARWU_2024":"401–500"},
         "degrees":[
             {"programme":"Bachelor of Engineering (Honours)","field":"Engineering","location":"Wellington","fulltime_duration_years":4,"points":480,"domestic_fee_NZD":8000},
-            {"programme":"LLB","field":"Law","location":"Wellington","fulltime_duration_years":4,"points":null,"domestic_fee_NZD":8000},
-            {"programme":"Bachelor of Music","field":"Music","location":"Wellington","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
+            {"programme":"Bachelor of Laws (LLB)","field":"Law","location":"Wellington","fulltime_duration_years":4,"points":null,"domestic_fee_NZD":8000},
+            {"programme":"Bachelor of Laws (LLB)","field":"Law","location":"Wellington","fulltime_duration_years":4,"points":null,"domestic_fee_NZD":8924},            {"programme":"Bachelor of Music","field":"Music","location":"Wellington","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
             {"programme":"Bachelor of Arts","field":"Arts","location":"Wellington","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
             {"programme":"Bachelor of Commerce","field":"Commerce","location":"Wellington","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
             {"programme":"Bachelor of Science","field":"Science","location":"Wellington","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000}
@@ -54,7 +201,7 @@
         "rankings": {"QS_2026":197,"THE_2025":"401–500","ARWU_2024":"801–900"},
         "degrees":[
             {"programme":"Bachelor of Engineering (Honours)","field":"Engineering","location":"Hamilton","fulltime_duration_years":4,"points":480,"domestic_fee_NZD":8000},
-            {"programme":"LLB","field":"Law","location":"Hamilton","fulltime_duration_years":4,"points":null,"domestic_fee_NZD":8000},
+            {"programme":"Bachelor of Laws (LLB)","field":"Law","location":"Hamilton","fulltime_duration_years":4,"points":null,"domestic_fee_NZD":8000},
             {"programme":"Bachelor of Arts","field":"Arts","location":"Hamilton","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
             {"programme":"Bachelor of Commerce","field":"Commerce","location":"Hamilton","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
             {"programme":"Bachelor of Science","field":"Science","location":"Hamilton","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000}
@@ -83,7 +230,7 @@
         "rankings": {"QS_2026":410,"THE_2025":"401–500","ARWU_2024":"801–900"},
         "degrees":[
             {"programme":"Bachelor of Engineering (Honours)","field":"Engineering","location":"City (Auckland)","fulltime_duration_years":4,"points":480,"domestic_fee_NZD":9200},
-            {"programme":"LLB","field":"Law","location":"City (Auckland)","fulltime_duration_years":4,"points":null,"domestic_fee_NZD":9200},
+            {"programme":"Bachelor of Laws (LLB)","field":"Law","location":"City (Auckland)","fulltime_duration_years":4,"points":null,"domestic_fee_NZD":9200},
             {"programme":"Bachelor of Music","field":"Music","location":"City (Auckland)","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":9200},
             {"programme":"Bachelor of Arts","field":"Arts","location":"City (Auckland)","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":9200},
             {"programme":"Bachelor of Commerce","field":"Commerce","location":"City (Auckland)","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":9200},
