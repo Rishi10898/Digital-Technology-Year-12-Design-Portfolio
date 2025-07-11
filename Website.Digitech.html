@@ -1,38 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
+<html lang="en"> <!-- Root element, sets language to English -->
 <head>
-    <meta charset="UTF-8">
-    <title>AINZUNI</title>
+    <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 -->
+    <title>AINZUNI</title> <!-- Sets the page title shown in browser tab -->
     <style>
+        /* Styles for the body: background color and font */
         body {
             background-color:#77bbc6; 
             font-family: 'Georgia', serif; 
         }
+        /* Styles for the header: background color and padding */
         header {
             background-color: #6ab5c1 ;
             padding: 20px 0;
         }
-    html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    body {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
-    main {
-        flex: 1;
-    }
+        /* Ensures html and body take full height and removes default margin/padding */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        /* Makes body a flex container for vertical layout */
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        /* Allows main content to expand and fill available space */
+        main {
+            flex: 1;
+        }
     </style>
 </head>
 <body>
+    <!-- Header section with logo and navigation buttons -->
     <header>
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0;">
+            <!-- Logo image linking to home page -->
             <a href="Website.Digitech.html">
-                <img src="C:\Users\Rishikesh\Downloads\AINZUNI logo.jpg" alt="AINZUNI Logo" style="display:block; margin-left:0; width:150px;">
+                <img src="C:\Users\Rishikesh\Downloads\AINZUNI 2.png" alt="AINZUNI Logo" style="display:block; margin-left:0; width:150px;">
             </a>
+            <!-- Navigation bar with buttons to other pages -->
             <nav style="display: flex; gap: 20px;">
                 <a href="About Me.html"><button style="font-family:Arial, Helvetica, sans-serif; background-color: #1874ca; color: white;">About</button></a>
                 <a href="Contact Me.html"><button style="font-family:sans-serif; background-color: #1874ca; color: rgb(251, 251, 251);">Contact</button></a>
@@ -41,18 +49,22 @@
             </nav>
         </div>
     </header>
+    <!-- Main content: page heading and introductory text -->
     <h3 style="text-align: center; font-weight:bold;">Home</h3>
     <p>Welcome to AINZUNI !!!</p>
     <p>Future University Insights and Information.</p>
     <p style="font-size: 1.2em; font-weight: bold;">Stay Tuned for AINZUNI: Future University Insights and Information.</p>
     <p>Have you got your university plan?</p>
+    <!-- Explains the importance of university planning -->
     Having a university plan helps students enhance and have effective learning in their field of passion and vision for their future.
     <p>Here are links to know more about university planning:-</p>
+    <!-- External resource links for university planning -->
     <p><a href = "https://studytime.co.nz/articles/planning-your-university-studies/">Study Time NZ</a></p>
     <p><a href = "https://ca.indeed.com/career-advice/career-development/college-planning">Indeed</a></p>
     <p><a href = "https://www.universitiesnz.ac.nz/sites/default/files/uni-nz/246656%20Student%20Directory_LR.pdf">Universities New Zealand (UNZ)</a></p>    
     <p>Explore further information and updates of AINZUNI at other pages.</p>
 </body>
+<!-- Footer section with copyright information -->
 <footer style="background-color: #333; color: #fff; text-align: center; padding: 15px; margin-top: 30px;">
 &copy; 2025 AINZUNI. All rights reserved.
 </footer>
