@@ -1,10 +1,12 @@
 
-{ "programme": "Bachelor of Engineering (Honours)",
+{   "programme": "Bachelor of Engineering (Honours)",
     "field": "Engineering",
     "location": "City (Auckland)",
     "fulltime_duration_years": 4,
     "points": 480,
     "domestic_fee_NZD": 9583,
+    "linkText":"Bachelor of Engineering (Honours)",
+    "link":"https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-engineering-honours-behons.html",
     "Entry_Requirements": { 
                     "NCEA": "17 external Level 3 credits in Calculus and 16 external Level 3 credits in Physics",
                     "CIE": "Mathematics and Physics at A Levels",
