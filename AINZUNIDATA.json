@@ -5,7 +5,8 @@
         "degrees":[
             {"programme":"Bachelor of Engineering (Honours)","field":"Engineering","location":"Wellington","fulltime_duration_years":4,"points":480,"domestic_fee_NZD":8000},
             {"programme":"Bachelor of Laws (LLB)","field":"Law","location":"Wellington","fulltime_duration_years":4,"points":null,"domestic_fee_NZD":8000},
-            {"programme":"Bachelor of Laws (LLB)","field":"Law","location":"Wellington","fulltime_duration_years":4,"points":null,"domestic_fee_NZD":8924},            {"programme":"Bachelor of Music","field":"Music","location":"Wellington","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
+            {"programme":"Bachelor of Laws (LLB)","field":"Law","location":"Wellington","fulltime_duration_years":4,"points":null,"domestic_fee_NZD":8924},            
+            {"programme":"Bachelor of Music","field":"Music","location":"Wellington","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
             {"programme":"Bachelor of Arts","field":"Arts","location":"Wellington","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
             {"programme":"Bachelor of Commerce","field":"Commerce","location":"Wellington","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000},
             {"programme":"Bachelor of Science","field":"Science","location":"Wellington","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000}
