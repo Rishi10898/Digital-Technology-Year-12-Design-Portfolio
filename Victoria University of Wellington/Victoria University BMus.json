@@ -1,7 +1,7 @@
 {   "programme":"Bachelor of Music",
     "field":"Music",
-    "location":"Dunedin",
+    "location":"Wellington",
     "fulltime_duration_years":3,
-    "points":null,
-    "domestic_fee_NZD":9000
+    "points":360,
+    "domestic_fee_NZD":8000
 }
