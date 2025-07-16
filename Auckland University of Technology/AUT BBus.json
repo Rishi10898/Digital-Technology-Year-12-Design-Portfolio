@@ -1,0 +1,199 @@
+{
+    "programme":"Bachelor of Buisness",
+    "field":"Commerce",
+    "Level" :7,
+    "programme_code":"AK3693",
+    "location":"City (Auckland) or South Campus",
+    "fulltime_duration_years":3,
+    "points":360,
+    "domestic_fee_NZD_2025_per_year_120_points": "$8,918 - $9,320 (for 120 points)",
+    "linkText":"Bachelor of Buisness",
+    "link" : "https://www.aut.ac.nz/study/study-options/business/courses/bachelor-of-business",
+    "Degree_Builder" : "https://www.aut.ac.nz/study/degree-builder?prog=82056&theme=blue",
+    "Undergraduate_Programme_Guide_2025_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0004/850396/Business-2025-Programme-Guide.pdf",
+    "Undergraduate_Programme_Guide_2026_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0019/980002/Business-2026-Final-Web.pdf",
+    "What_you_will_study" : {
+        "Core courses (120 points)" : [
+            "These are courses all students in this degree need to take. They give you a basic understanding of business processes and practices, and help you decide which subject to focus on later in your studies. One of the core courses is the Capstone course – a workplace experience, applied project or a new business venture – which is the final part of your degree and takes place in your last semester."],
+            "Your chosen major (120 points)" : "Your major is the subject area you want to specialise in. This makes up one third of your degree, and usually consists of eight courses related to your chosen subject. You can view the list of majors in this degree in the Majors tab.",
+            "Flexible component (120 points)" : "Flexible component (120 points), You can choose one of the following options Two minors (60 points each); or A minor (60 points) and elective courses (60 points); or A second major (120 points), Your second major, minor(s) and elective courses can be from different AUT degrees; they don’t need to be from business."
+    },
+    "Skills_you_will_develop" : "https://www.aut.ac.nz/__data/assets/pdf_file/0005/570758/Bachelor-of-Business.pdf",
+    "Entry Requirements" : {
+        "NCEA" : "18 credits from any Level 3 standards, Level 3 with 14 credits in each of three subjects, and 10 literacy credits at Level 2 or above, and 10 numeracy credits at Level 1 or above",
+        "CIE": {
+            "Total" : "120 points on the New Zealand CAIE Tariff at A or AS level in any subjects that are broadly equivalent to NCEA approved subjects. D or above in at least 3 different subjects (excluding Thinking Skills)",
+            "UE literacy" : "E or above in English Language, Language and Literature in English or Literature at AS or A level",
+            "Numeracy" : "D or above in IGCSE or GCSE Mathematics, or any mathematics subject passed at AS or A level"
+        },
+        "IB" : {
+            "Total" : "IB Diploma with a minimum 24 points",
+            "UE literacy" : "Literature or language and literature (SL or HL) – IB Group 1, with English as the language",
+            "Numeracy" : "Any mathematics subject – IB Group 5"
+        }, 
+        "Useful_New_Zealand_School_Subjects" : [    
+            "Art History", 
+            "Classical Studies", 
+            "Drama",
+            "English",
+            "Geography",
+            "Health Education",
+            "History",
+            "Media Studies",
+            "Social Studies",
+            "Te Reo Māori",
+            "Te Reo Rangatira",
+            "Calculus",
+            "Statistics",
+            "Business Studies",
+            "Economics"
+        ]
+    },
+    "Majors": [ "Accounting",
+    "Economics",
+    "Finance",
+    "Human Resource Management and Employment Relations",
+    "Information Systems",
+    "International Business and Strategy",
+    "Management and Leadership",
+    "Marketing"],
+    "Minors": [ "Accounting",
+        "Business Law",
+        "Data Analytics for Business",
+        "Economics",
+        "Entrepreneurship and Innovation",
+        "Finance",
+        "Human Resource Management and Employment Relations",
+        "Information Systems",
+        "International Business and Strategy",
+        "Management and Leadership",
+        "Marketing",
+        "Supply Chain Management",
+        "Sustainable Enterprise"],
+    "Majors_Descriptions":{
+    "Accounting_Major" : {
+        "Accounting_Major_Study_Planner_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0004/960241/Major-ACCT-2025.pdf",
+        "Bachelor_of_buisness_planner_link": "https://www.aut.ac.nz/__data/assets/pdf_file/0004/950287/Structure-BBus-majors-and-minors-2025-FINAL.pdf",
+        "Workplace_Experience_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS701",
+        "Year_1" : {
+            "Semester_1" : {
+                "BUSS505" : "Consumer and Organisational Behaviour",
+                "BUSS505_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS505",
+                "BUSS507" : "Financial Decision Making and Information Systems",
+                "BUSS507_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS507",
+                "BUSS508" : "Economics and International Business",
+                "BUSS508_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS508",
+                "BUSS509" : "Ethics, Responsibility and Sustainability",
+                "BUSS509_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS509",
+            "Semester_2" : {
+                "ACCT502" : "Accounting Essentials",
+                "ACCT502_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ACCT502"
+            }
+            }
+        },
+        "Year_2_and_3" : {
+            "ACCT602" : "Financial Accounting",
+            "ACCT602_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ACCT602",
+            "ACCT603" : "Management Accounting",
+            "ACCT603_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ACCT603",
+            "ACCT604" : "Taxation",
+            "ACCT604_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ACCT604",
+            "ACCT608" : "Accounting for Social Impact",
+            "ACCT608_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ACCT608",
+            "ACCT702" : "Advanced Financial Accounting",
+            "ACCT702_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ACCT702",
+            "ACCT703" : "Advanced Management Accounting",
+            "ACCT703_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ACCT703",
+            "ACCT704" : "Auditing",
+            "ACCT704_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ACCT704",
+            "Courses for professional accountancy membership" : {
+                "ACCT503" :  "Accounting Systems and Analytics" ,
+                "ACCT503_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ACCT503",
+                "ECON505" : "Business Economics and Data Analysis" ,
+                "ECON505_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ECON505",
+                "ACCT605" : "Accounting Legal and Regulatory Framework",
+                "ACCT605_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ACCT605",
+                "ACCT606": "Financial Management for Accountants",
+                "ACCT606_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ACCT606"
+            }
+        }
+    },
+    "Economics_Major" : {
+        "Economics_Major_Study_Planner_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0005/960242/Major-ECON-2025.pdf",
+        "Workplace_Experience_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS701",
+        "Bachelor_of_buisness_planner_link": "https://www.aut.ac.nz/__data/assets/pdf_file/0004/950287/Structure-BBus-majors-and-minors-2025-FINAL.pdf",
+        "Year 1" :
+        {"Semester_1" : {
+            "BUSS505" : "Consumer and Organisational Behaviour",
+            "BUSS505_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS505",
+            "BUSS507" : "Financial Decision Making and Information Systems",
+            "BUSS507_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS507",
+            "BUSS508" : "Economics and International Business",
+            "BUSS508_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS508",
+            "BUSS509" : "Ethics, Responsibility and Sustainability",
+            "BUSS509_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS509",
+        "Semester_2" : {
+            "ECON520" : "Principles of Microeconomics",
+            "ECON520_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ECON520",
+            "ECON521" : "Principles of Macroeconomics",
+            "ECON521_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ECON521"
+        },   
+        "Year_2_and_3" : {
+            "ECON620" : "Microeconomics: Choice and Welfare",
+            "ECON620_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ECON620",
+            "ECON621" : "Macroeconomics: Models, Data and Policy",
+            "ECON621_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ECON621",
+            "ECON622" : "Introduction to Econometrics",
+            "ECON622_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ECON622",
+            "ECON720" : "Microeconomics: Competition, Risk, and Strategy",
+            "ECON720_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ECON720",
+            "ECON721" : "Applied Macroeconomics",
+            "ECON721_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ECON721",
+            "ECON722" : "Applied Econometrics: Casual Inference for Social Impact",
+            "ECON722_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ECON722"
+        }
+    },
+    "Finance_Major" : {
+        "Workplace_Experience_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS701",
+        "Finance_Major_Study_Planner_Link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0006/960243/Major-FINA-2025.pdf",
+        "Bachelor_of_buisness_planner_link": "https://www.aut.ac.nz/__data/assets/pdf_file/0004/950287/Structure-BBus-majors-and-minors-2025-FINAL.pdf",
+        "Year 1" : {
+            "Semester_1" : {
+            "BUSS505" : "Consumer and Organisational Behaviour",
+            "BUSS505_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS505",
+            "BUSS507" : "Financial Decision Making and Information Systems",
+            "BUSS507_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS507",
+            "BUSS508" : "Economics and International Business",
+            "BUSS508_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS508",
+            "BUSS509" : "Ethics, Responsibility and Sustainability",
+            "BUSS509_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS509"
+            },
+            "Semester_2" : {
+                "FINA501" : "Introduction to Finance",
+                "FINA501_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=FINA501",
+                "FINA503" : "Financial Analysis",
+                "FINA503_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=FINA503"
+            },
+        "Year_2_and_3" : {
+            "FINA601" : "Corporate Finance",
+            "FINA601_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=FINA601",
+            "FINA602" :  "Investment and Portfolio Analysis",
+            "FINA602_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=FINA602",
+            "FINA608" : "Social Impact for Finance",
+            "FINA608_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=FINA608",
+            "FINA701" : "International Corporate Finance",
+            "FINA701_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=FINA701",
+            "FINA702" : "Financial Risk Management",
+            "FINA702_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=FINA702",
+            "FINA706" : "Financial Institutions and Markets",
+            "FINA706_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=FINA706"
+        }
+        }
+    },
+    "Human_Resource_Management_and_Employment_Relations_Major" : "",
+    "Information_Systems_Major" : "",
+    "International_Business_and_Strategy_Major" : "",
+    "Management_and_Leadership_Major" : "",
+    "Marketing_Major" : ""
+    }
+}
