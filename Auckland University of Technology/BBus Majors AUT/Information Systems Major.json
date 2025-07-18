@@ -1,0 +1,37 @@
+{
+        "Information_Systems_Major" : {
+        "Information_Systems_Major_Study_Planner_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0009/960246/Major-IS-2025.pdf",
+        "Bachelor_of_buisness_planner_link": "https://www.aut.ac.nz/__data/assets/pdf_file/0004/950287/Structure-BBus-majors-and-minors-2025-FINAL.pdf",
+        "Workplace_Experience_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS701"},
+        "Year 1" : {
+            "Semester_1" : {
+                "BUSS505" : "Consumer and Organisational Behaviour",
+                "BUSS505_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS505",
+                "BUSS507" : "Financial Decision Making and Information Systems",
+                "BUSS507_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS507",
+                "BUSS508" : "Economics and International Business",
+                "BUSS508_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS508",
+                "BUSS509" : "Ethics, Responsibility and Sustainability",
+                "BUSS509_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS509"
+            },
+            "Semester_2" : {
+                "BSYS501" : "Business Information Systems"
+            },
+        "Year_2_and_3" : {
+            "BSYS601" : "Business Process Management",
+            "BSYS601_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BSYS601",
+            "BSYS602" : "Business Data Management",
+            "BSYS602_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BSYS602",
+            "BSYS603" : "Project Management",
+            "BSYS603_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BSYS603",
+            "BSYS701" : "Enterprise Information Systems",
+            "BSYS701_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BSYS701",
+            "BSYS702" : "Cyber-security and Risk Management",
+            "BSYS702_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BSYS702",
+            "BSYS705" : "Digital Transformation and Social Impact",
+            "BSYS705_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BSYS705",
+            "BSYS706" : "Designing Systems for Contemporary Enterprises",
+            "BSYS706_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BSYS706"
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+        "Human_Resource_Management_and_Employment_Relations_Major" : {
+        "Bachelor_of_buisness_planner_link": "https://www.aut.ac.nz/__data/assets/pdf_file/0004/950287/Structure-BBus-majors-and-minors-2025-FINAL.pdf",
+        "Workplace_Experience_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS701",
+        "Human_Resource_Management_and_Employment_Relations_Major_Study_Planner_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0007/960244/Major-HRMER-2025.pdf"},
+        "Year_1" : {
+         "Semester_1" : {
+        "BUSS505" : "Consumer and Organisational Behaviour",
+        "BUSS505_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS505",
+        "BUSS507" : "Financial Decision Making and Information Systems",
+        "BUSS507_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS507",
+        "BUSS508" : "Economics and International Business",
+        "BUSS508_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS508",
+        "BUSS509" : "Ethics, Responsibility and Sustainability",
+        "BUSS509_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS509"
+        },
+        "Semester_2" : {
+            "MGMT501" : "Managing and Organising",
+            "MGMT501_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=MGMT501"
+        }
+        },
+        "Year_2_and_3" : {
+            "EMPL601" : "Employment Relations",
+            "EMPL601_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=EMPL601",
+            "HRMG601" : "Human Resource Management",
+            "HRMG601_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=HRMG601",
+            "HRMG602" : "Learning and Development",
+            "HRMG602_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=HRMG602",
+            "EMPL702" : "Workplace Health and Safety",
+            "EMPL702_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=EMPL702",
+            "EMPL704" : "The Dynamics of Employment Regulations",
+            "EMPL704_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=EMPL704",
+            "HRMG701" : "Diversity and Inclusion for Social Impact",
+            "HRMG701_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=HRMG701",
+            "HRMG703" : "Global Mobility",
+            "HRMG703_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=HRMG703"
+        }
+    }

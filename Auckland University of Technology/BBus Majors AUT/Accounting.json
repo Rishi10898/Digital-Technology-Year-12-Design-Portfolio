@@ -1,0 +1,48 @@
+{
+    "Accounting_Major" : {
+        "Accounting_Major_Study_Planner_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0004/960241/Major-ACCT-2025.pdf",
+        "Bachelor_of_buisness_planner_link": "https://www.aut.ac.nz/__data/assets/pdf_file/0004/950287/Structure-BBus-majors-and-minors-2025-FINAL.pdf",
+        "Workplace_Experience_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS701"},
+        "Year_1" : {
+            "Semester_1" : {
+                "BUSS505" : "Consumer and Organisational Behaviour",
+                "BUSS505_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS505",
+                "BUSS507" : "Financial Decision Making and Information Systems",
+                "BUSS507_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS507",
+                "BUSS508" : "Economics and International Business",
+                "BUSS508_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS508",
+                "BUSS509" : "Ethics, Responsibility and Sustainability",
+                "BUSS509_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS509",
+            "Semester_2" : {
+                "ACCT502" : "Accounting Essentials",
+                "ACCT502_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ACCT502"
+            }
+            }
+        },
+        "Year_2_and_3" : {
+            "ACCT602" : "Financial Accounting",
+            "ACCT602_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ACCT602",
+            "ACCT603" : "Management Accounting",
+            "ACCT603_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ACCT603",
+            "ACCT604" : "Taxation",
+            "ACCT604_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ACCT604",
+            "ACCT608" : "Accounting for Social Impact",
+            "ACCT608_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ACCT608",
+            "ACCT702" : "Advanced Financial Accounting",
+            "ACCT702_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ACCT702",
+            "ACCT703" : "Advanced Management Accounting",
+            "ACCT703_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ACCT703",
+            "ACCT704" : "Auditing",
+            "ACCT704_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ACCT704",
+            "Courses for professional accountancy membership" : {
+                "ACCT503" :  "Accounting Systems and Analytics" ,
+                "ACCT503_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ACCT503",
+                "ECON505" : "Business Economics and Data Analysis" ,
+                "ECON505_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ECON505",
+                "ACCT605" : "Accounting Legal and Regulatory Framework",
+                "ACCT605_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ACCT605",
+                "ACCT606": "Financial Management for Accountants",
+                "ACCT606_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ACCT606"
+            }
+        }
+    }
