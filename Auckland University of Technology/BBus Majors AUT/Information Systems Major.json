@@ -1,8 +1,40 @@
 {
         "Information_Systems_Major" : {
+        "link_text" : "Information Systems Major - Bachelor of Business",
+        "Information_Systems_Major_website_link" : "https://www.aut.ac.nz/study/study-options/business/courses/bachelor-of-business/business-information-systems-major",
+        "Information_Systems_Major_Overview" : "Information systems is the crucial area between an organisation’s technological systems and its users - from software, data and business process improvements to social media operations. A well-developed information systems team is essential for the success of any business. It can improve business processes, help an organisation stay competitive, and increase efficiency, share information and make effective decisions. Skills in this area can help you play an essential role in the new world of business.",
+        "Degree_Builder_link" : "https://www.aut.ac.nz/study/degree-builder?prog=82056&theme=blue",
         "Information_Systems_Major_Study_Planner_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0009/960246/Major-IS-2025.pdf",
         "Bachelor_of_buisness_planner_link": "https://www.aut.ac.nz/__data/assets/pdf_file/0004/950287/Structure-BBus-majors-and-minors-2025-FINAL.pdf",
         "Workplace_Experience_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS701"},
+        "Information_Systmes_Carrers_Link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0003/136308/Information-Systems-Career-Sheet-Web.pdf",
+        "Carrer_Oppurtunities" : [
+            "Business analyst/process analyst",
+            "Business database administrator",
+            "Consultant",
+            "eBusiness manager",
+            "Information systems manager",
+            "Project manager"
+        ],
+        "Placements" : ["Bridgestone NZ",
+        "LG Electrics NZ",
+        "Mainfreight",
+        "Open Systems Specialists",
+        "Optimation New Zealand",
+        "Quantium Solutions NZ Ltd",
+        "Sovereign",
+        "Vodafone NZ"],
+        "Key_features" : [
+            "Can open up a wide range of careers",
+            "Skills in demand across the business world",
+            "Valuable workplace experience in an organisation of your choice",
+            "Option to include subjects from outside of business"
+        ],
+        "See_yourself_as" : [
+            "Curious about how systems are developed, maintained and used by business",
+            "Someone who enjoys working in teams",
+            "Interested in the innovative use of technology"
+        ],
         "Year 1" : {
             "Semester_1" : {
                 "BUSS505" : "Consumer and Organisational Behaviour",

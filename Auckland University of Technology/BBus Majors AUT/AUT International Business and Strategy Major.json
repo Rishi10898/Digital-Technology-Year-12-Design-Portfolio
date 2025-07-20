@@ -1,3 +1,75 @@
 {
-    "International_Business_and_Strategy_Major" : ""
+    "International_Business_and_Strategy_Major" : {
+    "International_Business_and_Strategy_Major_Overview" : "Driven by disruptive changes in technology, policy and globalisation, today’s dynamic business environment presents new challenges and opportunities. In New Zealand, international trade accounts for two thirds of total economic activity, multinationals dominate business, and many SMEs are internationalising early. If you study international business and strategy, you can make the most of the opportunities this global environment offers.",
+    "link_text" : "International Business and Strategy Major - Bachelor of Business",
+    "International_Business_and_Strategy_website_link" : "https://www.aut.ac.nz/study/study-options/business/courses/bachelor-of-business/international-business-major",
+    "Degree_Builder_link" : "https://www.aut.ac.nz/study/degree-builder?prog=82056&theme=blue",
+    "Workplace_Experience_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS701",
+    "Bachelor_of_buisness_planner_link": "https://www.aut.ac.nz/__data/assets/pdf_file/0004/950287/Structure-BBus-majors-and-minors-2025-FINAL.pdf",
+    "International_Buisness_and_Strategy_Major_Study_Planner_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0008/960245/Major-INTB-2025.pdf",
+    "International_Business_and_Strategy_Carrers_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0016/136321/International-Business-Career-Sheet-2024.pdf",
+    "Key_Features" : [
+        "Sets the foundation for a global career",
+        "Overseas experience: study overseas for a semester or complete your workplace experience abroad",
+        "International business and strategy is of huge importance in the evolving business world",
+        "Option to include subjects from outside of business"
+    ],
+    "See_yourself" : [
+        "Able to embrace situations outside your comfort zone",
+        "Having strong interpersonal skills",
+        "Able to accommodate differences in other people"
+    ],
+    "Carrers" : [
+        "Manager",
+        "Team leader",
+        "Export manager",
+        "International account manager",
+        "International project manager",
+        "International sales representative",
+        "Management consultant or business analyst",
+        "Working with government agencies, councils or industry associations",
+        "National or regional trade development advisor",
+        "Overseas buyer",
+        "Policy and research advisor",
+        "Regional marketing manager"
+    ],
+    "Placements" : [
+        "Grant Thornton",
+        "ATS Pacific Fiji",
+        "Chrisco Hampers (Sydney, Australia)",
+        "Consulate of Saudi Arabia in Spain",
+        "New Zealand Customs Service"
+    ],
+    "Year_1" : {
+        "Semester_1" : {
+            "BUSS505" : "Consumer and Organisational Behaviour",
+            "BUSS505_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS505",
+            "BUSS507" : "Financial Decision Making and Information Systems",
+            "BUSS507_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS507",
+            "BUSS508" : "Economics and International Business",
+            "BUSS508_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS508",
+            "BUSS509" : "Ethics, Responsibility and Sustainability",
+            "BUSS509_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS509"
+        },
+        "Semester_2" : {
+            "INTB501" : "Business and Strategy in a Changing World"
+        }
+    },
+    "Year_2_and_3" : {
+        "INTB603" : "Dynamic Environments",
+        "INTB603_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=INTB603",
+        "INTB604" : "International Business Management",
+        "INTB604_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=INTB604",
+        "INTB605" : "Business Strategy",
+        "INTB605_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=INTB605",
+        "INTB706" : "Global Social Impact",
+        "INTB706_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=INTB706",
+        "INTB707" : "Strategy in Uncertain Times",
+        "INTB707_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=INTB707",
+        "INTB708" : "Innovation and Technology Strategy",
+        "INTB708_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=INTB708",
+        "INTB709" : "Strategic Design",
+        "INTB709_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=INTB709"
+    }
+}    
 }
