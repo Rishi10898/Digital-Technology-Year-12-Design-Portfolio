@@ -18,7 +18,7 @@
             "Your chosen major (120 points)" : "Your major is the subject area you want to specialise in. This makes up one third of your degree, and usually consists of eight courses related to your chosen subject. You can view the list of majors in this degree in the Majors tab.",
             "Flexible component (120 points)" : "Flexible component (120 points), You can choose one of the following options Two minors (60 points each); or A minor (60 points) and elective courses (60 points); or A second major (120 points), Your second major, minor(s) and elective courses can be from different AUT degrees; they don’t need to be from business."
     },
-    "Skills_you_will_develop" : "https://www.aut.ac.nz/__data/assets/pdf_file/0005/570758/Bachelor-of-Business.pdf",
+    "Skills_you_will_develop_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0005/570758/Bachelor-of-Business.pdf",
     "Entry Requirements" : {
         "NCEA" : "18 credits from any Level 3 standards, Level 3 with 14 credits in each of three subjects, and 10 literacy credits at Level 2 or above, and 10 numeracy credits at Level 1 or above",
         "CIE": {

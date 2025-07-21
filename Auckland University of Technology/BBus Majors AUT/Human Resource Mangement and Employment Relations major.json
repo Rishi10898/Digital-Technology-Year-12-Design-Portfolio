@@ -7,7 +7,7 @@
         "Bachelor_of_buisness_planner_link": "https://www.aut.ac.nz/__data/assets/pdf_file/0004/950287/Structure-BBus-majors-and-minors-2025-FINAL.pdf",
         "Workplace_Experience_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS701",
         "Human_Resource_Management_and_Employment_Relations_Major_Study_Planner_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0007/960244/Major-HRMER-2025.pdf"},
-        "Carrers_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0005/136319/Human-Resource-Management-Career-Sheet-Aug-2024-Web.pdf",
+        "Human_Resource_Management_and_Employment_Relations_Major_Carrers_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0005/136319/Human-Resource-Management-Career-Sheet-Aug-2024-Web.pdf",
         "Carrer_oppurtunities" : ["Employment relations specialist",
         "Human resource manager",
         "Industry training advisor",
@@ -15,7 +15,7 @@
         "Talent manager",
         "Health and safety manager"
         ],
-        "Placements" : [
+        "Recent_Placements_Included" : [
             "DB Breweries",
             "Farmers Trading Company",
             "Fletcher Construction",
@@ -32,7 +32,7 @@
             "Option to include subjects from outside of business",
             "Offered at the City or South Campus"
         ],
-        "See_yourself_as" : [
+        "See_Yourself_As" : [
             "Committed to productive employment relationships",
             "Interested in talent management",
             "Able to build inclusive organisations",

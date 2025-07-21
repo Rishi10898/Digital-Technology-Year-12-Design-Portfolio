@@ -3,7 +3,72 @@
         "Management_and_Leadership_Major_Overview" : "Organisations of all sizes, types and industries need managers who can deal with the myriad demands of leadership in the modern environment. Profitability, sustainability, innovation, social responsibility, stakeholder relations, market share and resource utilisation are just some of the issues that managers must face, which make this a stimulating and challenging career direction. A key aspect of management is the ability to get the best out of people, to motivate them and integrate their own professional development with the requirements of the business. This calls for extremely well-developed interpersonal skills and emotional intelligence, allied to a strong sense of commercial awareness.",
         "link_text" : "Management and Leadership Major - Bachelor of Business",
         "Management_and_Leadership_Major_website_link" : "https://www.aut.ac.nz/study/study-options/business/courses/bachelor-of-business/management-major",
-        "Management_and_Leadership_Major_study_planner" : "https://www.aut.ac.nz/__data/assets/pdf_file/0010/960247/Major-M-and-L-2025.pdf"
+        "Degree_Builder_link" : "https://www.aut.ac.nz/study/degree-builder?prog=82056&theme=blue",
+        "Management_and_Leadership_Major_study_planner_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0010/960247/Major-M-and-L-2025.pdf",
+        "Bachelor_of_buisness_study_planner_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0004/950287/Structure-BBus-majors-and-minors-2025-FINAL.pdf",
+        "Workplace_Experience_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS701",
+        "Management_and_Leadership_Major_Carrers_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0018/136323/Management-and-Leadership-career-sheet.pdf",
+        "key_features" : [
+            "Management skills are in demand across the business world",
+            "Can open up a wide range of career opportunities",
+            "Valuable workplace experience in an organisation of your choice",
+            "Option to include subjects from outside of business",
+            "Offered at the City or South Campus"
+        ],
+        "See_Yourself_As" : [
+            "Having leadership qualities and organisational abilities",
+            "Interested in change and improvement",
+            "Able to prioritise and deal with a wide range of people"
+        ],
+        "Carrer_Oppurtunities" : [
+            "Manager or executive",
+            "Business researcher",
+            "Functional manager",
+            "Management consultant",
+            "Project manager",
+            "Small business operator"
+        ],
+        "Recent_Placements_Included" : [
+            "Air New Zealand",
+            "Auckland Council",
+            "Coca-Cola Amatil NZ",
+            "Counties Manukau DHB",
+            "Johnson & Johnson",
+            "The Warehouse Group",
+            "Vodafone NZ",
+            "Waitemata District Health Board"
+        ],
+        "Year_1" : {
+            "Semester_1" : {
+                "BUSS505" :  "Consumer and Organisational Behaviour",
+                "BUSS505_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS505",
+                "BUSS507" :  "Financial Decision Making and Information Systems",
+                "BUSS507_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS507",
+                "BUSS508" :  "Economics and International Business",
+                "BUSS508_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS508",
+                "BUSS509" : "Ethics, Responsibility and Sustainability",
+                "BUSS509_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS509"
+            },
+            "Semester_2" : {
+                "MGMT501" : "Managing and Organising",
+                "MGMT501_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=MGMT501"
+            }
+        },
+        "Year_2_and_3" : {
+            "HRMG601" : "Human Resource Management",
+            "INTB605" : "Business Strategy",
+            "MGMT602" : "Small and Medium Enterprise Management",
+            "MGMT602_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=MGMT602",
+            "MGMT603" :  "Leadership for Change",
+            "MGMT603_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=MGMT603",
+            "MGMT704" : "Management for Social Impact",
+            "MGMT704_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=MGMT704",
+            "MGMT705" : "Stress and Resilience at Work",
+            "MGMT705_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=MGMT705",
+            "MGMT708" : "Organising for the Future of Work",
+            "MGMT708_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=MGMT708"
+        }
+
 
     }
 }

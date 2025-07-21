@@ -7,7 +7,7 @@
         "Accounting_Major_Study_Planner_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0004/960241/Major-ACCT-2025.pdf",
         "Bachelor_of_buisness_planner_link": "https://www.aut.ac.nz/__data/assets/pdf_file/0004/950287/Structure-BBus-majors-and-minors-2025-FINAL.pdf",
         "Workplace_Experience_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS701"},
-        "Accounting_Carrers" : "https://www.aut.ac.nz/__data/assets/pdf_file/0019/136306/Accounting-Career-Sheet-2024.pdf",
+        "Accounting_Carrers_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0019/136306/Accounting-Career-Sheet-2024.pdf",
         "Carrer_Oppurtunities" : [
             "Chartered accountant",
             "Chief financial officer",
@@ -16,7 +16,7 @@
             "Management accountant",
             "Taxation consultant"
         ],
-        "Recent placements included" : [
+        "Recent_Placements_Included" : [
             "ANZ Bank",
             "Auckland Council",
             "Audit New Zealand",
@@ -26,7 +26,7 @@
             "Vodafone NZ",
             "Westpac Bank"
         ],
-        "See_Yourself_as" : [
+        "See_Yourself_As" : [
             "A strategic and financial planner",
             "Enjoying maths, statistics and accounting",
             "Interested in researching, analysing and interpreting information"
@@ -39,7 +39,7 @@
         ],
             "CPA_Australia" : "http://www.cpaaustralia.com.au/"
         },
-        "Key features" : ["World-leading accounting department",
+        "Key Features" : ["World-leading accounting department",
         "Accredited by CA ANZ, CIMA, CPA Australia and ACCA",
         "Includes valuable workplace experience in your final year",
         "Option to include subjects outside of business as part of your degree",

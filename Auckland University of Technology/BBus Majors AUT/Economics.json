@@ -7,14 +7,14 @@
         "Economics_Major_Study_Planner_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0005/960242/Major-ECON-2025.pdf",
         "Workplace_Experience_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS701",
         "Bachelor_of_buisness_planner_link": "https://www.aut.ac.nz/__data/assets/pdf_file/0004/950287/Structure-BBus-majors-and-minors-2025-FINAL.pdf"},
-        "Economics_Carrers" : "https://www.aut.ac.nz/__data/assets/pdf_file/0017/136313/Economics-Career-Sheet-A4-2024.pdf",
+        "Economics_Carrers_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0017/136313/Economics-Career-Sheet-A4-2024.pdf",
         "Key_Features" : [
             "Study at an internationally recognised School of Economics",
             "Can open up a wide range of career opportunities",
             "Option to include subjects from outside of business as part of your degree",
             "Valuable workplace experience in an organisation of your choice"
         ],
-        "Recent_Placements_Include" : [
+        "Recent_Placements_Included" : [
             "Auckland Council",
             "ASB",
             "Goldman Sachs",
@@ -32,7 +32,7 @@
             "Researcher in a consulting firm or non-profit organisation",
             "Strategic planner, analyst or policy advisor in a local council"
         ],
-        "See_yourself_As" : ["Interested in testing theories with empirical data",
+        "See_Yourself_As" : ["Interested in testing theories with empirical data",
         "Keen on modelling behaviour with attention to detail",
         "Analytical and a good communicator"
         ],
