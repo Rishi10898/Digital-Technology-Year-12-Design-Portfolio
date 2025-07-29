@@ -1,0 +1,59 @@
+{
+    "programme":"Bachelor of Science",
+    "field":"Science",
+    "location":"Lincoln",
+    "fulltime_duration_years":3,
+    "points":360,
+    "domestic_fee_NZD":"https://www.lincoln.ac.nz/study/fees/domestic-fees-calculator/",
+    "bachelor_of_science_website_link" : "https://www.lincoln.ac.nz/study/study-programmes/programme-search/bachelor-of-science-individual-major/",
+    "bachelor_of_science_overview" : [
+        "Grow your impact on the sustainable management of land, water and other essential natural resources. This applicable, practical and versatile science degree will develop your potential to help shape a healthy future.",
+        "As the world changes, the challenges for scientists evolve. How do we grow enough food whilst lessening environmental impact? How do we maintain and support a healthy natural environment? How do we protect ecosystems from biological threats? This 3-year, full-time Lincoln University degree will prepare you to face the big issues via a flexible programme of scientific study.",
+        "Create your own science major in an area not covered by the named Majors, focusing on biochemistry, genetics, animal science or plant science.",
+        "Learn how to apply your knowledge through the environment, through ecosystems, plant ecology or at a molecular level.",
+        "Build on a firm grounding in basic sciences by combining study in areas that interest you such as ecology, soil science, genetics or animal science.",
+        "Preparing you to contribute to sustainable management and conservation of land, water, air and New Zealand’s abundant natural resources.",
+        "Lincoln’s Bachelor of Science will prepare you for roles in environmental land management, conservation and restoration. You’ll be a strong candidate for careers in consultancy and with both local and central government.",
+        "Upon successful completion of this degree programme, you will be awarded a Bachelor of Science with an Individual Major"
+    ],
+    "additional_major" : "There may be an opportunity to add an additional major to your study programme. Please refer to the programme course advisor for further information. https://www.lincoln.ac.nz/additional-majors-and-minors/",
+    "regulations" : [
+        "Pass at least 360 credits (24 courses)",
+        "Pass all compulsory courses",
+        "Complete no more than 165 credits (11 courses ) at the 100 level",
+        "Pass at least 75 credits (5 courses) at the 300 level",
+        "Meet the requirements of at least one of the named Bachelor of Science majors",
+        "Please refer to the Academic Calendar for all of the suggested electives for the Bachelor of Science."
+    ],
+    "entry_requirements" : {
+    "requirement" : "University Entrance through NCEA or an approved, equivalent qualification.",
+    "useful_subjects" : [
+        "Biology (highly recommended)",
+        "Chemistry (highly recommended)",
+        "Computing",
+        "English (highly recommended)",
+        "Māori Studies",
+        "Maths / Statistics (highly recommended)"
+    ]
+    },
+    "programme_structure" : {
+        "overview" : [
+            "Your individual major must have a coherent focus, determined by the courses you choose as electives. It’s also possible to combine different disciplines in an individual major, such as ecology and soil science or animal science and genetics.",
+            "You need to select a minimum of 75 credits at 300-level from the Bachelor of Science schedule. At least 60 of those 300-level credits must be from Schedule A, Part 2, together with a maximum of 165 credits at 100-level.  In general, an area of focus should be defined by a minimum of three 300-level courses with the same prefix.",
+            "You must pass all compulsory courses and gain at least 360 credits for 24 courses. Then complete at least 5 courses (75 credits) at the 300 level and meet the requirements for at least one of the named Bachelor of Science majors."
+        ],
+        "year_1" : {
+            "BIOS110" : "Biological Sciences",
+            "BIOS110_link" : "https://www.lincoln.ac.nz/study/courses-2/course-search/biological-sciences/",
+            "BSC Individual List A*" : {
+                "*BSC Individual List A" : [  "Semester 1 PHSC 101 - Chemistry IA, ENSC 101 - Introduction to Earth and Ecological Sciences",
+                "Semester 2 PHSC 103 - Environmental Physics"]
+        }
+        },
+        "year_2" : {
+            "QMET201": "biometrics",
+            "QMET201_link" : "https://www.lincoln.ac.nz/study/courses-2/course-search/biometrics/"
+        },
+        "year_3" : ["all electives in semester 1 and 2"]
+    }
+}

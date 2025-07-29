@@ -1,1 +1,59 @@
-{"programme":"Bachelor of Commerce","field":"Commerce","location":"Lincoln","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000}
+{
+    "programme":"Bachelor of Commerce",
+    "field":"Commerce",
+    "location":"Lincoln",
+    "fulltime_duration_years":3,
+    "points":360,
+    "domestic_fee_NZD": "https://www.lincoln.ac.nz/study/fees/domestic-fees-calculator/",
+    "bachelor_of_commerce_overview" : [
+        "Commerce and value chains are at the heart of global economies. Being able to design strategies that respond to what’s happening in the global economy is essential to creating commercial advantage. Lincoln University’s BCom allows you to design your own major by combining core courses with electives. As the global economy has grown and become more interconnected, businesses everywhere have become more dependent on international markets for both customers and raw materials. As these businesses grow and evolve, there will be a growing need for graduates of Lincoln University’s Bachelor of Commerce to apply your learning and experience in taking goods and services from Aotearoa-New Zealand to the world and bringing the world back to us.",
+        "This three year, full-time degree will allow you to cultivate your knowledge in areas such as global supply chains, food and resource economics, and business systems and principles.",
+        "How accounting, finance and business strategies create commercial advantages that can be leveraged across markets and through commercial partnerships. Create your own Bachelor of Commerce and expand your value by building on the core compulsory courses, then adding electives of your choice."
+    ],
+    "bachelor_of_commerce_website_link" : "https://www.lincoln.ac.nz/study/study-programmes/programme-search/bachelor-of-commerce-individual-major/",
+    "additional_major" : "There may be an opportunity to add an additional major to your study programme. Please refer to the programme course advisor for further information. https://www.lincoln.ac.nz/additional-majors-and-minors/",
+    "regulations" : [
+        "Pass at least 360 credits (24 courses)",
+        "Pass all compulsory courses",
+        "Complete no more than 165 credits (11 courses ) at the 100 level",
+        "Pass at least 75 credits (5 courses) at the 300 level"
+    ],
+    "entry_requirements" : {
+    "requirement" : "University Entrance through NCEA or an approved, equivalent qualification.",
+    "useful_subjects" : [
+        "Computing",
+        "Economics",
+        "English (highly recommended)",
+        "Māori Studies",
+        "Maths / Statistics"
+    ]
+    },
+    "programme_structure" : {
+        "overview" : ["Your Individual Major must have two areas of focus. Choose two 300-level courses from two different subject areas, such as two Accounting courses (ACCT prefix) and two Marketing courses (MKTG prefix). 300-level courses are usually taken in your third study year.",
+        "You must pass at least five courses at the 300-level and all compulsory courses.",
+        "Subject areas for your Individual Major are ACCT, BMGT, ECON, FINC, MGMT, MKTG, VAPM."
+    ],
+    "year_1" : {
+        "semester_1" : {
+            "LWST114" : "Introduction to Commercial Law",
+            "LWST114_link" : "https://www.lincoln.ac.nz/study/courses-2/course-search/introduction-to-commercial-law/",
+            "ECON113" : "Economies and Markets",
+            "ECON113_link" : "https://www.lincoln.ac.nz/study/courses-2/course-search/economies-and-markets/",
+            "BMGT116" : "Principles of Management",
+            "BMGT116_link" : "https://www.lincoln.ac.nz/study/courses-2/course-search/principles-of-management/",
+            "COMM112" : "Financial Information for Business",
+            "COMM112_link" : "https://www.lincoln.ac.nz/study/courses-2/course-search/financial-information-for-business/"
+        },
+        "semester_2" : {
+            "MKTG115" : "Principles of Marketing",
+            "MKTG115_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/principles-of-marketing-2/",
+            "COMM111" : "Introductory Statistics",
+            "COMM111_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/introductory-statistics/",
+            "electives_link" : "https://www.lincoln.ac.nz/study/courses-2/course-search/"
+        }
+    },
+    "year_2_3" : [
+        "all elective courses link:- https://www.lincoln.ac.nz/study/courses-2/course-search/ "
+    ]
+    }
+}
