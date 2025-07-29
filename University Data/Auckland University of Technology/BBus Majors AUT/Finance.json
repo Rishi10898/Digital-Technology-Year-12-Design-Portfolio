@@ -1,20 +1,20 @@
 {
-    "Finance_Major" : {
+    "finance_major" : {
         "link_text" : "Finance Major - Bachelor of Business",
-        "Finance_major_website_link" : "https://www.aut.ac.nz/study/study-options/business/courses/bachelor-of-business/finance-major",
-        "Finance_Major_Overview" : "Finance is a dynamic field within the modern global economy. Professionals in this field could work with anyone from small private investors in a financial advising role to guiding large companies through the process of listing their shares on stock exchanges worldwide. While many jobs are in the private sector, you could equally work in public or non-government organisations (NGOs). The AUT Business School is part of the CFA Institute University Affiliation Program. The Bachelor of Business in Finance curriculum is based on the Candidate Body of Knowledge (CBOK) from the CFA Program and this degree will position you well to obtain the Chartered Financial Analyst designation – a globally respected and recognised investment credential.",
-        "Degree_Builder_link" : "https://www.aut.ac.nz/study/degree-builder?prog=82056&theme=blue",
-        "Workplace_Experience_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS701",
-        "Finance_Major_Study_Planner_Link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0006/960243/Major-FINA-2025.pdf",
-        "Bachelor_of_buisness_planner_link": "https://www.aut.ac.nz/__data/assets/pdf_file/0004/950287/Structure-BBus-majors-and-minors-2025-FINAL.pdf"},
-        "Finance_Carrers_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0003/136317/Finance-CS-A4-2024.pdf",
-        "Key_Features" : ["World-leading finance department",
+        "finance_major_website_link" : "https://www.aut.ac.nz/study/study-options/business/courses/bachelor-of-business/finance-major",
+        "finance_major_overview" : "Finance is a dynamic field within the modern global economy. Professionals in this field could work with anyone from small private investors in a financial advising role to guiding large companies through the process of listing their shares on stock exchanges worldwide. While many jobs are in the private sector, you could equally work in public or non-government organisations (NGOs). The AUT Business School is part of the CFA Institute University Affiliation Program. The Bachelor of Business in Finance curriculum is based on the Candidate Body of Knowledge (CBOK) from the CFA Program and this degree will position you well to obtain the Chartered Financial Analyst designation – a globally respected and recognised investment credential.",
+        "degree_builder_link" : "https://www.aut.ac.nz/study/degree-builder?prog=82056&theme=blue",
+        "workplace_experience_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS701",
+        "finance_major_study_planner_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0006/960243/Major-FINA-2025.pdf",
+        "bachelor_of_buisness_planner_link": "https://www.aut.ac.nz/__data/assets/pdf_file/0004/950287/Structure-BBus-majors-and-minors-2025-FINAL.pdf"},
+        "finance_carrers_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0003/136317/Finance-CS-A4-2024.pdf",
+        "key_features" : ["World-leading finance department",
         "Recognised by the CFA Institute",
         "Graduates are well prepared to move up to Chartered Financial Analyst status",
         "Valuable workplace experience in an organisation of your choice",
         "Option to include subjects outside of business as part of your degree",
         "Networking opportunities through the AUT Investment Club and the CFA Institute Research Challenge"],
-        "Finance_Carrers" : [ "Commercial banker",
+        "finance_carrers" : [ "Commercial banker",
         "Commodities trader",
         "Corporate finance manager",
         "Fund manager",
@@ -22,7 +22,7 @@
         "Investment banker",
         "Securities analyst",
         "Stock broker"],
-        "Recent_Placements_Included" : [
+        "recent_placements_included" : [
             "ASB Securities",
             "BNZ",
             "Goldman Sachs",
@@ -32,13 +32,13 @@
             "Treasury",
             "Vodafone NZ"
         ],
-        "See_Yourself_As" : [
+        "see_yourself_as" : [
             "Analytical and interested in financial markets, financial institutions, investments and corporate finance",
             "Confident and articulate",
             "Someone who pays attention to detail"
         ],
-        "Year 1" : {
-            "Semester_1" : {
+        "year_1" : {
+            "semester_1" : {
             "BUSS505" : "Consumer and Organisational Behaviour",
             "BUSS505_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS505",
             "BUSS507" : "Financial Decision Making and Information Systems",
@@ -48,13 +48,13 @@
             "BUSS509" : "Ethics, Responsibility and Sustainability",
             "BUSS509_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS509"
             },
-            "Semester_2" : {
+            "semester_2" : {
                 "FINA501" : "Introduction to Finance",
                 "FINA501_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=FINA501",
                 "FINA503" : "Financial Analysis",
                 "FINA503_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=FINA503"
             },
-        "Year_2_and_3" : {
+        "year_2_and_3" : {
             "FINA601" : "Corporate Finance",
             "FINA601_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=FINA601",
             "FINA602" :  "Investment and Portfolio Analysis",

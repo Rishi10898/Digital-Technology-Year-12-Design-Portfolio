@@ -1,0 +1,187 @@
+{
+    "programme": "Bachelor of Science",
+    "programme_code": "AK1041",
+    "field": "Science",
+    "level": 7,
+    "location": "City Campus (Auckland)",
+    "fulltime_duration_years": 3,
+    "points": 360,
+    "domestic_fee_NZD_2025_per_year": "8918–9158",
+    "bachelor_of_science_website_link" :"https://www.aut.ac.nz/courses/bachelor-of-science?source=/engineering-computer-and-mathematical-sciences",
+    "bachelor_of_science_overview" : "Study with us and you have access to some of the best lecturers in Aotearoa New Zealand and state-of-the-art equipment. You’ll have lots of opportunities to apply your knowledge in the lab or on field trips, and our science degree integrates mātauranga Māori. Our strong links with the scientific community extend right across the world – making it easy for you to transition from university to your career.",
+    "degree_builder" : "https://www.aut.ac.nz/study/degree-builder?prog=98757&theme=green",
+    "skills_you_will_develop" : "https://www.aut.ac.nz/__data/assets/pdf_file/0016/1030183/AK1041-BSc-Graduate-Profile.pdf",
+    "book_a_session_talk_about_your_options_link" : "https://www.aut.ac.nz/study/study-options/meet-us-on-campus-to-discuss-your-options",
+    "fee_overview" : [
+        "Fees shown are based on a full-time workload for the points indicated next to the fee. The exact fee charged will depend on which courses you select at the time of enrolment. Fees are subject to change year to year. If you are planning for study beyond the current year fees may vary from those stated. There may also be other fees and charges you need to pay."
+    ],
+    "fees_free_for_domestic_students" : "https://www.aut.ac.nz/study/fees-and-scholarships/get-free-fees-for-your-university-study",
+    "scholarship_link" : "https://www.aut.ac.nz/study/fees-and-scholarships/scholarships-and-awards-at-aut",
+    "entry_requirements" : {
+    "link" : "https://www.aut.ac.nz/study/entry-requirements/university-entrance",
+    "NCEA" : {
+            "level_3_60_credits" : [
+                "14 credits in approved subject 1",
+                "14 credits in approved subject 2",
+                "14 credits in approved subject 3",
+                "18 credits from any Level 3 standards"
+            ],
+            "UE_literacy" : [
+                "5 Reading credits (Level 2 or 3)",
+                "5 Writing credits (Level 2 or 3)"
+            ],
+            "numeracy" : "10 Numeracy credits at Level 1, 2 or 3"
+        },
+        "CIE": {
+            "Total" : "120 points on the New Zealand CAIE Tariff at A or AS level in any subjects that are broadly equivalent to NCEA approved subjects. D or above in at least 3 different subjects (excluding Thinking Skills)",
+            "UE_literacy" : "E or above in English Language, Language and Literature in English or Literature at AS or A level",
+            "numeracy" : "D or above in IGCSE or GCSE Mathematics, or any mathematics subject passed at AS or A level"
+        },
+        "IB" : {
+            "Total" : "IB Diploma with a minimum 24 points",
+            "UE_literacy" : "Literature or language and literature (SL or HL) – IB Group 1, with English as the language",
+            "Numeracy" : "Any mathematics subject – IB Group 5"
+        }
+    },
+    "useful_new_zealand_school_subjects" : {
+        "Analytics, Mathematical Modelling and Computation majors" : "Calculus, Mathematics, Physics, Statistics",
+        "Biological Science, Biomedical Science majors" : "Biology, Level 3 Chemistry and other science subjects",
+        "Chemistry, Food Science majors" : "Level 3 Chemistry, Mathematics and other science subjects",
+        "Environmental Science, Marine Science majors" : "Biology and other science subjects"
+    },
+    "core_courses_(120 points)" : {
+        "year_1" : {
+            "choose_one_of" : {
+                "DIGD507" : "Mahitahi | Collaborative Practices",
+                "DIGD507_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=DIGD507",
+                "SCIE504" : "Science and Society",
+                "SCIE504_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=SCIE504"
+            },
+            "choose_one_natural_sciences_course" : {
+                "ASTR500" : "Introductory Astronomy",
+                "ASTR500_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ASTR500",
+                "BIOL500" : "Foundations of Life",
+                "BIOL500_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BIOL500",
+                "BMED500" : "Introduction to Biomedical Science",
+                "BMED500_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BMED500",
+                "CHEM500" : "Chemistry in Our World",
+                "CHEM500_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=CHEM500",
+                "CHEM501" : "Principles of Chemistry#",
+                "CHEM501_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=CHEM501",
+                "CHEM502" : "Biological and Solution Chemistry",
+                "CHEM502_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=CHEM502",
+                "CONS500" : "Biodiversity",
+                "CONS500_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=CONS500",
+                "EASC500" : "Our Dynamic Earth",
+                "EASC500_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=EASC500",
+                "ENVS502" : "Environmental Science Skills",
+                "ENVS502_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ENVS502",
+                "ENVS503" : "Our Total Environment",
+                "ENVS503_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ENVS503",
+                "FOOD502" : "Food Science",
+                "FOOD502_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=FOOD502",
+                "FOOD503" : "Food Technology",
+                "FOOD503_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=FOOD503",
+                "GESC500" : "Mapping Our Environment",
+                "GESC500_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=GESC500",
+                "HEAL505" : "Human Anatomy and Physiology",
+                "HEAL505_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=HEAL505",
+                "HEAL507" : "Health and Environment",
+                "HEAL507_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=HEAL507",
+                "MAOH501" : "Hauora Māori and Environment",
+                "MAOH501_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=MAOH501",
+                "MASC500" : "Introduction to Marine Science",
+                "MASC500_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=MASC500",
+                "MASC501" : "Marine Science Techniques",
+                "MASC501_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=MASC501",
+                "MELS501" : "Histology and Cytology",
+                "MELS501_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=MELS501",
+                "MICR501" : "Microbial Life",
+                "MICR501_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=MICR501",
+                "PHYS501" : "Physics for Scientists and Engineers",
+                "PHYS501_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=PHYS501",
+                "SOSC585" : "Climate Action",
+                "SOSC585_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=SOSC585"
+            },
+            "choose_one_mathematical_and_computer_sciences_course" : {
+                "COMP500" : "Programming Concepts and Techniques*",
+                "COMP500_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=COMP500",
+                "COMP503" : "Object Oriented Programming*",
+                "COMP503_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=COMP503",
+                "MATH502" : "Algebra and Discrete Mathematics",
+                "MATH502_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=MATH502",
+                "MATH504" : "Introductory Mathematics for Science",
+                "MATH504_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=MATH504",
+                "MATH505" : "Algebra and Calculus I",
+                "MATH505_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=MATH505",
+                "STAT500" : "Applied Statistics",
+                "STAT500_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=STAT500",
+                "STAT502" : "Introductory Probability and Statistics",
+                "STAT502_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=STAT502"
+            }
+            },
+            "symbols" : {
+                "*" : "Only available to students in the Analytics and Mathematical Modelling and Computation majors",
+                "#" : "Please note that this course is designed for students with chemistry knowledge from high school. If you're unsure about your level of knowledge, you can take an optional pre-test here:- https://forms.office.com/r/deap5ALkwc"
+        },
+        "year_2" : {
+            "SCIE606" : "Vision Mātauranga: Science Practice in Aotearoa",
+            "SCIE606_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=SCIE606",
+            "choose_one_of" : {
+                "CHEM604" : "Instrumental Analysis",
+                "CHEM604_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=CHEM604",
+                "SCIE600" : "Scientific Inquiry",
+                "SCIE600_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=SCIE600"
+            }
+        },
+        "year_3" : {
+            "overview" : "In Year 3, you complete a project in an area related to your major. This project gives you an important competitive edge for your career, and is good preparation for postgraduate study.",
+            "courses_you_can_complete" : {
+                "SCIE707" : "Science Capstone Project A",
+                "SCIE707_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=SCIE707",
+                "SCIE708" : "Science Capstone Project B",
+                "SCIE708_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=SCIE708"
+            }
+        }
+    },
+    "chosen_major_120_pointts" : "Your major is the subject area you want to specialise in. This makes up one third of your degree, and usually consists of eight courses related to your chosen subject.",
+    "flexible_component_120_points" : {
+        "you_can_choose_following_options*" : [
+            "A minor (60 points) and elective courses (60 points)",
+            "Two minors (60 points each)",
+            "A second major (120 points)",
+            "Your second major, minor(s) and elective courses can be from different AUT degrees; they don’t need to be from science."
+        ],
+        "*" : "Depending on your chosen combination of majors and minors it may take you longer than three years to complete your degree."
+    },
+    "bachelor_of_science_majors" : {
+        "Analytics" : "https://www.aut.ac.nz/courses/bachelor-of-science/analytics-major",
+        "Biological Science" : "https://www.aut.ac.nz/courses/bachelor-of-science/biological-science-major-bachelor-of-science",
+        "Biomedical Science" : "https://www.aut.ac.nz/courses/bachelor-of-science/biomedical-science-major",
+        "Chemistry" : "https://www.aut.ac.nz/courses/bachelor-of-science/chemistry-major",
+        "Environmental Science" : "https://www.aut.ac.nz/courses/bachelor-of-science/environmental-science-major",
+        "Food Science" : "https://www.aut.ac.nz/courses/bachelor-of-science/food-science-major",
+        "Marine Science" : "https://www.aut.ac.nz/courses/bachelor-of-science/marine-science-major",
+        "Mathematical Modelling and Computation" : "https://www.aut.ac.nz/courses/bachelor-of-science/mathematical-modelling-and-computation-major"   
+    },
+    "bachelor_of_science_minors" : {
+        "Analytics" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/analytics",
+        "Astronomy and Space Science" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/astronomy",
+        "Bioanalytical Chemistry" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/bioanalytical-chemistry",
+        "Biochemistry" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/biochemistry",
+        "Biodiversity Conservation" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/biodiversity-conservation",
+        "Biomedical Science" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/biomedical-science",
+        "Chemical Science" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/chemical-science",
+        "Earth System Science" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/earth-system-science",
+        "Environmental Science" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/environmental-science",
+        "Environmental Sustainability" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/environmental-sustainability",
+        "Food Science"  : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/food-science",
+        "Geospatial Science" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/geospatial-science",
+        "Marine Science" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/marine-science",
+        "Mathematical Modelling and Computation" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/mathematical-modelling-and-computation",
+        "Microbiology"  : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/microbiology",
+        "Molecular Genetics" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/molecular-genetics",
+        "Pharmaceutical Formulation" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/pharmaceutical-formulation"
+    }
+
+}

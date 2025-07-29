@@ -1,13 +1,13 @@
 {
-    "Marketing_Major" : {
-        "Marketing_Major_Overview" : "New media channels are emerging and rivalling traditional ways of going to market. Integrated shopping experiences extend from the shop floor to Facebook, Twitter, email marketing, texting, television, radio, direct mail, catalogues etc. Businesses need staff who are confident and competent at taking an interactive, omni-channel approach to business solutions and who know how to identify customers and connect with them in meaningful ways.",
-        "Marketing_Major_website_link" : "https://www.aut.ac.nz/study/study-options/business/courses/bachelor-of-business/marketing,-advertising,-retailing,-sales-major",
-        "Degree_Builder_link" : "https://www.aut.ac.nz/study/degree-builder?prog=82056&theme=blue",
-        "Workplace_Experience_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS701",
-        "Marketing_Major_Study_Planner_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0011/960248/Major-MKTG-2025.pdf",
-        "Marketing_Carrers_Link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0020/136325/Marketing-Career-Sheet-Web-2024.pdf",
-        "Bachelor_of_buisness_study_planner_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0004/950287/Structure-BBus-majors-and-minors-2025-FINAL.pdf",
-        "Recent_Placements_Included" : [
+    "marketing_major" : {
+        "marketing_major_overview" : "New media channels are emerging and rivalling traditional ways of going to market. Integrated shopping experiences extend from the shop floor to Facebook, Twitter, email marketing, texting, television, radio, direct mail, catalogues etc. Businesses need staff who are confident and competent at taking an interactive, omni-channel approach to business solutions and who know how to identify customers and connect with them in meaningful ways.",
+        "marketing_major_website_link" : "https://www.aut.ac.nz/study/study-options/business/courses/bachelor-of-business/marketing,-advertising,-retailing,-sales-major",
+        "degree_builder_link" : "https://www.aut.ac.nz/study/degree-builder?prog=82056&theme=blue",
+        "workplace_experience_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS701",
+        "marketing_major_study_planner_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0011/960248/Major-MKTG-2025.pdf",
+        "marketing_carrers_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0020/136325/Marketing-Career-Sheet-Web-2024.pdf",
+        "bachelor_of_buisness_study_planner_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0004/950287/Structure-BBus-majors-and-minors-2025-FINAL.pdf",
+        "recent_placements_included" : [
             "Colenso BBDO",
             "Contagion",
             "Cook Islands Tourism Group",
@@ -17,7 +17,7 @@
             "Ogilvy",
             "TVNZ"
         ],
-        "Carrer_Oppurtunities" : [
+        "carrer_oppurtunities" : [
             "Market insights analyst",
             "Customer experience and insights researcher",
             "Sales account manager",
@@ -30,19 +30,19 @@
             "Customer relationship manager",
             "Omni-channel communications manager"
         ],
-        "Key_Features" : [
+        "key_features" : [
             "Reflects the reality of the new business world",
             "Produce a portfolio that showcases your skills",
             "Real projects and workplace experience",
             "Option to include subjects outside of business"
         ],
-        "See_Yourself_As" : [
+        "see_yourself_as" : [
             "Having insight into consumer, shopper and organisational behaviours",
             "Familiar with channels in which markets operate",
             "Interested in business success strategies"
         ],
-        "Year_1" : {
-            "Semester_1" : {
+        "year_1" : {
+            "semester_1" : {
                 "BUSS505" :  "Consumer and Organisational Behaviour",
                 "BUSS505_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS505",
                 "BUSS507" :  "Financial Decision Making and Information Systems",
@@ -52,12 +52,12 @@
                 "BUSS509" : "Ethics, Responsibility and Sustainability",
                 "BUSS509_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=BUSS509"
             },
-            "Semester_2" : {
+            "semester_2" : {
                 "MKTG501" : "Marketing insights",
                 "MKTG501_Link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=MKTG501"
             }
         },
-        "Year_2_and_3" : {
+        "year_2_and_3" : {
             "MKTG601" : "Marketing Research",
             "MKTG601_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=MKTG601",  
             "MKTG602" : "Marketing Relationships",

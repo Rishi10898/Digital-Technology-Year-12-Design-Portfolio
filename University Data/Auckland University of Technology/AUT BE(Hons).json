@@ -1,0 +1,76 @@
+{
+    "programme":"Bachelor of Engineering (Honours)",
+    "field":"Engineering",
+    "campus_location":"City Campus (Auckland)",
+    "fulltime_duration_years":4,
+    "Programme code" : "AK3751",
+    "points":480,
+    "level" : 8,
+    "domestic_fee_NZD": [
+        "$8,918 - $11,221 (for 120 points)",
+        "($7,726 - $10,029 tuition fees + $1,192 student services levy)"
+    ],
+    "scholarship_link" : "https://www.aut.ac.nz/study/fees-and-scholarships/scholarships-and-awards-at-aut",
+    "book_a_session_talk_about_your_options_link" : "https://www.aut.ac.nz/study/study-options/meet-us-on-campus-to-discuss-your-options",
+    "fee_overview" : [
+        "Fees shown are based on a full-time workload for the points indicated next to the fee. The exact fee charged will depend on which courses you select at the time of enrolment. Fees are subject to change year to year. If you are planning for study beyond the current year fees may vary from those stated. There may also be other fees and charges you need to pay."
+    ],
+    "fees_free_for_domestic_students" : "https://www.aut.ac.nz/study/fees-and-scholarships/get-free-fees-for-your-university-study",
+    "bachelor_of_engineering_overview" : [
+        "As an engineer you address the key issues we face today, like access to clean water, sustainable energy systems, waste management, recycling and environmental pressures. In our engineering degree you learn to formulate models and analyse, predict and monitor engineering systems – essential skills in professional engineering. Through engineering projects and other practical courses you have plenty of opportunities to apply what you have learnt in class. Our strong industry partnerships with companies like Fisher & Paykel, Beca, Opus, Spark and Contact Energy help you gain valuable workplace experience as part of your study."
+    ],
+    "entry_requirements" : {
+    "link" : "https://www.aut.ac.nz/study/entry-requirements/university-entrance",
+    "NCEA" : {
+            "level_3_60_credits" : [
+                "14 credits in approved subject 1",
+                "14 credits in approved subject 2",
+                "14 credits in approved subject 3",
+                "18 credits from any Level 3 standards",
+                " At least 14 level 3 credits in each of Calculus and Physics"
+            ],
+            "UE_literacy" : [
+                "5 Reading credits (Level 2 or 3)",
+                "5 Writing credits (Level 2 or 3)"
+            ],
+            "numeracy" : "10 Numeracy credits at Level 1, 2 or 3"
+        },
+        "CIE": {
+            "Total" : "120 points on the New Zealand CAIE Tariff at A or AS level in any subjects that are broadly equivalent to NCEA approved subjects. D or above in at least 3 different subjects (excluding Thinking Skills)",
+            "UE_literacy" : "E or above in English Language, Language and Literature in English or Literature at AS or A level",
+            "numeracy" : "D or above in IGCSE or GCSE Mathematics, or any mathematics subject passed at AS or A level",
+            "others" : " A level Mathematics and a minimum  of AS in Physics OR A level in Physics and a minimum of AS in Mathematics"
+        },
+        "IB" : {
+            "Total" : "IB Diploma with a minimum 24 points",
+            "UE_literacy" : "Literature or language and literature (SL or HL) – IB Group 1, with English as the language",
+            "Numeracy" : "Any mathematics subject – IB Group 5",
+            "others" : " A grade of 4 or better in Mathematics and Physics"
+        },
+        "guaranteed_entry" : "Applicants will automatically be offered a place in this programme if they have a rank score of 250 or higher, along with 14 NCEA level 3 credits in each of Calculus and Physics or CIE A levels in Mathematics and Physics. All other applicants who have met the admission requirements will be considered on a case-by-case basis"
+
+    },
+    "if_you're_starting_in_2025" : {
+        "overview" : "To prepare for your future career as an engineer, you’ll develop strong interpersonal and teamwork skills, and apply what you’ve learnt through engineering projects and other practical courses. Each year you study courses related to your chosen major (the main subject you want to specialise in) and develop an understanding of the wider field of engineering. If you're a full-time student, you normally study eight courses a year (120 points each year, and 480 points for the entire degree).",
+        "year_1" : [
+            "Your first year introduces you to the different fields of engineering and helps you better imagine what your future career as an engineer could look like.",
+            "Many of your first-year courses are shared between the majors in this programme and the Bachelor of Engineering Technology, making it possible for you to switch between our engineering degrees and majors.*",
+            "*Cross-credits between different engineering majors and degrees are assessed on a case-by-case basis, and you may not be able to gain cross-credits for all your first-year courses."
+        ],
+        "year_2_3_and_4" : [
+            "You become more specialised in your chosen major and also develop more advanced engineering skills to prepare for your future career.",
+            "Maritime engineering students move to Tasmania for Year 3 and 4.",
+            "In Year 4 you complete an industry-based project, working on a piece of engineering design and analysis for organisations like Mighty River Power, Fletcher Building, BECA, SKM, Genesis Energy, Contact Energy, Fisher & Paykel Appliances, Spark or Auckland Airport."
+        ]
+    },
+    "bachelor_of_engineering_majors" : {
+        "Architectural Engineering" : "https://www.aut.ac.nz/courses/bachelor-of-engineering-honours/architectural-engineering-major",
+        "Civil Construction Engineering" : "https://www.aut.ac.nz/courses/bachelor-of-engineering-honours/construction-engineering-major",
+        "Electrical and Electronic Engineering" : "https://www.aut.ac.nz/courses/bachelor-of-engineering-honours/electrical-and-electronic-engineering-major",
+        "Maritime Engineering*" : "https://www.aut.ac.nz/courses/bachelor-of-engineering-honours/maritime-majors",
+        "*" : "The maritime engineering majors are delivered in partnership with the Australian Maritime College (AMC) in Launceston, Tasmania. Students study the first two years at AUT and the last two years at AMC. Maritime engineering students can focus on Naval Architecture or Ocean Engineering.",
+        "Mechanical Engineering" : "https://www.aut.ac.nz/courses/bachelor-of-engineering-honours/mechanical-engineering-major",
+        "Mechatronics Engineering" : "https://www.aut.ac.nz/courses/bachelor-of-engineering-honours/mechatronics-engineering-major",
+        "Software Engineering" : "https://www.aut.ac.nz/courses/bachelor-of-engineering-honours/software-engineering-major"
+    }
+}

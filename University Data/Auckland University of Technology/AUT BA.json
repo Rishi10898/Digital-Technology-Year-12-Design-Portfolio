@@ -1,0 +1,222 @@
+{
+    "programme":"Bachelor of Arts",
+    "field":"Arts",
+    "campus_location":"City (Auckland)",
+    "programme_code" : "AK3704",
+    "fulltime_duration_years":3,
+    "points":360,
+    "level" : 7,
+    "domestic_fee_NZD_min": 8379,
+    "domestic_fee_NZD_max": 9261,
+    "scholarship_link" : "https://www.aut.ac.nz/study/fees-and-scholarships/scholarships-and-awards-at-aut",
+    "book_a_session_talk_about_your_options_link" : "https://www.aut.ac.nz/study/study-options/meet-us-on-campus-to-discuss-your-options",
+    "fee_overview" : [
+        "Fees shown are based on a full-time workload for the points indicated next to the fee. The exact fee charged will depend on which courses you select at the time of enrolment. Fees are subject to change year to year. If you are planning for study beyond the current year fees may vary from those stated. There may also be other fees and charges you need to pay."
+    ],
+    "fees_free_for_domestic_students" : "https://www.aut.ac.nz/study/fees-and-scholarships/get-free-fees-for-your-university-study",
+    "bachelor_of_arts_website_link" : "https://www.aut.ac.nz/courses/bachelor-of-arts?source=/social-sciences-and-public-policy",
+    "bachelor_of_arts_overview" : "Build a degree that fits your passions and interests with the Bachelor of Arts. Get an in depth understanding of the wider world and your role in it, and learn how you can make a positive difference. As you explore topics that unpack social issues you will become a skilled problem solver - analytical thinker - communicator - researcher and questioner. The knowledge and skills you gain, combined with workplace experience opportunities in your final semester will prepare you for meaningful careers in Aotearoa New Zealand and abroad.",
+    "new_zealand_qualifications_university_entrance_link" : "https://www.aut.ac.nz/study/entry-requirements/university-entrance",
+    "degree_builder_link" : "https://www.aut.ac.nz/study/degree-builder?prog=101186&theme=purple",
+    "skills_you_will_develop_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0010/579952/BA-and-NZSL-grad-profile.pdf",
+    "options_from_other_AUT_degrees_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees",
+    "majors_overview" : [
+        "Your chosen major (120 points) Your major is the subject area you want to specialise in. This makes up one third of your degree and usually consists of eight courses related to your chosen subject.",
+        "The Psychology major is bigger than the other Bachelor of Arts majors and makes up half of your degree (180 points). Depending on which subjects you choose to combine with your Psychology major, it may take you a little longer to complete your degree."
+    ],
+    "flexible_component_overview" : [
+        "You can choose one of the following options:",
+        "Two minors (60 points each) or A minor (60 points) and elective courses (60 points); or A second major (120 points)",
+        "Your second major, minor(s) and elective courses can be from different AUT degrees; they don’t need to be from the Bachelor of Arts."
+    ],
+    "core_courses_120_points_1" :
+    [
+        "All Bachelor of Arts students need to complete core courses that help you develop transferable skills and support your work in all other courses in the degree."
+    ],
+    "your_chosen_major_120_points" : " Your major is the subject area you want to specialise in. This makes up one third of your degree, and usually consists of eight courses related to your chosen subject. You can view the list of majors in this degree in the ‘Majors’ tab.",
+    "Flexible component (120 points)" : [
+        "Two minors (60 points each); or",
+        "A minor (60 points) and elective courses (60 points); or",
+        "A second major (120 points)",
+        "Your second major, minor(s) and elective courses can be from different AUT degrees; they don’t need to be from the Bachelor of Arts.",
+        "The Psychology major is bigger than the other Bachelor of Arts majors and makes up half of your degree (180 points). Depending on which subjects you choose to combine with your Psychology major, it may take you a little longer to complete your degree."
+    ],
+    "major" : [
+    ],
+    "academic_communication" : {
+        "COMM570" : "Academic Communication",
+        "COMM570_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=COMM570",
+        "COMM590" : "Learning in a Digital World",
+        "COMM590_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=COMM590"
+    },
+    "culture_and_society" : {
+        "introduction" : "Complete one course from each of the following clusters. Each cluster aligns with one of the United Nations Sustainable Development Goals.",
+        "partnerships_and_reduced_inequalities" : {
+            "ENGL502" : "Reading New Zealand",
+            "ENGL502_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ENGL502",
+            "ENGL503" : "A Pacific Reader",
+            "ENGL503_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=ENGL503",
+            "JAPA511" : "Speak Japanese I",
+            "JAPA511_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=JAPA511",
+            "MAOR505" : "Te Mānutanga Beginners Māori Language 1",
+            "MAOR505_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=MAOR505",
+            "MAOR506" : "Te Ekenga Waka Beginners Māori Language 2",
+            "MAOR506_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=MAOR506",
+            "NZSL502" : "Deaf Community and Culture I",
+            "NZSL502_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=NZSL502",
+            "NZSL510" : "New Zealand Sign Language I",
+            "NZSL510_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=NZSL510",
+            "NZSL520" : "New Zealand Sign Language II",
+            "NZSL520_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=NZSL520",
+            "SPAN501" : "Spanish 1A",
+            "SPAN501_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=SPAN501",
+            "SPAN502" : "Spanish 1B",
+            "SPAN502_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=SPAN502"
+        },
+        "peace_and_justice_climate_action_and_economic_world" : {
+            "CRIM580" : "Criminology and Criminal Justice",
+            "CRIM580_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=CRIM580",
+            "EVNT500" : "Introduction to Event Management",
+            "EVNT500_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=EVNT500",
+            "HIST500" : "Introduction to New Zealand History",
+            "HIST500_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=HIST500",
+            "HIST501" : "The Holocaust: Its Causes, Character, and Legacy",
+            "HIST501_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=HIST501",
+            "PSYC580" : "Introduction to Psychology A",
+            "PSYC580_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=PSYC580",
+            "SOSC582" : "Social Thinking",
+            "SOSC582_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=SOSC582",
+            "SOSC583" : "Social Institutions",
+            "SOSC583_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=SOSC583",
+            "SOSC585" : "Climate Action",
+            "SOSC585_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=SOSC585",
+            "TOUR511" : "Global Issues in Tourism",
+            "TOUR511_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=TOUR511"
+        },
+        "sustainability_health_and_wellbeing" : {
+            "FOOD501" : "Food and the Senses",
+            "FOOD501_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=FOOD501",
+            "CLSY513" : "Organisation and Human Behaviour Perspectives",
+            "CLSY513_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=CLSY513",
+            "HOSP509" : "Hospitality Social Enterprise",
+            "HOSP509_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=HOSP509",
+            "TOUR512" : "Tourism and Sustainability",
+            "TOUR512_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=TOUR512"
+        },
+        "quality_education_gender_equality_and_reduced_poverty" : {
+            "EDUC503" : "Critical Questions in Education",
+            "EDUC503_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=EDUC503",
+            "EDUC504" : "Places and Learning",
+            "EDUC504_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=EDUC504",
+            "EDUC506" : "Education, Careers and Employability",
+            "EDUC506_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=EDUC506",
+            "EDUC511" : "Introduction to Social Education Practice",
+            "EDUC511_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=EDUC511",
+            "EDUC517" : "The Child in Aotearoa New Zealand",
+            "EDUC517_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=EDUC517",
+            "HIST504" : "Gender and Development in Asia and the Pacific since WWII (Online)",
+            "HIST504_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=HIST504"
+        }
+    },
+    "knowledge_and_inquiry" : {
+        "CLSY504" : "Knowledge and Inquiry",
+        "CLSY504_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=CLSY504",
+        "EDUC516" : "Creative Learning Inquiries",
+        "EDUC516_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=EDUC516",
+        "PHIL500" : "Introduction to Philosophy",
+        "PHIL500_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=PHIL500",
+        "SOSC584" : "Introduction to Social Data Analytics",
+        "SOSC584_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=SOSC584"
+    },
+    "entry_requirements" : {
+        "link" : "https://www.aut.ac.nz/study/entry-requirements/university-entrance",
+        "NCEA" : {
+            "level_3_60_credits" : [
+                "14 credits in approved subject 1",
+                "14 credits in approved subject 2",
+                "14 credits in approved subject 3",
+                "18 credits from any Level 3 standards"
+            ],
+            "UE_literacy" : [
+                "5 Reading credits (Level 2 or 3)",
+                "5 Writing credits (Level 2 or 3)"
+            ],
+            "numeracy" : "10 Numeracy credits at Level 1, 2 or 3"
+        },
+        "CIE": {
+            "Total" : "120 points on the New Zealand CAIE Tariff at A or AS level in any subjects that are broadly equivalent to NCEA approved subjects. D or above in at least 3 different subjects (excluding Thinking Skills)",
+            "UE_literacy" : "E or above in English Language, Language and Literature in English or Literature at AS or A level",
+            "numeracy" : "D or above in IGCSE or GCSE Mathematics, or any mathematics subject passed at AS or A level"
+        },
+        "IB" : {
+            "Total" : "IB Diploma with a minimum 24 points",
+            "UE_literacy" : "Literature or language and literature (SL or HL) – IB Group 1, with English as the language",
+            "N,umeracy" : "Any mathematics subject – IB Group 5"
+        },
+        "interpreting_major" : "High level of competency in English and one other language. Interview will be required.",
+        "NZ_sign_language_english_interpreting_major": "High level of competency in English (NZSL fluency is not required). Interview will be required."
+    },
+    "useful_new_zealand_school_subjects" : [
+        "Art History", 
+        "Classical Studies", 
+        "English", 
+        "Geography", 
+        "History", 
+        "Media Studies", 
+        "Social Studies", 
+        "Psychology"    
+    ],
+    "majors" : {
+        "creative_writing_major_link" : "https://www.aut.ac.nz/courses/bachelor-of-arts/creative-writing-major",
+        "criminology_and_criminal_justice_major_link" : "https://www.aut.ac.nz/courses/bachelor-of-arts/criminology-major",
+        "culinary_arts_major_link" : "https://www.aut.ac.nz/courses/bachelor-of-arts/culinary-arts-major",
+        "economics_(not offered for new students)_major_link" : "https://www.aut.ac.nz/courses/bachelor-of-arts/economics-major",
+        "education_major_link" : "https://www.aut.ac.nz/courses/bachelor-of-arts/education-major",
+        "event_management_major_link" : "https://www.aut.ac.nz/courses/bachelor-of-arts/event-management-major",
+        "global_tourism_major_link" : "https://www.aut.ac.nz/courses/bachelor-of-arts/global-tourism-major-bachelor-of-arts",
+        "history_major_link" : "https://www.aut.ac.nz/courses/bachelor-of-arts/history-major-bachelor-of-arts",
+        "international_studies_major_link" : "https://www.aut.ac.nz/courses/bachelor-of-arts/international-studies-major",
+        "interpreting_major_link" : "https://www.aut.ac.nz/courses/bachelor-of-arts/interpreting-major",
+        "māori_development_major_link" : "https://www.aut.ac.nz/courses/bachelor-of-arts/maori-development-major",
+        "māori_media_(not offered for new students)_major_link" : "https://www.aut.ac.nz/courses/bachelor-of-arts/maori-media-major-bachelor-of-arts",
+        "NZ_sign_language_and_deaf_studies_major_link" : "https://www.aut.ac.nz/courses/bachelor-of-arts/new-zealand-sign-language-and-deaf-studies-major",
+        "NZ_sign_language_english_interpreting_major" : {
+            "link" : "https://www.aut.ac.nz/courses/new-zealand-sign-language-english-interpreting-major-bachelor-of-arts",
+            "details" : "This major focuses on New Zealand Sign Language and developing the skills to become a Sign Language interpreter. It doesn’t include the option to include courses from different subjects."
+        },
+        "psychology_major_link" : "https://www.aut.ac.nz/courses/bachelor-of-arts/psychology-major",
+        "social_sciences_major_link" : "https://www.aut.ac.nz/courses/bachelor-of-arts/social-sciences-major"
+    },
+    "minors" : {
+        "children_and_learning_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/children-and-learning",
+        "conflict_resolution_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/conflict-resolution",
+        "creative_writing_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/creative-writing",
+        "criminology_and_criminal_justice_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/criminology",
+        "culinary_arts_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/culinary-arts",
+        "deaf_studies_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/deaf-studies",
+        "digital_cultures_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/digital-cultures",
+        "economics_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/economics",
+        "education_minor_link": "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/education",
+        "event_management_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/event-management",
+        "gastronomy_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/gastronomy",
+        "global_tourism_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/global-tourism",
+        "history_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/history",
+        "hospitality_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/hospitality",
+        "hospitality_enterprise_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/hospitality-enterprise",
+        "hospitality_and_society_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/hospitality-and-society",
+        "hospitality_management_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/hospitality-management",
+        "international_studies_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/international-studies",
+        "interpreting_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/interpreting",
+        "māori_development_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/maori-development",
+        "māori_media_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/maori-media",
+        "new_zealand_sign_language_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/new-zealand-sign-language",
+        "popular_culture_and_performance_(not open to new students from 2025)_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/popular-culture-and-performance",
+        "psychology_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/psychology",
+        "restaurant_management_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/restaurant-management",
+        "social_education_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/social-education",
+        "social_sciences_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/social-sciences",
+        "spanish_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/spanish",
+        "te_reo_māori_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/te-reo-maori",
+        "translation_minor_link" : "https://www.aut.ac.nz/study/study-options/Additional-majors-and-minors-for-bachelors-degrees/translation"
+    }
+}

@@ -1,0 +1,92 @@
+{
+    "programme":"Bachelor of Buisness",
+    "field":"Commerce",
+    "level" : 7,
+    "programme_code":"AK3693",
+    "campus_location":"City (Auckland) or South Campus",
+    "fulltime_duration_years":3,
+    "points":360,
+    "domestic_fee_NZD_2025_per_year_120_points": "$8,918 - $9,320 (for 120 points)",
+    "scholarship_link" : "https://www.aut.ac.nz/study/fees-and-scholarships/scholarships-and-awards-at-aut",
+    "book_a_session_talk_about_your_options_link" : "https://www.aut.ac.nz/study/study-options/meet-us-on-campus-to-discuss-your-options",
+    "fee_overview" : [
+        "Fees shown are based on a full-time workload for the points indicated next to the fee. The exact fee charged will depend on which courses you select at the time of enrolment. Fees are subject to change year to year. If you are planning for study beyond the current year fees may vary from those stated. There may also be other fees and charges you need to pay."
+    ],
+    "fees_free_for_domestic_students" : "https://www.aut.ac.nz/study/fees-and-scholarships/get-free-fees-for-your-university-study",
+    "link_text":"Bachelor of Buisness",
+    "link" : "https://www.aut.ac.nz/study/study-options/business/courses/bachelor-of-business",
+    "degree_builder" : "https://www.aut.ac.nz/study/degree-builder?prog=82056&theme=blue",
+    "undergraduate_programme_guide_2025_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0004/850396/Business-2025-Programme-Guide.pdf",
+    "undergraduate_programme_guide_2026_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0019/980002/Business-2026-Final-Web.pdf",
+    "what_you_will_study" : {
+        "core_courses_(120 points)" : [
+            "These are courses all students in this degree need to take. They give you a basic understanding of business processes and practices, and help you decide which subject to focus on later in your studies. One of the core courses is the Capstone course – a workplace experience, applied project or a new business venture – which is the final part of your degree and takes place in your last semester."],
+            "your_chosen_major_(120 points)" : "Your major is the subject area you want to specialise in. This makes up one third of your degree, and usually consists of eight courses related to your chosen subject. You can view the list of majors in this degree in the Majors tab.",
+            "flexible_component_(120 points)" : "Flexible component (120 points), You can choose one of the following options Two minors (60 points each); or A minor (60 points) and elective courses (60 points); or A second major (120 points), Your second major, minor(s) and elective courses can be from different AUT degrees; they don’t need to be from business."
+    },
+    "skills_you_will_develop_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0005/570758/Bachelor-of-Business.pdf",
+    "entry_requirements" : {
+        "link" : "https://www.aut.ac.nz/study/entry-requirements/university-entrance",
+        "NCEA" : {
+            "level_3_60_credits" : [
+                "14 credits in approved subject 1",
+                "14 credits in approved subject 2",
+                "14 credits in approved subject 3",
+                "18 credits from any Level 3 standards"
+            ],
+            "UE_literacy" : [
+                "5 Reading credits (Level 2 or 3)",
+                "5 Writing credits (Level 2 or 3)"
+            ],
+            "numeracy" : "10 Numeracy credits at Level 1, 2 or 3"
+        },
+        "CIE": {
+            "Total" : "120 points on the New Zealand CAIE Tariff at A or AS level in any subjects that are broadly equivalent to NCEA approved subjects. D or above in at least 3 different subjects (excluding Thinking Skills)",
+            "UE_literacy" : "E or above in English Language, Language and Literature in English or Literature at AS or A level",
+            "numeracy" : "D or above in IGCSE or GCSE Mathematics, or any mathematics subject passed at AS or A level"
+        },
+        "IB" : {
+            "Total" : "IB Diploma with a minimum 24 points",
+            "UE_literacy" : "Literature or language and literature (SL or HL) – IB Group 1, with English as the language",
+            "Numeracy" : "Any mathematics subject – IB Group 5"
+        }, 
+        "useful_new_zealand_school_subjects" : [    
+            "Art History", 
+            "Classical Studies", 
+            "Drama",
+            "English",
+            "Geography",
+            "Health Education",
+            "History",
+            "Media Studies",
+            "Social Studies",
+            "Te Reo Māori",
+            "Te Reo Rangatira",
+            "Calculus",
+            "Statistics",
+            "Business Studies",
+            "Economics"
+        ]
+    },
+    "majors": [ "Accounting",
+    "Economics",
+    "Finance",
+    "Human Resource Management and Employment Relations",
+    "Information Systems",
+    "International Business and Strategy",
+    "Management and Leadership",
+    "Marketing"],
+    "minors": [ "Accounting",
+        "Business Law",
+        "Data Analytics for Business",
+        "Economics",
+        "Entrepreneurship and Innovation",
+        "Finance",
+        "Human Resource Management and Employment Relations",
+        "Information Systems",
+        "International Business and Strategy",
+        "Management and Leadership",
+        "Marketing",
+        "Supply Chain Management",
+        "Sustainable Enterprise"]
+    }

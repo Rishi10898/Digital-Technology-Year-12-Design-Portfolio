@@ -1,0 +1,132 @@
+{
+    "programme":"Bachelor of Laws (LLB)",
+    "field":"Law",
+    "campus_location":"City Campus, South Campus",
+    "fulltime_duration_years":4,
+    "points":480,
+    "level" : 7,
+    "programme_code" : "AK1008",
+    "domestic_fee_NZD_120_points":8918,
+    "scholarship_link" : "https://www.aut.ac.nz/study/fees-and-scholarships/scholarships-and-awards-at-aut",
+    "bachelor_of_laws_programme_guide_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0006/980007/Law-2026-Final-Web.pdf",
+    "bachelor_of_laws_study_planner_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0008/958085/Full-List-of-Bachelor-of-Law-Courses-Offered-in-2025-2.pdf",
+    "skills_you_will_develop_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0017/623033/Bachelor-of-Laws.pdf",
+    "book_a_session_talk_about_your_options_link" : "https://www.aut.ac.nz/study/study-options/meet-us-on-campus-to-discuss-your-options",
+    "bachelor_of_laws_courses_offered_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0008/958085/Full-List-of-Bachelor-of-Law-Courses-Offered-in-2025-2.pdf",
+    "law_carrers_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0004/136516/Law-2023-Web.pdf",
+    "fee_overview" : [
+        "Fees shown are based on a full-time workload for the points indicated next to the fee. The exact fee charged will depend on which courses you select at the time of enrolment. Fees are subject to change year to year. If you are planning for study beyond the current year fees may vary from those stated. There may also be other fees and charges you need to pay."
+    ],
+    "fees_free_for_domestic_students" : "https://www.aut.ac.nz/study/fees-and-scholarships/get-free-fees-for-your-university-study",
+    "bachelor_of_laws_overview" : "Our interactive lectures and regular case-study workshops develop your ability to interpret, critically analyse, reason and deliver practical solutions to legal problems. You become an articulate communicator, and confident in your understanding of legal principles and their relevance to business and community. You also develop your critical thinking and problem-solving skills, your ability to act ethically, and your sense of community and professional responsibility.",
+    "bachelor_of_law_website_link" : "https://www.aut.ac.nz/study/study-options/law/courses/bachelor-of-laws",
+    "if_you're_starting_in_2025" : {
+        "part_I_courses_overview" : "In your first year you study two compulsory law courses. This makes up half of your first-year study (60 points). The other 60 points (usually four 15-points courses) must be taken from another AUT degree, which gives you the opportunity to broaden your study and enables you to enrol in one of the double degrees.",
+        "options_from_other_AUT_degrees_link" : "https://www.aut.ac.nz/__data/assets/pdf_file/0010/958078/Recommended-non-law-courses.pdf",
+        "full_year_course" : {
+            "LAWS509" : "Legal Reasoning and Writing (30 points)",
+            "LAWS509_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=LAWS509",
+            "LAWS510" : "Tikanga Māori and the Settler State Legal System of Aotearoa New Zealand (30 points)",
+            "LAWS510_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=LAWS510",
+            "semester_1_courses" : "Choose two non-law courses",
+            "semester_2_courses" : "Choose two non-law courses"
+        },
+        "part_II_courses" : {
+            "LAWS621": "Public Law (30 points)",
+            "LAWS621_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=LAWS621",
+            "LAWS622" : "Law of Contract (30 points)",
+            "LAWS622_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=LAWS622",
+            "LAWS623" : "Law of Torts (30 points)",
+            "LAWS623_link" : "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=LAWS623",
+            "LAWS6XX" : "Criminal Law (30 points)"
+        },
+        "part_III_courses" : {
+            "full_year_course" : [
+                "LAWS7XX He Raranga: Tikanga Māori Me Ngā Ture o Aotearoa (30 points)*",
+                "LAWS7XX Law of Property (30 points)*",
+                "*Proposed new course. More details will be available once this course has been fully approved."
+            ],
+            "semester_1_courses" : ["LAWS7XX Wills, Trusts and Succession (15 points)*",
+            "Plus choose one law elective"],
+            "semester_2_courses" : [
+                "Plus choose two law electives"
+            ]
+        },
+        "part_IV_courses" : {
+            "semester_1_courses" : {
+                "LAWS706" : "Legal Ethics (15 points)",
+                "LAWS706_link": "https://www.aut.ac.nz/rc/arion_address/paperdetails-refresh.php?paper_code=LAWS706",
+                    "elective" : "Plus choose three law electives"
+            },
+            "semester_2_courses" : "Choose four law electives"
+        }
+    },
+    "entry_requirements" : {
+    "link" : "https://www.aut.ac.nz/study/entry-requirements/university-entrance",
+    "NCEA" : {
+            "level_3_60_credits" : [
+                "14 credits in approved subject 1",
+                "14 credits in approved subject 2",
+                "14 credits in approved subject 3",
+                "18 credits from any Level 3 standards"
+            ],
+            "UE_literacy" : [
+                "5 Reading credits (Level 2 or 3)",
+                "5 Writing credits (Level 2 or 3)"
+            ],
+            "numeracy" : "10 Numeracy credits at Level 1, 2 or 3"
+        },
+        "CIE": {
+            "Total" : "120 points on the New Zealand CAIE Tariff at A or AS level in any subjects that are broadly equivalent to NCEA approved subjects. D or above in at least 3 different subjects (excluding Thinking Skills)",
+            "UE_literacy" : "E or above in English Language, Language and Literature in English or Literature at AS or A level",
+            "numeracy" : "D or above in IGCSE or GCSE Mathematics, or any mathematics subject passed at AS or A level"
+        },
+        "IB" : {
+            "Total" : "IB Diploma with a minimum 24 points",
+            "UE_literacy" : "Literature or language and literature (SL or HL) – IB Group 1, with English as the language",
+            "Numeracy" : "Any mathematics subject – IB Group 5"
+        }
+    },
+    "useful_new_zealand_school_subjects" : [
+        "Art History", 
+        "Classical Studies", 
+        "Drama",
+        "English",
+        "Geography",
+        "Health Education",
+        "History",
+        "Media Studies",
+        "Social Studies",
+        "Te Reo Māori",
+        "Te Reo Rangatira"],
+    "direct_entry_into_part_II" : {
+        "link" : "https://www.aut.ac.nz/study/study-options/law/courses/bachelor-of-laws#tab-100706-2",
+        "who_can_apply_for_direct_entry_into_part_II" : [
+            "The AUT Law School considers applications for direct entry to Part II of the LLB degree. Applicants will normally have: Successfully completed Part I of the law degree at another New Zealand law school; and Obtained a minimum of a B grade average in their first‑year law courses"
+        ]
+    },
+    "carrer_oppurutnities_overview" : {
+        "overview" : "AUT law graduates have established successful careers in a range of law firms, immigration consultancies and commercial establishments including Kensington Swan, Bell Gully, Buddle Findlay, Chapman Tripp, Meredith Connell, Langdon and Co Lawyers, Enterprise Law, Simpson Dowsett Mackie, Davies Law, Te Nahu Lovell & Co, Simpson Grierson, Kayes Fletcher Walker, Russell McVeagh and Wynyard Wood. As a lawyer you might practise in a wide range of legal areas including corporate law, commercial and intellectual property, family law, environmental law, criminal law, taxation and general practice.",
+        "roles" : [
+            "In-house lawyers in large New Zealand and multinational businesses and organisations",
+            "Patent attorneys",
+            "Policy advisors to central and local government",
+            "Senior management roles in business",
+            "Taxation practitioners in accountancy practices"
+        ],
+        "to_become_soliciter_and_barrister" : {
+            "overview" : "Graduates of AUT’s Bachelor of Laws are eligible to gain admission as barristers and solicitors of the High Court of New Zealand on completion of their Professional Legal Studies course. If you want to become a barrister and solicitor, you need to be admitted to the bar before you can call yourself a lawyer and practise law in New Zealand.",
+            "afer_completing_LLB" : [
+                "Complete the Professional Legal Studies Course",
+                "Obtain a certificate of completion from the New Zealand Council of Legal Education (NZCLE)",
+                "Obtain a certificate of character from the Law Society",
+                "Be admitted to the roll of barristers and solicitors of the High Court of New Zealand",
+                "Hold a current practising certificate issued by the Law Society."
+        ],
+        "Professional Legal Studies Course" : {
+            "The Institute of Professional Legal Studies_link" : "https://www.ipls.org.nz/",
+            "The College of Law (New Zealand)" : "https://www.collaw.ac.nz/"
+        }
+    }
+    }
+}
