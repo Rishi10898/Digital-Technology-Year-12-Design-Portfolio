@@ -1,1 +1,229 @@
-{"programme":"Bachelor of Commerce","field":"Commerce","location":"Palmerston North/Wellington/Auckland","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000}
+{
+    "programme":"Bachelor of Commerce",
+    "field":"Commerce",
+    "location":"Auckland campus, Distance and online Manawatū campus (Palmerston North)",
+    "fulltime_duration_years":3,
+    "points":360,
+    "level" : 7,
+    "domestic_fee_NZD":8000,
+    "bachelor_of_accountancy_website_link" : "https://www.massey.ac.nz/study/all-qualifications-and-degrees/bachelor-of-accountancy-UBACC/",
+    "bachelor_of_accountancy_overview" : [
+        "A BAcc is a good fit if you: know you would like to be an accountant",
+        "enjoy working in a team and meeting new people",
+        "would like a career with a new challenge every day.",
+        "Study a Bachelor of Accountancy – BAcc Keen to become a professional accountant? This specialised degree will lead you to an accountancy career. You can become a member of one of the professional accounting organisations.",
+        "What will you learn? The Bachelor of Accountancy will give you the skills needed to analyse accounting and business problems. You will gain a solid foundation in accounting and finance. You will also learn inter-personal and technical skills, knowledge and critical thinking skills. These are essential for success in today’s business environment.",
+        "Your study has a solid foundation of compulsory courses, but it also provides some flexibility to choose courses for yourself.",
+        "The BAcc degree will give you an understanding of the legal and regulatory environments. You'll learn to identify and evaluate ethical dilemmas and provide logical ways to resolve them. You’ll learn how best to communicate and use financial information to support business decisions.",
+        "You'll also learn the concepts and processes needed to protect and validate the integrity of accounting information.",
+        "Relevant study - Our lecturers are actively researching, bringing the most relevant developments in accounting theory and practice to your study. Massey is ranked third in Australasia and first in New Zealand for accounting research impact and productivity.",
+        "If you’d like to take accountancy as part of a broader business qualification, consider the Bachelor of Business (Accountancy) : - https://www.massey.ac.nz/study/all-qualifications-and-degrees/bachelor-of-business-UBBSS/accountancy-UBBSS1JACCN1/.",
+        "The 2020 Student Experience Survey results for this qualification found that 75% of students on this qualification were satisfied with the teaching they have received, 81% believed assessment tasks challenged students to learn, and 83% highlighted that the qualification has given them “confidence to learn independently”.",
+        "The 2020 Graduate Destination Survey results for this qualification found that 82% of graduates are in employment and 50% have continued in further study. The most common job title for graduated students was “Accountant”. Respondents indicated that 60% were earning above the New Zealand median national salary.",
+        "Between 2018 and 2021 the average number of students enrolled in the qualification was 735 (headcount). In the 2020 academic year, 73% of students in the first year continued their studies and across the whole qualification 81% of courses were successfully completed.",
+        "The QS World University Ranking by Subject ranks Massey in the top 250 universities worldwide in this subject area."
+    ],
+    "entry_requirements" : {
+        "link" : "https://www.massey.ac.nz/study/entry-requirements-to-study-at-massey/",
+        "NCEA" : {
+            "subjects" : "3 subjects at Level 3, made up of *14 credits in each of 3 approved subjects. : - https://www2.nzqa.govt.nz/ncea/understanding-secondary-quals/university-entrance/",
+            "UE_literacy" : "Ten credits at Level 2 or above, made up of 5 credits in reading and 5 credits in writing",
+            "numeracy" : "Ten credits at Level 1 or above, made up of: specified achievement standards available through a range of subjects, or a unit standards package of 3 numeracy unit standards (numbers 26623, 26626 and 26627 – all 3 required)."
+        },
+        "CIE" : {
+            "overview" : "You are eligible to be admitted to Massey if you have: a minimum of 120* points on the NZ CAIE Tariff at A or AS Level, which are broadly equivalent to approved subjects for NCEA, and a D grade or better in syllabuses from at least 3 different syllabus groups (excluding thinking skills)*.",
+            "UE_literacy" : "An 'E' grade or better in any 1 of: AS English Language, AS General English, AS Language and Literature in English, Literature in English.",
+            "numeracy" : "A 'D' grade or better in: IGCSE, or, GCSE mathematics."
+        },
+        "IB" : "You qualify for admission if you have been awarded the full International Baccalaureate (IB) Diploma (a minimum of 24 points)."
+    },
+    "rules_and_regulations_link" : "https://www.massey.ac.nz/about/university-calendar-and-regulations/qualification-regulations/bachelor-of-accountancy/",
+    "CA_overview" : [
+        "Becoming a Chartered Accountant",
+        "Chartered Accountants Australia and New Zealand (CA ANZ) Requirements",
+        "If you complete a Bachelor of Accountancy degree with the required subjects included as electives (for details refer to the eligibility criteria to join CA ANZ as a provisional member). After completing 3 years of practical experience and the CA Programme you will become a Chartered Accountant (CA). Alternatively, after 2 years of practical experience and a professional competence programme you could become an Associate Chartered Accountant (ACA).",
+        "CPA Australia Requirements",
+        "If you complete your BAcc degree with the required subjects included as electives (for details refer to the eligibility criteria to join CPA Australia as an Associate). After completing the CPA programme and practical experience you will become a CPA (Certified Practicing Accountant).",
+        "Association of Chartered Certified Accountants (ACCA) Requirements",
+        "On completion of your BAcc degree with the required subjects included as electives (for details refer to the eligibility criteria for exemptions from 9 ACCA modules). After completing the remaining 5 ACCA examinations, plus 3 years of practical experience and a professional ethics module, you will qualify as an ACCA member.",
+        "Chartered Institute of Management Accountants (CIMA) Requirements",
+        "If you complete your BAcc degree with the required subjects included as electives (for details refer to exemptions from 7 CIMA courses – all 5 certificates, one operational, and one management). After completing the remaining CIMA syllabus you become a CGMA (Chartered Global Management Accountant)."
+    ],
+    "structure_of_bachelor_of_accountancy" : {
+        "overview" : [
+            "If you study full-time, in your first year, you’ll take eight 15-credit courses, making a total of 120 credits.",
+            "If you wish to study over 2 semesters, you should aim for 60 credits per semester. You may be able to take some courses at summer school. Make sure you include courses that are prerequisites for the next level of courses you wish to study.",
+            "Typical pattern for the Bachelor of Accountancy",
+            "Core courses These courses are a compulsory part of your qualification.",
+            "Elective courses Follow your interests. Your qualification may have selection guidelines for elective courses.",
+            "Courses are each worth 15 credits"
+        ],
+        "year_1" : {
+            "110109" :  "Introductory Financial Accounting",
+            "110109_link" : "https://www.massey.ac.nz/study/courses/110109/",
+            "115111" : "Communication Theory and Practice",
+            "115111_link" : "https://www.massey.ac.nz/study/courses/115111/",
+            "115112" : "Accounting for Business",
+            "115112_link" : "https://www.massey.ac.nz/study/courses/115112/",
+            "115113" : "Economics of Business",
+            "115113_link" : "https://www.massey.ac.nz/study/courses/115113/",
+            "115114" : "Finance Fundamentals",
+            "115114_link" : "https://www.massey.ac.nz/study/courses/115114/",
+            "115115" : "Management in Context",
+            "115115_link" : "https://www.massey.ac.nz/study/courses/115115/",
+            "115116" : "Introduction to Marketing",
+            "115116_link" : "https://www.massey.ac.nz/study/courses/115116/",
+            "161101" : "Statistics for Business OR 161111 Applied Statistics",
+            "161101_link" : "https://www.massey.ac.nz/study/courses/161101/",
+            "161111_link" : "https://www.massey.ac.nz/study/courses/161111/"
+        },
+        "year_2" : {
+            "110209" : "Intermediate Financial Accounting",
+            "110209_link" : "https://www.massey.ac.nz/study/courses/110209/",
+            "110229" : "Management Accounting",
+            "110229_link" : "https://www.massey.ac.nz/study/courses/110229/",
+            "110249" : "Accounting Information Systems",
+            "110249_link" : "https://www.massey.ac.nz/study/courses/110249/",
+            "110279" : "Auditing",
+            "110279_link" : "https://www.massey.ac.nz/study/courses/110279/",
+            "110289" : "Taxation",
+            "110289_link" : "https://www.massey.ac.nz/study/courses/110289/",
+            "115211" : "Business Law",
+            "115211_link" : "https://www.massey.ac.nz/study/courses/115211/",
+            "125230" : "Business Finance",
+            "125230_link" : "https://www.massey.ac.nz/study/courses/125230/"
+        },
+        "year_3" : {
+            "110303" : "Integrative Accounting",
+            "110303_link" :"https://www.massey.ac.nz/study/courses/110303/",
+            "110309" : "Advanced Financial Accounting",
+            "110309_link" :"https://www.massey.ac.nz/study/courses/110309/",
+            "155203" : "Law of Business Organisations",
+            "155203_link" :"https://www.massey.ac.nz/study/courses/155203/",
+            "155210" : "Commercial Law",
+            "155210_link" :"https://www.massey.ac.nz/study/courses/155210/",
+            "110329" : "Advanced Management Accounting",
+            "110329_link" :"https://www.massey.ac.nz/study/courses/110329/"
+        }
+    },
+    "courses_and_specialisations" : [
+        "Key terms",
+        "Courses Each qualification has its own specific set of courses. Some universities call these papers. You enrol in courses after you get accepted into Massey.",
+        "Course code Each course is numbered using 6 digits. The fourth number shows the level of the course. For example, in course 219206, the fourth number is a 2, so it is a 200-level course (usually studied in the second year of full-time study).",
+        "Credits Each course is worth a number of credits. You combine courses (credits) to meet the total number of credits needed for your qualification.",
+        "Specialisations Some qualifications let you choose what subject you'd like to specialise in. Your major or endorsement is what you will take the majority of your courses in.",
+        "Credit summary",
+        "360 credits",
+        "Compulsory courses from Schedule A – 285 credits",
+        "Courses from Schedule B – 45 credits",
+        "Numeracy course from Schedule C – 15 credits",
+        "Elective from specified business subjects – 15 credits",
+        "Ensure that overall, you have: Not more than 135 credits at 100 level, At least 90 credits at 300 level",
+        "Course planning key",
+        "Prerequisites Courses that need to be completed before moving onto a course at the next level. For example, a lot of 200-level courses have 100-level prerequisite courses.",
+        "Corequisites Courses that must be completed at the same time as another course are known as corequisite courses.",
+        "Restrictions Some courses are restricted against each other because their content is similar. This means you can only choose one of the offered courses to study and credit to your qualification."
+    ],
+    "core_courses" : {
+        "schedule_A_core_courses_285_credits" : {
+            "110109" : "Introductory Financial Accounting",
+            "110109_link" : "https://www.massey.ac.nz/study/courses/introductory-financial-accounting-110109/",
+            "110209" : "Intermediate Financial Accounting",
+            "110209_link" : "https://www.massey.ac.nz/study/courses/intermediate-financial-accounting-110209/",
+            "110229" : "Management Accounting",
+            "110229_link" : "https://www.massey.ac.nz/study/courses/management-accounting-110229/",
+            "110249" : "Accounting Information Systems",
+            "110249_link" : "https://www.massey.ac.nz/study/courses/accounting-information-systems-110249/",
+            "110279" : "Auditing",
+            "110279_link" : "https://www.massey.ac.nz/study/courses/auditing-110279/",
+            "110289" : "Taxation",
+            "110289_link" : "https://www.massey.ac.nz/study/courses/taxation-110289/",
+            "110303" : "Integrative Accounting",
+            "110303_link" : "https://www.massey.ac.nz/study/courses/integrative-accounting-110303/",
+            "110309" : "Advanced Financial Accounting",
+            "110309_link" : "https://www.massey.ac.nz/study/courses/advanced-financial-accounting-110309/",
+            "110329" : "Advanced Management Accounting",
+            "110329_link" : "https://www.massey.ac.nz/study/courses/advanced-management-accounting-110329/",
+            "115111" : "Communication Theory and Practice",
+            "115111_link" : "https://www.massey.ac.nz/study/courses/communication-theory-and-practice-115111/",
+            "115112" : "Accounting for Business",
+            "115112_link" : "https://www.massey.ac.nz/study/courses/accounting-for-business-115112/",
+            "115113" : "Economics for Business",
+            "115113_link" : "https://www.massey.ac.nz/study/courses/economics-for-business-115113/",
+            "115114" : "Finance Fundamentals",
+            "115114_link" : "https://www.massey.ac.nz/study/courses/finance-fundamentals-115114/",
+            "115115" : "Management in Context",
+            "115115_link" : "https://www.massey.ac.nz/study/courses/management-in-context-115115/",
+            "115116" : "Introduction to Marketing",
+            "115116_link" : "https://www.massey.ac.nz/study/courses/introduction-to-marketing-115116/",
+            "115211" : "Business Law",
+            "115211_link" : "https://www.massey.ac.nz/study/courses/business-law-115211/",
+            "125230" : "Business Finance",
+            "125230_link" : "https://www.massey.ac.nz/study/courses/business-finance-125230/",
+            "155203" : "Law of Business Organisations",
+            "155203_link" : "https://www.massey.ac.nz/study/courses/law-of-business-organisations-155203/",
+            "155210" : "Commercial Law",
+            "155210_link" : "https://www.massey.ac.nz/study/courses/commercial-law-155210/"
+        },
+        "schedule_b_accountancy_and_finance_courses_45_credits" : {
+            "110304" : "Data Analytics for Accounting and Business",
+            "110304_link" : "https://www.massey.ac.nz/study/courses/data-analytics-for-accounting-and-business-110304/",
+            "110369" : "Forensic Accounting",
+            "110369_link" : "https://www.massey.ac.nz/study/courses/forensic-accounting-110369/",
+            "110379" : "Advanced Auditing",
+            "110379_link" : "https://www.massey.ac.nz/study/courses/advanced-auditing-110379/",
+            "110389" : "Advanced Taxation",
+            "110389_link" : "https://www.massey.ac.nz/study/courses/advanced-taxation-110389/",
+            "125320" : "International Finance",
+            "125320_link" : "https://www.massey.ac.nz/study/courses/international-finance-125320/",
+            "125330" : "Advanced Business Finance",
+            "125330_link" : "https://www.massey.ac.nz/study/courses/advanced-business-finance-125330/"
+        },
+        "schedule_c_numeracy_courses_15_credits" : {
+            "161101" : "Statistics for Business",
+            "161101_link" : "https://www.massey.ac.nz/study/courses/statistics-for-business-161101/",
+            "161111" : "Applied Statistics",
+            "161111_link" : "https://www.massey.ac.nz/study/courses/applied-statistics-161111/"
+        }
+        },
+    "fees_and_scholarships" : {
+        "fees_overview" : "Fees, student loans and free fees scheme Your tuition fees may be different depending on the courses you choose. Your exact fees will show once you have chosen your courses. There will also be some compulsory non-tuition fees and for some courses, there may also be charges for things such as study resources, software, trips and contact workshops.",
+        "estimate_fees_link" : "https://www.massey.ac.nz/study/fees-and-funding/tuition-fees-for-domestic-and-international-students/",
+        "others" : "https://www.massey.ac.nz/study/fees-and-funding/non-tuition-fees/",
+        "study_link" : {
+            "study_link" : "https://www.studylink.govt.nz/,",
+            "fees_free" : "https://www.feesfree.govt.nz/",
+            "student_portal_link" : "https://smsportal.massey.ac.nz/sitsvision/wrd/siw_lgn"
+        },
+        "scholarship_links" : {
+            "find_out_more" : "https://www.massey.ac.nz/study/scholarships-and-awards/",
+            "Allan Gibson Accountancy Scholarship" : "https://www.massey.ac.nz/study/scholarships-and-awards/allan-gibson-accountancy-scholarship/",
+            "Business Excellence Scholarship_link" : "https://www.massey.ac.nz/study/scholarships-and-awards/business-excellence-scholarship/",
+            "David Levene Foundation Bursaries_link" : "https://www.massey.ac.nz/study/scholarships-and-awards/david-levene-foundation-bursaries/",
+            "Drakeford Undergraduate Accountancy Scholarship_link" : "https://www.massey.ac.nz/study/scholarships-and-awards/drakeford-undergraduate-accountancy-scholarship/",
+            "He Oha Puiaki - Massey University Māori First Year Scholarship_link" : "https://www.massey.ac.nz/study/scholarships-and-awards/he-oha-puiaki-massey-university-m%C4%81ori-first-year-scholarship/",
+            "Massey University Undergraduate Excellence Scholarship_link" : "https://www.massey.ac.nz/study/scholarships-and-awards/massey-university-undergraduate-excellence-scholarship/",
+            "Massey University Undergraduate First Year Scholarship – School Leavers_link" : "https://www.massey.ac.nz/study/scholarships-and-awards/massey-university-undergraduate-first-year-scholarship-school-leavers/",
+            "Ted Delahunty Accountancy/Agribusiness Bursary_link" : "https://www.massey.ac.nz/study/scholarships-and-awards/ted-delahunty-accountancyagribusiness-bursary/",
+            "Ted Delahunty Accountancy Scholarship_link" : "https://www.massey.ac.nz/study/scholarships-and-awards/ted-delahunty-accountancy-scholarship/"
+        }
+    },
+    "carrers_and_opportunities" : {
+        "overview" : ["There are more employment and career opportunities in accounting than there are in many other areas of study. The management of financial information underpins all business activity.",
+        "With a Massey Bachelor of Accountancy, you are equipped for a diverse range of accountancy and financial roles in almost any industry, including:",
+        "chartered accounting firms - audit, tax, business services, or consulting",
+        "business - financial accounting, management accounting, or financial management",
+        "finance, banking and public sectors.",
+        "Our recent graduates have been employed by a range of companies, including the ‘big four’ international accounting and consulting firms. PricewaterhouseCoopers (PWC), KPMG, Deloitte, Ernst & Young, Fonterra,Toyota, New Zealand Post (business and industry), BNZ Bank (finance), Mid-Central District Health Board, Audit New Zealand (public sector)."
+    ],
+    "other" : {
+        "overview" : ["Boost your career even further:- Your Bachelor of Accountancy degree will allow you to join key professional bodies. You can then further develop your technical knowledge and professional skills through applied postgraduate learning and mentored practical experience."],
+        "links" : {
+            "CAANZ" : "https://www.charteredaccountantsanz.com/ - representing more than 120,000 members in New Zealand and around the world.",
+            "CPA_australia" : "https://www.cpaaustralia.com.au/ - the largest professional accounting body in Australia with membership around the globe.",
+            "CIMA" : "https://www.aicpa-cima.com/home -  a chartered management accountant is considered to be the premier management accounting qualification you can attain globally.",
+            "ACCA" : "https://www.accaglobal.com/an/en.html - supports 208,000 members and 503,000 students worldwide."
+        }
+    }
+    }
+}

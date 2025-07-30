@@ -1,1 +1,193 @@
-{"programme":"Bachelor of Arts","field":"Arts","location":"Palmerston North/Wellington/Auckland","fulltime_duration_years":3,"points":360,"domestic_fee_NZD":8000}
+{
+    "programme":"Bachelor of Arts",
+    "field":"Arts",
+    "location":"Palmerston North/Wellington/Auckland",
+    "fulltime_duration_years":3,
+    "level" : 7,
+    "points":360,
+    "domestic_fee_NZD":8000,
+    "bachelor_of_arts_overview" : [
+        "Study a Bachelor of Arts – BA",
+        "A Massey Bachelor of Arts is your passport to discovering, questioning and understanding the big issues and big ideas. Discover new ways of making sense of life in the 21st century. You’ll explore humanity’s richness and diversity, its conflicts and cataclysms, its triumphs of art and knowledge.",
+        "With 26 majors to choose among, there’s something for everyone. You can also select your major in your second year, so there’s plenty of time to make a choice.",
+        "What you – and employers – are looking for - Give you the transferable skills demanded by employers",
+        "Position you for any career path you choose",
+        "Be intellectually stimulating",
+        "Offer you a rich diversity of subjects",
+        "Complement your major(s) and/or minor(s)",
+        "Help you make sense of and engage with the wider world.",
+        "Discover a whole new world",
+        "You’ll be introduced to new ways of making sense of the world. Your assumptions and ideas will be challenged. Your ability to make informed choices, evaluate evidence and construct reasoned arguments will be strengthened. And you will use your intellect and imagination to generate imaginative solutions to complex local and global challenges.",
+        "Shape your BA to fit your lifestyle -  If studying on campus is not an option for you, study via distance. Your study will fit with your lifestyle and your commitments. Whatever your circumstances, we’ve got you covered.",
+        "Further study - Once you have completed your BA you can move on to further study: join us for a postgraduate diploma, an honours year, a master’s degree or a PhD in your chosen subject."
+    ],
+    "entry_requirements" : {
+        "link" : "https://www.massey.ac.nz/study/entry-requirements-to-study-at-massey/",
+        "NCEA" : {
+            "subjects" : "3 subjects at Level 3, made up of *14 credits in each of 3 approved subjects. : - https://www2.nzqa.govt.nz/ncea/understanding-secondary-quals/university-entrance/",
+            "UE_literacy" : "Ten credits at Level 2 or above, made up of 5 credits in reading and 5 credits in writing",
+            "numeracy" : "Ten credits at Level 1 or above, made up of: specified achievement standards available through a range of subjects, or a unit standards package of 3 numeracy unit standards (numbers 26623, 26626 and 26627 – all 3 required)."
+        },
+        "CIE" : {
+            "overview" : "You are eligible to be admitted to Massey if you have: a minimum of 120* points on the NZ CAIE Tariff at A or AS Level, which are broadly equivalent to approved subjects for NCEA, and a D grade or better in syllabuses from at least 3 different syllabus groups (excluding thinking skills)*.",
+            "UE_literacy" : "An 'E' grade or better in any 1 of: AS English Language, AS General English, AS Language and Literature in English, Literature in English.",
+            "numeracy" : "A 'D' grade or better in: IGCSE, or, GCSE mathematics."
+        },
+        "IB" : "You qualify for admission if you have been awarded the full International Baccalaureate (IB) Diploma (a minimum of 24 points)."
+    },
+    "rules_and_regulations_link" : "https://www.massey.ac.nz/about/university-calendar-and-regulations/qualification-regulations/bachelor-of-accountancy/",
+    "structure_of_bachelor_of_arts" : [
+        "If you study full-time, you’ll take 120 credits per year or 60 credits per semester.",
+        "If you study part-time you will usually take at least 3 courses (45 credits) each year. This can be spread across Semester One, Semester Two and Summer School.",
+        "Core courses 230110, 230111 and 230112 must be completed within the first 120 credits, and 230210 within the first 240 credits of study towards the degree.",
+        "You need to pass 5 courses at 300-level for your BA. One of these (230310) is in the compulsory core and 3 are required for your major. If you are not taking a double major or a minor, you will need to take one 300-level elective course to meet this requirement.",
+        "Not all courses are available in each semester.",
+        "Core courses These courses are a compulsory part of your qualification.",
+        "Major courses Choose from a selection of courses appropriate for your specialisation.",
+        "Minor courses You may choose to pursue study in a second subject area from the BA, BBus or BSc.",
+        "Elective courses Follow your interests. Your qualification may have selection guidelines for elec"
+    ],
+    "year_1" : {
+        "230110" :  "Tūrangawaewae: Identity and Belonging",
+        "230110_link" : "https://www.massey.ac.nz/study/courses/230110/",
+        "230111" : "Tū Kupu: Writing and Inquiry",
+        "230111_link" : "https://www.massey.ac.nz/study/courses/230111/",
+        "230112" : "Tū Arohae: Critical Thinking",
+        "230112_link" : "https://www.massey.ac.nz/study/courses/230112/"
+
+    },
+    "year_2" : {
+        "230210" : "Tū Rangaranga: Global Encounters",
+        "230210_link" : "https://www.massey.ac.nz/study/courses/230210/"
+    },
+    "year_3" : {
+        "230310" : "Tū Tira Mai: Practising Engagement",
+        "230310_link" : "https://www.massey.ac.nz/study/courses/230310/"
+    },
+    "courses_and_specialisations" : {
+        "overview" : [
+            "Key terms",
+            "Courses Each qualification has its own specific set of courses. Some universities call these papers. You enrol in courses after you get accepted into Massey.",
+            "Course code Each course is numbered using 6 digits. The fourth number shows the level of the course. For example, in course 219206, the fourth number is a 2, so it is a 200-level course (usually studied in the second year of full-time study).",
+            "Credits Each course is worth a number of credits. You combine courses (credits) to meet the total number of credits needed for your qualification.",
+            "Specialisations Some qualifications let you choose what subject you'd like to specialise in. Your major or endorsement is what you will take the majority of your courses in.",
+            "Credit summary",
+            "360 credits",
+            "Core courses – 75 credits",
+            "Major courses – 120 credits",
+            "Electives from the Schedule – 45 credits",
+            "Other electives – 120 credits",
+            "Ensure that overall, you have:",
+            "Not more than 165 credits at 100 level",
+            "At least 75 credits at 300 level",
+            "All majors require 120 credits except:",
+            "Business Psychology (195 credits)",
+            "Mathematics (135 credits)",
+            "You could replace electives with a second BA major, or some electives with a minor from the Bachelor of Arts, the Bachelor of Business, or the Bachelor of Science.",
+            "Course planning key",
+            "Prerequisites Courses that need to be completed before moving onto a course at the next level. For example, a lot of 200-level courses have 100-level prerequisite courses.",
+            "Corequisites Courses that must be completed at the same time as another course are known as corequisite courses.",
+            "Restrictions Some courses are restricted against each other because their content is similar. This means you can only choose one of the offered courses to study and credit to your qualification."
+        ],
+        "schedule_A_core_courses" : {
+            "230110" : "Tūrangawaewae: Identity & Belonging in Aotearoa NZ",
+            "230110_link" : "https://www.massey.ac.nz/study/courses/turangawaewae-identity-belonging-in-aotearoa-nz-230110/",
+            "230111" : "Tū Kupu: Writing and Inquiry",
+            "230111_link" : "https://www.massey.ac.nz/study/courses/tu-kupu-writing-and-inquiry-230111/",
+            "230112" : "Tū Arohae: Critical Thinking",
+            "230112_link" : "https://www.massey.ac.nz/study/courses/tu-arohae-critical-thinking-230112/",
+            "230210" : "Tū Rangaranga: Global Encounters",
+            "230210_link" : "https://www.massey.ac.nz/study/courses/tu-rangaranga-global-encounters-230210/",
+            "230310" : "Tū Tira Mai: Practising Engagement",
+            "230310_link" : "https://www.massey.ac.nz/study/courses/tu-tira-mai-practising-engagement-230310/"
+        },
+        "schedule_b_specialisations" : ["Go to this link for viewing specialisations for your desired campus options and more further details. :- https://www.massey.ac.nz/study/all-qualifications-and-degrees/bachelor-of-arts-UBART/"],
+        "schedule_c_minors" : {
+            "overview" : [
+                "Minors",
+                "Completing a minor is optional.  Minors increase the breadth of your degree and give you extra knowledge, attributes and capabilities. A minor must be in a different subject from your major.",
+                "You may choose a minor from the Bachelor of Arts, Bachelor of Business or Bachelor of Science. If the minor is from another degree the regulations of that qualification will apply.",
+                "Bachelor of Arts minors",
+                "All BA majors are available as minors (except Business Psychology). The following are also available as minor-only topics. See the BA regulations (https://www.massey.ac.nz/about/university-calendar-and-regulations/qualification-regulations/bachelor-of-arts/) for requirements.",
+                "Development Studies",
+                "Examine the processes that are transforming people's lives throughout the world.",
+                "Emergency Management",
+                "Get useful career skills in disaster prevention and management that can be applied in a range of fields.",
+                "French - Gain knowledge of French language and culture in an ever-growing multilingual global economy.",
+                "Indigenous Psychologies - Indigenous psychologies is a movement, perspective and approach that examines how the worldviews specific to particular communities influence the thoughts and behaviours of group members.",
+                "Planning Studies - Contribute to the design of better communities and sustainable use of resources.",
+                "132221 Planning Studies is not offered in 2024. An approved alternative course is 132212 (https://www.massey.ac.nz/study/courses/professional-practice-i-132212/) Professional Practice I. You can add this course using the Special permission request in your portal : - https://www.massey.ac.nz/study/admission-and-enrolment/waiting-lists-and-special-permission-to-enrol-in-courses/. ",
+                "Disability and Rehabilitation Studies -  Get a broad general knowledge of the purpose, practice and philosophy of rehabilitation.",
+                "Theatre Studies - This exciting applied theatre and performing arts course combines theatre for social change with real-world communication techniques.",
+                "More on minors : - https://www.massey.ac.nz/study/find-a-subject-course-or-qualification/minor-subjects/",
+                "Chinese", "Classical Studies", "Creative Writing", "Defence Studies", "Development Studies", "Disability and Rehabilitation Studies", "Economics", "Education", "Educational Psychology", "Emergency Management", "English", "Environmental Studies", "French", "Geography", "History", "Indigenous Psychologies", "Japanese", "Linguistics", "Māori Knowledge", "Mathematics", "Media Studies", "Philosophy", "Politics and International Relations", "Psychology", "Security Studies", "Social Anthropology", "Sociology", "Spanish", "Statistics", "Te Reo Māori", "Theatre Studies"
+            ]
+        },
+        "schedule_c_other_subject_and_courses" : {
+            "emergency_management" : {
+                "130301" : "Incident Command Systems",
+                "130301_link" : "https://www.massey.ac.nz/study/courses/incident-command-systems-130301/"
+            },
+            "english_for_speakers_of_other_languages" : {
+                "192101" : "English for Academic Purposes for Speakers of Other Languages",
+                "192101_link" : "https://www.massey.ac.nz/study/courses/english-for-academic-purposes-for-speakers-of-other-languages-192101/",
+                "192102" : "Academic Writing in English for Speakers of Other Languages",
+                "192102_link" : "https://www.massey.ac.nz/study/courses/academic-writing-in-english-for-speakers-of-other-languages-192102/"
+            },
+            "humanities_and_social_sciences" : {
+                "150103" : "Nau mai e noho: Engaging with Māori",
+                "150103_link" : "https://www.massey.ac.nz/study/courses/nau-mai-e-noho-engaging-with-maori-150103/",
+                "230102" : "Pacific Peoples in New Zealand",
+                "230102_link" : "https://www.massey.ac.nz/study/courses/pacific-peoples-in-new-zealand-230102/"
+            },
+            "defence_and_security_studies" : {
+                "294382" :  "Advanced Biosecurity",
+                "294382_link" : "https://www.massey.ac.nz/study/courses/advanced-biosecurity-294382/"
+            },
+            "other" : {
+                "230191" : "Special Topic Humanities & Social Sciences",
+                "230191_link" : "https://www.massey.ac.nz/study/courses/special-topic-humanities-social-sciences-230191/"
+            }
+        }
+
+    },
+    "fees_and_scholarships" : {
+        "fees_overview" : "Fees, student loans and free fees scheme Your tuition fees may be different depending on the courses you choose. Your exact fees will show once you have chosen your courses. There will also be some compulsory non-tuition fees and for some courses, there may also be charges for things such as study resources, software, trips and contact workshops.",
+        "estimate_fees_link" : "https://www.massey.ac.nz/study/fees-and-funding/tuition-fees-for-domestic-and-international-students/",
+        "others" : "https://www.massey.ac.nz/study/fees-and-funding/non-tuition-fees/",
+        "study_link" : {
+            "study_link" : "https://www.studylink.govt.nz/,",
+            "fees_free" : "https://www.feesfree.govt.nz/",
+            "student_portal_link" : "https://smsportal.massey.ac.nz/sitsvision/wrd/siw_lgn"
+        },
+        "scholarship_links" : {
+            "find_out_more" : "https://www.massey.ac.nz/study/scholarships-and-awards/",
+            "Allan Gibson Accountancy Scholarship" : "https://www.massey.ac.nz/study/scholarships-and-awards/allan-gibson-accountancy-scholarship/",
+            "Business Excellence Scholarship_link" : "https://www.massey.ac.nz/study/scholarships-and-awards/business-excellence-scholarship/",
+            "David Levene Foundation Bursaries_link" : "https://www.massey.ac.nz/study/scholarships-and-awards/david-levene-foundation-bursaries/",
+            "Drakeford Undergraduate Accountancy Scholarship_link" : "https://www.massey.ac.nz/study/scholarships-and-awards/drakeford-undergraduate-accountancy-scholarship/",
+            "He Oha Puiaki - Massey University Māori First Year Scholarship_link" : "https://www.massey.ac.nz/study/scholarships-and-awards/he-oha-puiaki-massey-university-m%C4%81ori-first-year-scholarship/",
+            "Massey University Undergraduate Excellence Scholarship_link" : "https://www.massey.ac.nz/study/scholarships-and-awards/massey-university-undergraduate-excellence-scholarship/",
+            "Massey University Undergraduate First Year Scholarship – School Leavers_link" : "https://www.massey.ac.nz/study/scholarships-and-awards/massey-university-undergraduate-first-year-scholarship-school-leavers/",
+            "Ted Delahunty Accountancy/Agribusiness Bursary_link" : "https://www.massey.ac.nz/study/scholarships-and-awards/ted-delahunty-accountancyagribusiness-bursary/",
+            "Ted Delahunty Accountancy Scholarship_link" : "https://www.massey.ac.nz/study/scholarships-and-awards/ted-delahunty-accountancy-scholarship/"
+        }
+    },
+    "carrers_and_opportunities" : [
+        "The nature of work is rapidly changing, and our research with employers tells us that the BA is highly relevant to today’s business environment. Transferable skills such as problem solving, critical thinking and communication, which are at the core of the BA, will enable you to thrive in today’s job market.",
+        "Studying a BA at Massey will ensure you develop these skills and make you ready for the jobs of the future.",
+        "Our research tells us that our BA graduates work right across the public and private sectors. We have graduates working in:",
+        "IT and other tech sectors",
+        "education and training",
+        "health care and social assistance",
+        "public administration and government services",
+        "information, media and telecommunications",
+        "financial and insurance services",
+        "arts, design and recreation",
+        "defence",
+        "Employers say: “The BA prepares people for the future and the future labour market.”",
+        "“A BA provides graduates who have the skills in information analysis, writing and thinking that are vital to business in the modern age.”",
+        "“A BA teaches broad thinking and research abilities. It leads to articulate workers who are able to think for themselves.”",
+        "“Knowledge is moving and changing so quickly, and we need people who are critical thinkers and multi-taskers. I see these attributes more readily in a BA graduate as opposed to a more specialist degree.”"
+    ]
+}
