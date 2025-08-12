@@ -6,6 +6,7 @@
     "level" : "7",
     "points":360,
     "domestic_fee_NZD":8000,
+    "course_planner" : "https://course-planner.massey.ac.nz/?qualification=UBART",
     "bachelor_of_commercial_music_website_link" : "https://www.massey.ac.nz/study/all-qualifications-and-degrees/bachelor-of-commercial-music-UBCMS/",
     "bachelor_of_commercial_music_overview" : [
         "In the Bachelor of Commercial Music, you will: think critically about the music industry and where you want to position yourself work collaboratively on a wide range of music events and experiences become proficient with industry-standard production tools.",

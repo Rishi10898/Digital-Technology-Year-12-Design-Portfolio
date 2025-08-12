@@ -1,0 +1,86 @@
+{
+    "programme":"Bachelor of Information Sciences",
+    "field":"computer",
+    "location":"Palmerston North/Wellington/Auckland",
+    "fulltime_duration_years":3,
+    "level" : "7",
+    "points":360,
+    "domestic_fee_NZD":8000,
+    "course_planner" : "https://course-planner.massey.ac.nz/?qualification=UBART",
+    "bachelor_of_information_sciences_website_link" : "https://www.massey.ac.nz/study/all-qualifications-and-degrees/bachelor-of-information-sciences-UBINS/",
+    "bachelor_of_information_sciences_overview" : [
+        "Study a Bachelor of Information Sciences – BInfSc",
+        "Flexible and unique study options -  Massey is the only university in New Zealand to offer 5 ICT-related majors in the same degree. This allows you to mix and match courses to suit your strengths and interests. Enjoy smaller classes with individual attention from lecturers. Experience the first-year courses and still be able to change your major at the start of the second year. Include a double major or a minor (in any subject) or New Zealand’s only minor in Games Programming.",
+        "Generous cross credit system - Massey transfers credits from a wide range of previous study. If you have a previous diploma in any area of ICT, it is highly likely that you will be awarded credits towards your BInfSc.",
+        "Applied and technical knowledge - Massey teaches students the skills and knowledge needed to succeed in the software industry. Topics include:",
+        "mobile applications, graphics and games programming, networks and security, web development and internet programming, artificial intelligence, machine learning and data wrangling.",
+        "Massey is the only university in New Zealand specialising in the C and C++ programming languages that are highly sought after by employers. You’ll also learn Java, Python, SQL and other languages.",
+        "Join the real world of software development - Massey has close ties with the innovative and rapidly expanding software companies based in North Auckland. These companies offer opportunities for internships, industry projects, holiday work and possible employment offers. Students are also involved in creating websites and applications for charities and voluntary organisations.",
+        "Further study - Once you graduate you can move on to advanced study in the Postgraduate Diploma in Information Sciences (1 year of 120 credits in taught courses) or the Master of Information Sciences (180 credits including 120 credits of taught courses and a major professional project)."
+    ],
+    "fees_and_scholarships" : {
+        "fees_overview" : "Fees, student loans and free fees scheme Your tuition fees may be different depending on the courses you choose. Your exact fees will show once you have chosen your courses. There will also be some compulsory non-tuition fees and for some courses, there may also be charges for things such as study resources, software, trips and contact workshops.",
+        "estimate_fees_link" : "https://www.massey.ac.nz/study/fees-and-funding/tuition-fees-for-domestic-and-international-students/",
+        "others" : "https://www.massey.ac.nz/study/fees-and-funding/non-tuition-fees/",
+        "study_link" : {
+            "study_link" : "https://www.studylink.govt.nz/,",
+            "fees_free" : "https://www.feesfree.govt.nz/",
+            "student_portal_link" : "https://smsportal.massey.ac.nz/sitsvision/wrd/siw_lgn"
+        }
+    },
+    "entry_requirements" : {
+        "link" : "https://www.massey.ac.nz/study/entry-requirements-to-study-at-massey/",
+        "specific_requirements" : "However for the Bachelor of Commercial Music (Music Practice) you must register for an audition. You should apply for entry to this degree before registering for your audition and you will be assessed for selection into the qualification. We also recommend you join us for a consultation if you’re applying for Music Technology or Music Industry, to make sure it’s right for you. https://creative.massey.ac.nz/apply/auditions-and-consultations",
+        "NCEA" : {
+            "subjects" : "3 subjects at Level 3, made up of *14 credits in each of 3 approved subjects. : - https://www2.nzqa.govt.nz/ncea/understanding-secondary-quals/university-entrance/",
+            "UE_literacy" : "Ten credits at Level 2 or above, made up of 5 credits in reading and 5 credits in writing",
+            "numeracy" : "Ten credits at Level 1 or above, made up of: specified achievement standards available through a range of subjects, or a unit standards package of 3 numeracy unit standards (numbers 26623, 26626 and 26627 – all 3 required)."
+        },
+        "CIE" : {
+            "overview" : "You are eligible to be admitted to Massey if you have: a minimum of 120* points on the NZ CAIE Tariff at A or AS Level, which are broadly equivalent to approved subjects for NCEA, and a D grade or better in syllabuses from at least 3 different syllabus groups (excluding thinking skills)*.",
+            "UE_literacy" : "An 'E' grade or better in any 1 of: AS English Language, AS General English, AS Language and Literature in English, Literature in English.",
+            "numeracy" : "A 'D' grade or better in: IGCSE, or, GCSE mathematics."
+        },
+        "IB" : "You qualify for admission if you have been awarded the full International Baccalaureate (IB) Diploma (a minimum of 24 points)."
+    },
+    "rules_and_regulations_link" : "https://www.massey.ac.nz/about/university-calendar-and-regulations/qualification-regulations/bachelor-of-accountancy/",
+    "structure_of_bachelor_of_information_sciences" : {
+        "overview" : [
+            "First year for a full-time student usually consists of 8 courses. Take electives** to get the total number of courses to 8.  Make sure you include courses that are prerequisites for the next level of courses you wish to study.  You can change your major up until the start of your second year and it is a good idea to keep your options open by taking courses such that you are ready to move on to several different majors. In the first year of study, you should take the following courses:",
+            "https://www.massey.ac.nz/study/courses/159101/ - 159101 Applied Programming",
+            "Statistics course - 161111 (https://www.massey.ac.nz/study/courses/161111/) Applied Statistics or 297101 (http://www.massey.ac.nz/study/courses/297101/) Statistical Data Science (297101 is recommended for Computer Science, Data Science, Software Engineering)",
+            "247112 (https://www.massey.ac.nz/study/courses/247112/) Science and Sustainability for ICT (or 247113) https://www.massey.ac.nz/study/courses/247113/",
+            "158100 (https://www.massey.ac.nz/study/courses/158100/) Information Technology Principles (required for Information Technology or Information Systems)* or an elective**",
+            "158120 (https://www.massey.ac.nz/study/courses/158120/) Web-based IT Fundamentals (required for Information Technology or Information Systems)* or an elective**",
+            "159102 (https://www.massey.ac.nz/study/courses/159102/) Computer Science and Programming (required for Computer Science, Data Science, Software Engineering)* or an elective**",
+            "Mathematics course - 160105 (https://www.massey.ac.nz/study/courses/160105/) or 160102 (https://www.massey.ac.nz/study/courses/160102) or 160101 (https://www.massey.ac.nz/study/courses/160101/) (required for Computer Science, Data Science, Software Engineering)* or an elective**",
+            "An elective course from any subject**",
+            "* Ensure that you have selected the correct courses for your major: Computer Science, Data Science and Software Engineering require 159101 (https://www.massey.ac.nz/study/courses/159101/), 159102 (https://www.massey.ac.nz/study/courses/159102/), and a maths course. Information Technology and Information Systems require 158100 and 158120 but do not require the second programming course or the maths course.",
+            "** Elective courses: Any course from any subject (including the courses listed above). Some elective courses may be available in Summer School. If you are interested in taking a minor subject there may be required 100-level courses for that minor.",
+            "In the second year, you must take at least four 200-level courses for each major. In the third year, you must take at least four 300-level courses for the major and one 300-level course for the degree. Double majors or minors will require additional courses.",
+            "Typical pattern for the Bachelor of Information Sciences - Core courses These courses are a compulsory part of your qualification.",
+            "Major courses Choose from a selection of courses appropriate for your specialisation.",
+            "Elective courses Follow your interests. Your qualification may have selection guidelines for elective courses."
+        ],
+        "year_1" : {
+            "159101" : "Applied Programming",
+            "159101_link" : "https://www.massey.ac.nz/study/courses/159101/",
+            "161111" : "Applied Statistics or 297101 (http://www.massey.ac.nz/study/courses/297101/) Statistical Data Science",
+            "161111_link" : "https://www.massey.ac.nz/study/courses/161111/",
+            "247112" : "Science and Sustainability for ICT",
+            "247112_link" : "https://www.massey.ac.nz/study/courses/247112/",
+            "158100" : "Information Technology Principles or Elective",
+            "158100_link" : "https://www.massey.ac.nz/study/courses/158100/",
+            "158120" : "Web-based IT Fundamentals or Elective",
+            "158120_link" : "https://www.massey.ac.nz/study/courses/158120/",
+            "159102" : "Computer Science and Programming",
+            "159102_link" : "https://www.massey.ac.nz/study/courses/159102/",
+            "160101" : "Calculus or 160102 (https://www.massey.ac.nz/study/courses/160102/) Algebra or 160105 (https://www.massey.ac.nz/study/courses/160105/) Methods of Mathematics or Elective",
+            "160101_link" : "https://www.massey.ac.nz/study/courses/160101/"
+        }
+    },
+    "courses_and_specialisations" : {
+        
+    }
+
+}

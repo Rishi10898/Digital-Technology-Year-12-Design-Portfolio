@@ -6,6 +6,7 @@
     "level" : 7,
     "points":360,
     "domestic_fee_NZD":8000,
+    "course_planner" : "https://course-planner.massey.ac.nz/?qualification=UBART",
     "bachelor_of_arts_overview" : [
         "Study a Bachelor of Arts – BA",
         "A Massey Bachelor of Arts is your passport to discovering, questioning and understanding the big issues and big ideas. Discover new ways of making sense of life in the 21st century. You’ll explore humanity’s richness and diversity, its conflicts and cataclysms, its triumphs of art and knowledge.",

@@ -6,6 +6,7 @@
     "points":360,
     "level" : 7,
     "domestic_fee_NZD":8000,
+    "course_planner" : "https://course-planner.massey.ac.nz/?qualification=UBART",
     "bachelor_of_accountancy_website_link" : "https://www.massey.ac.nz/study/all-qualifications-and-degrees/bachelor-of-accountancy-UBACC/",
     "bachelor_of_accountancy_overview" : [
         "A BAcc is a good fit if you: know you would like to be an accountant",
