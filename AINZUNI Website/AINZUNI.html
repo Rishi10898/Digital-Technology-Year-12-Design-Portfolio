@@ -3,13 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>NZ Universities</title>
-<!--
-    CSS styles for page layout and appearance:
-    - Sets background color and font for body
-    - Styles header background and padding
-    - Ensures full height and removes default margins/padding
-    - Uses flexbox for vertical layout and sticky footer
--->
+<!-- CSS styles for page layout and appearance -->
 <style>
     body {
         background-color:#77bbc6; 
@@ -34,45 +28,41 @@
     }
 </style>
 </head>
-<!--
-    Header section:
-    - Contains logo (linked to homepage)
-    - Navigation bar with buttons for different pages
-    - Uses flexbox for layout
--->
+<!-- Hamburger button -->
+<button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
+<!-- Menu content -->
+<div id="menu" class="menu-content">
+  <a href="About Me.html"><button>About</button></a>
+  <a href="Contact Me.html"><button>Contact</button></a>
+  <a href="NZ Universities.html"><button>NZ Universities Info</button></a>
+</div>
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.style.width = (menu.style.width === "250px") ? "0" : "250px";
+}
+</script>
+<!-- Header section with logo and navigation buttons -->
 <header>
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0;">
-        <a href="Website.Digitech.html">
-        <img src="C:\Users\Rishikesh\Downloads\AINZUNI 2.png" alt="AINZUNI Logo" style="display:block; margin-left:0; width:150px;">
-        </a>
-        <nav style="display: flex; gap: 20px;">
-                <a href="About Me.html"><button style="font-family:Arial, Helvetica, sans-serif; background-color: #1874ca; color: white;">About</button></a>
-                <a href="Contact Me.html"><button style="font-family:sans-serif; background-color: #1874ca; color: rgb(251, 251, 251);">Contact</button></a>
-                <a href="AINZUNI.html"><button style="font-family:Arial, Helvetica, sans-serif; background-color: #1874ca; color: white;">AINZUNI</button></a>
-                <a href="NZ Universities.html"><button style="font-family:Arial, Helvetica, sans-serif; background-color: #1874ca; color: white;">NZ universities Bachelor Degree Information links</button></a>
-        </nav>
-    </div>
+</div>
+    <!-- Logo linked to homepage -->
+    <a href="Website Digitech.html"></a>
+    <img src="C:\Users\Rishikesh\Downloads\AINZUNI 2.png" alt="AINZUNI Logo" style="display:block; margin-left:0; width:150px;">
+    </a>
+</div>
 </header>
-<!--
-    Main content section:
-    - Title and description about AINZUNI project
-    - Displays project logo
-    - Explains purpose and scope of the website
--->
+
+<!-- Main content: project title, description, and logo -->
 <body>
+    <!-- Project title -->
     <p style="font-size: 1.2em; font-weight: bold;">AINZUNI</p>
+    <!-- Project description -->
     <p style="font-size: 1.2em; font-weight: bold;">Stay Tuned for AINZUNI: Future University Insights and Information.</p>
+    <!-- Project logo image -->
     <img src="C:\Users\Rishikesh\Downloads\Rishikesh\Digitech\Digital-Technology-Year-12-Design-Portfolio\Logo AINZUNI.jpg" alt="AINZUNI Logo" style="display:block; margin:auto; width:400px;">
-    <p>This website is a part of my digital outcome, which is a product of my School Project.
-    This is an AI/ML model that I intend to make and integrate with this website named “AINZUNI”. AINZUNI stands for Artificial Intelligence-New Zealand-Universities. It helps student users who are living in New Zealand or plan to study Undergraduate degrees in NZ universities. Students can choose their most suitable university and plan by comparing all 8 universities in NZ. It covers specific fields of study like Engineering, Science, Medicine (Doctor), Arts, Law, Music, and Commerce.
-    Note:- I will first create an MVP of my project to fulfill the user’s needs. I have time restraints. The desired final outcome will not be able to be made in the future. However, I will do my best to fulfill the needs. I will do this even though the deadlines cross.
-    </p>
 </body>
-<!--
-    Footer section:
-    - Displays copyright
-    - Styled with dark background and centered text
--->
+
+<!-- Footer section: copyright notice -->
 <footer style="background-color: #333; color: #fff; text-align: center; padding: 15px; margin-top: 30px;">
 &copy; 2025 AINZUNI. All rights reserved.
 </footer> 
