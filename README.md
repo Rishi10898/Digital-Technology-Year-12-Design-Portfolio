@@ -1,0 +1,4 @@
+This website is a part of my digital outcome, which is a product of my School Project. This is an AI/ML model that I intend to make and integrate with this website named “AINZUNI”. 
+AINZUNI stands for Artificial Intelligence-New Zealand-Universities. It helps student users who are living in New Zealand or plan to study Undergraduate degrees in NZ universities. 
+Students can choose their most suitable university and plan by comparing all 8 universities in NZ. It covers specific fields of study like Engineering, Science, Medicine (Doctor), Arts, Law, Music, and Commerce. 
+Note:- I will first create an MVP of my project to fulfill the user’s needs. I have time restraints. The desired final outcome will not be able to be made in the future. However, I will do my best to fulfill the needs. I will do this even though the deadlines cross.
