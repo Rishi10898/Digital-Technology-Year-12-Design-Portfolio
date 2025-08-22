@@ -1,69 +1,201 @@
 <!DOCTYPE html>
-<!-- Declares the document type as HTML5 -->
-
+<!-- Defines this document as HTML5 -->
 <html lang="en">
+<!-- Start of HTML document, language set to English -->
+
 <head>
-    <meta charset="UTF-8">
-    <title>Contact Me</title>
-    <!-- Sets character encoding and page title -->
-
-<style>
-    /* Styles for page background, font, header, layout, and main content area */
+  <!-- Head section: contains metadata, title, and styles -->
+  <meta charset="UTF-8">
+  <!-- Sets character encoding to UTF-8 for international characters -->
+  
+  <title>About Me</title>
+  <!-- Browser tab title -->
+  
+  <style>
+    /* === Base layout and font === */
     body {
-        background-color:#77bbc6; 
-        font-family: 'Georgia', serif; 
+      background-color: #77bbc6;               /* Light teal background */
+      font-family: 'Georgia', serif;           /* Serif font for academic style */
+      margin: 0;                               /* Remove default browser margin */
+      padding: 0;                              /* Remove default padding */
+      min-height: 100vh;                       /* Full viewport height */
+      display: flex;                           /* Use flexbox for vertical layout */
+      flex-direction: column;                 /* Stack header, main, footer vertically */
     }
+
+    /* === Header styling === */
     header {
-        background-color: #6ab5c1 ;
-        padding: 20px 0;
+     background-color: #6ab5c1;
+     padding: 1px 10px; /* 10px top/bottom, 20px left/right */
     }
-    html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    body {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
+
+    /* === Main content area === */
     main {
-        flex: 1;
+      flex: 1;                                 /* Expand to fill available space */
+      padding: 20px;                           /* Space around main content */
+      text-align: center;                      /* Center content horizontally */
     }
-</style>
+
+    /* === Footer styling === */
+    footer {
+      background-color: #333;                  /* Dark gray background */
+      color: #fff;                             /* White text */
+      text-align: center;                      /* Centered text */
+      padding: 15px;                           /* Space inside footer */
+      margin-top: auto;                        /* Push footer to bottom */
+    }
+
+    /* === Logo in header === */
+    .logo {
+      display: block;                          /* Block-level for layout */
+      margin-left: 0;                          /* No left margin */
+      top: 100px;                               /* Distance from top */
+      border: none;                            /* No border */
+      border-radius: 6px;                      /* Rounded corners */
+      width: 100px;                            /* Fixed width for consistency */
+    }
+
+    /* === Centered main image === */
+    .center-image {
+      display: block;                          /* Block element */
+      margin: 20px auto;                       /* 20px top/bottom, centered horizontally */
+      width: 400px;                            /* Fixed width */
+    }
+
+    /* === Hamburger Menu Button === */
+    .menu-btn {
+      position: fixed;                         /* Stays on screen when scrolling */
+      top: 1px;                               /* Distance from top */
+      left: 1px;                              /* Distance from left */
+      font-size: 20px;                         /* Big hamburger icon */
+      background: var(--accent, #0e5fc2);      /* Blue background with fallback */
+      color: #fff;                             /* White text */
+      border: none;                            /* No border */
+      border-radius: 6px;                      /* Rounded corners */
+      padding: 6px 12px;                       /* Inner spacing */
+      cursor: pointer;                         /* Pointer cursor on hover */
+      z-index: 100;                           /* Display on top of content */
+    }
+
+    /* === Hidden Menu Styling === */
+    .menu {
+      position: fixed;                         /* Fixed relative to viewport */
+      top: 60px;                               /* Appears below menu button */
+      left: 20px;                              /* Aligned with button */
+      display: none;                           /* Hidden by default */
+      flex-direction: column;                 /* Stack menu items vertically */
+      background: rgba(255, 255, 255, 0.9);    /* Slightly transparent white background */
+      padding: 12px;                           /* Inner padding */
+      border-radius: 8px;                      /* Rounded corners */
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);/* Shadow for depth */
+      z-index: 999;                            /* Slightly below menu button */
+    }
+
+    /* === Menu buttons === */
+    .menu button {
+      margin: 6px 0;                           /* Vertical spacing between buttons */
+      padding: 10px 20px;                      /* Button padding */
+      border: none;                            /* No border */
+      border-radius: 6px;                      /* Rounded corners */
+      background: var(--accent,  #e4e9ed);      /* Green background fallback */
+      color: #10a8db;                             /* White text */
+      cursor: pointer;                         /* Pointer cursor */
+      font-size: 16px;                         /* Font size */
+      transition: background 0.2s;             /* Smooth hover transition */
+    }
+
+    .menu button:hover {
+      background: #021e03;                     /* Darker green on hover */
+    }
+
+    /* === Dark Mode Styles === */
+    .dark-mode {
+      background: var(--bg-dark, #222)         /* Dark fallback background */
+                  url('images/flute-5.jpg')    /* Optional background image */
+                  center/cover no-repeat;      /* Centered and scaled to cover */
+      color: var(--text-dark, #fff);           /* White text */
+    }
+
+    /* === Dark Mode Toggle Button === */
+    .toggle-btn {
+      position: fixed;                         /* Fixed top-right */
+      top: 20px;
+      right: 30px;
+      background: var(--accent, #0e5fc2);      /* Blue background */
+      color: #fff;                             /* White text */
+      border: none;                            /* No border */
+      border-radius: 20px;                     /* Rounded pill shape */
+      padding: 8px 18px;                       /* Padding inside button */
+      cursor: pointer;                         /* Pointer cursor */
+      font-size: 16px;                         /* Font size */
+      transition: background 0.2s ease;        /* Smooth hover effect */
+      z-index: 1000;                           /* On top of page elements */
+    }
+
+    .toggle-btn:hover {
+      background: #021e03;                     /* Darker background on hover */
+    }
+  </style>
 </head>
 
-<header>
-    <!-- Header section with logo and navigation bar -->
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0;">
-        <!-- Logo image linking to homepage -->
-        <a href="Website.Digitech.html">
-            <img src="C:\Users\Rishikesh\Downloads\AINZUNI 2.png" alt="AINZUNI Logo" style="display:block; margin-left:0; width:150px;">
-        </a>
-        <!-- Navigation bar with buttons linking to other pages -->
-        <nav style="display: flex; gap: 20px;">
-            <a href="About Me.html"><button style="font-family:Arial, Helvetica, sans-serif; background-color: #1874ca; color: white;">About</button></a>
-            <a href="Contact Me.html"><button style="font-family:sans-serif; background-color: #1874ca; color: rgb(251, 251, 251);">Contact</button></a>
-            <a href="AINZUNI.html"><button style="font-family:Arial, Helvetica, sans-serif; background-color: #1874ca; color: white;">AINZUNI</button></a>
-            <a href="NZ Universities.html"><button style="font-family:Arial, Helvetica, sans-serif; background-color: #1874ca; color: white;">NZ universities Bachelor Degree Information links</button></a>
-        </nav>
-    </div>
-</header>
-
-</head>
 <body>
-    <!-- Main content: page title, contact image, contact info, and feedback prompt -->
-    <p style="font-size: 1.2em; font-weight: bold;">Contact Me</p>
-    <img src= "C:\Users\Rishikesh\Downloads\contact.png" alt= "Contact Me logo" style="display:block; margin:auto; width:200px;">
-    <p>If you have any inquiries, please do contact me with this email address: sriramr@wsc.school.nz</p>
-    <p>Give your feedback on my website honestly, Here:- </p>
+  <!-- Hamburger Menu Button -->
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <!-- When clicked, shows or hides the menu -->
+
+  <!-- Dark Mode Toggle Button -->
+  <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Dark</button>
+  <!-- When clicked, toggles dark/light theme -->
+
+  <!-- Navigation Menu (hidden by default) -->
+  <div class="menu" id="menu">
+    <button onclick="location.href='index.html'">Home</button>
+    <button onclick="location.href='AINZUNI.html'">AINZUNI</button>
+    <button onclick="location.href='About Me.html'">About</button>
+    <button onclick="location.href='NZ Universities.html'">NZ Universities</button>
+  </div>
+
+  <!-- Header Section -->
+  <header>
+    <a href="Website Digitech.html">
+      <img src="C:\Users\Rishikesh\Downloads\Rishikesh\Digitech\Digital-Technology-Year-12-Design-Portfolio\AINZUNI 2.png" alt="AINZUNI Logo" class="logo">
+      <!-- Logo linking to homepage -->
+    </a>
+  </header>
 </body>
-
+<body>
+  <!-- Main Section -->
+  <main>
+    <main>
+        <p><img src= "C:\Users\Rishikesh\Downloads\Rishikesh\Digitech\Digital-Technology-Year-12-Design-Portfolio\contact.png" alt = "About Me Logo" style="display:block; margin:auto; width:200px; border-radius: 100%;"></p>
+<!-- Main content: page title, contact image, contact info, and feedback prompt -->
+    <p>If you have any inquiries, please do contact me with this email address: sriramr@wsc.school.nz</p>
+    <p>Give your feedback on my website honestly, Here:- <a href="https://forms.gle/YmKBLJQxsBFBnyNP9" target="_blank">Feedback Form</a> </p>
 <!-- Feedback form link for users to submit feedback -->
-<a href="https://forms.gle/YmKBLJQxsBFBnyNP9" target="_blank">Feedback Form</a>
+    </main>
+  </main>
 
-<!-- Footer section with copyright information -->
-<footer style="background-color: #333; color: #fff; text-align: center; padding: 15px; margin-top: 30px;">
+  <!-- Footer Section -->
+  <footer>
     &copy; 2025 AINZUNI. All rights reserved.
-</footer>
+    <!-- Footer copyright -->
+  </footer>
+
+  <!-- JavaScript Functions -->
+  <script>
+    // Toggle the visibility of the menu
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+    }
+
+    // Toggle dark mode and update button text
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      const toggleBtn = document.querySelector('.toggle-btn');
+      toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light' : '🌙 Dark';
+    }
+  </script>
+
+</body>
 </html>

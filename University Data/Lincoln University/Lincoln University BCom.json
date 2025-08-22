@@ -52,8 +52,80 @@
             "electives_link" : "https://www.lincoln.ac.nz/study/courses-2/course-search/"
         }
     },
-    "year_2_3" : [
-        "all elective courses link:- https://www.lincoln.ac.nz/study/courses-2/course-search/ "
-    ]
+    "year_2" : {
+        "semester_1" : {
+        "MKTG 202" :"Social Marketing and Ethics",
+        "MKTG 202_link" : "https://www.lincoln.ac.nz/study/courses-2/course-search/social-marketing-and-ethics/"
+    },
+    "semester_2" : {
+        "MKTG 205" : "Consumer Behaviour",
+        "MKTG 205_link" : "https://www.lincoln.ac.nz/study/courses-2/course-search/consumer-behaviour/"
+    }
+    },
+    "year_3" : {
+        "semester_1_2" : {
+            "MKTG 301" : "Marketing Research",
+            "list" : [
+                "B.Com. Marketing List A*",
+                "possible replacements for MKTG 300-level courses*"
+        ],
+        "*B.Com. Marketing Suggested Electives" : {
+            "semester_1" : {
+                "DESN 101": "Digital Tools for Design - 15 credits",
+                "DESN 101_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/digital-tools-for-design/",
+                "TOUR 101": "Introduction to Tourism - 15 credits",
+                "TOUR 101_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/introduction-to-tourism/",
+                "PSYC 101": "Introduction to Psychology - 15 credits",
+                "PSYC 101_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/introduction-to-psychology/",
+                "DESN 103": "Visual Communication - 15 credits",
+                "DESN 103_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/visual-communication/",
+                "MGMT 106": "Global Food Systems - 15 credits",
+                "MGMT 106_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/global-food-systems/"
+                },
+            "semester_2" :  {
+                "FOOD 101": "Food Quality and Consumer Acceptance - 15 credits",
+                "FOOD 101_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/food-quality-and-consumer-acceptance/",
+                "DESN 102": "Introduction to 3D Design - 15 credits",
+                "DESN 102_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/introduction-to-3d-design/",
+                "PSYC 102": "Introduction to Social Psychology - 15 credits",
+                "PSYC 102_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/introduction-to-social-psychology/",
+                "RECN 111": "Leisure Industry Leadership - 15 credits",
+                "RECN 111_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/leisure-industry-leadership/",
+                "COMP 112": "Problem Solving and Data Management - 15 credits",
+                "COMP 112_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/problem-solving-and-data-management/",
+                "WINE 101": "Introduction to the Winegrowing Industry - 15 credits",
+                "WINE 101_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/introduction-to-the-winegrowing-industry/"
+            }
+        },
+        "*B.Com. Marketing List A" : {
+            "semester_1" : {
+                "MKTG 311": "Product Design - 15 credits",
+                "MKTG 311_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/product-design/",
+                "MKTG 322": "Sales Management - 15 credits",
+                "MKTG 322_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/sales-management/",
+                "MKTG 334": "Branding Aotearoa - 15 credits",
+                "MKTG 334_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/branding-aotearoa/"
+            },
+            "semester_2" : {
+                "MKTG 308": "Marketing New Zealand Products and Services - 15 credits",
+                "MKTG 308_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/marketing-of-new-zealand-products-and-services/",
+                "MKTG 321": "Promotion Management - 15 credits",
+                "MKTG 321_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/promotion-management/",
+                "MKTG 304": "Services Marketing - 15 credits",
+                "MKTG 304_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/services-marketing/"
+            }
+        },
+        "*possible replacements for MKTG 300-level courses" : ["One of the following courses can substitute for one 300-level MKTG course:"],
+        "semester_2" : {
+            "BMGT 315": "Project Planning and Management - 15 credits",
+            "BMGT 315_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/project-planning-and-management/",
+            "COMM 301": "Integrated Business Analysis - 15 credits",
+            "COMM 301_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/integrated-business-analysis/",
+            "RECN 393": "Practicum: Practical Experience in Sport and Recreation and Tourism Management - 15 credits",
+            "RECN 393_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/integrated-business-analysis/"
+}
+
+    }
+    }
     }
 }

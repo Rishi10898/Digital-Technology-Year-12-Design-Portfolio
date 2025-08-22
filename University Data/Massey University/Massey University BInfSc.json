@@ -1,86 +1,192 @@
 {
-    "programme":"Bachelor of Information Sciences",
-    "field":"computer",
-    "location":"Palmerston North/Wellington/Auckland",
-    "fulltime_duration_years":3,
-    "level" : "7",
-    "points":360,
-    "domestic_fee_NZD":8000,
-    "course_planner" : "https://course-planner.massey.ac.nz/?qualification=UBART",
-    "bachelor_of_information_sciences_website_link" : "https://www.massey.ac.nz/study/all-qualifications-and-degrees/bachelor-of-information-sciences-UBINS/",
-    "bachelor_of_information_sciences_overview" : [
-        "Study a Bachelor of Information Sciences – BInfSc",
-        "Flexible and unique study options -  Massey is the only university in New Zealand to offer 5 ICT-related majors in the same degree. This allows you to mix and match courses to suit your strengths and interests. Enjoy smaller classes with individual attention from lecturers. Experience the first-year courses and still be able to change your major at the start of the second year. Include a double major or a minor (in any subject) or New Zealand’s only minor in Games Programming.",
-        "Generous cross credit system - Massey transfers credits from a wide range of previous study. If you have a previous diploma in any area of ICT, it is highly likely that you will be awarded credits towards your BInfSc.",
-        "Applied and technical knowledge - Massey teaches students the skills and knowledge needed to succeed in the software industry. Topics include:",
-        "mobile applications, graphics and games programming, networks and security, web development and internet programming, artificial intelligence, machine learning and data wrangling.",
-        "Massey is the only university in New Zealand specialising in the C and C++ programming languages that are highly sought after by employers. You’ll also learn Java, Python, SQL and other languages.",
-        "Join the real world of software development - Massey has close ties with the innovative and rapidly expanding software companies based in North Auckland. These companies offer opportunities for internships, industry projects, holiday work and possible employment offers. Students are also involved in creating websites and applications for charities and voluntary organisations.",
-        "Further study - Once you graduate you can move on to advanced study in the Postgraduate Diploma in Information Sciences (1 year of 120 credits in taught courses) or the Master of Information Sciences (180 credits including 120 credits of taught courses and a major professional project)."
-    ],
-    "fees_and_scholarships" : {
-        "fees_overview" : "Fees, student loans and free fees scheme Your tuition fees may be different depending on the courses you choose. Your exact fees will show once you have chosen your courses. There will also be some compulsory non-tuition fees and for some courses, there may also be charges for things such as study resources, software, trips and contact workshops.",
-        "estimate_fees_link" : "https://www.massey.ac.nz/study/fees-and-funding/tuition-fees-for-domestic-and-international-students/",
-        "others" : "https://www.massey.ac.nz/study/fees-and-funding/non-tuition-fees/",
-        "study_link" : {
-            "study_link" : "https://www.studylink.govt.nz/,",
-            "fees_free" : "https://www.feesfree.govt.nz/",
-            "student_portal_link" : "https://smsportal.massey.ac.nz/sitsvision/wrd/siw_lgn"
-        }
-    },
-    "entry_requirements" : {
-        "link" : "https://www.massey.ac.nz/study/entry-requirements-to-study-at-massey/",
-        "specific_requirements" : "However for the Bachelor of Commercial Music (Music Practice) you must register for an audition. You should apply for entry to this degree before registering for your audition and you will be assessed for selection into the qualification. We also recommend you join us for a consultation if you’re applying for Music Technology or Music Industry, to make sure it’s right for you. https://creative.massey.ac.nz/apply/auditions-and-consultations",
-        "NCEA" : {
-            "subjects" : "3 subjects at Level 3, made up of *14 credits in each of 3 approved subjects. : - https://www2.nzqa.govt.nz/ncea/understanding-secondary-quals/university-entrance/",
-            "UE_literacy" : "Ten credits at Level 2 or above, made up of 5 credits in reading and 5 credits in writing",
-            "numeracy" : "Ten credits at Level 1 or above, made up of: specified achievement standards available through a range of subjects, or a unit standards package of 3 numeracy unit standards (numbers 26623, 26626 and 26627 – all 3 required)."
-        },
-        "CIE" : {
-            "overview" : "You are eligible to be admitted to Massey if you have: a minimum of 120* points on the NZ CAIE Tariff at A or AS Level, which are broadly equivalent to approved subjects for NCEA, and a D grade or better in syllabuses from at least 3 different syllabus groups (excluding thinking skills)*.",
-            "UE_literacy" : "An 'E' grade or better in any 1 of: AS English Language, AS General English, AS Language and Literature in English, Literature in English.",
-            "numeracy" : "A 'D' grade or better in: IGCSE, or, GCSE mathematics."
-        },
-        "IB" : "You qualify for admission if you have been awarded the full International Baccalaureate (IB) Diploma (a minimum of 24 points)."
-    },
-    "rules_and_regulations_link" : "https://www.massey.ac.nz/about/university-calendar-and-regulations/qualification-regulations/bachelor-of-accountancy/",
-    "structure_of_bachelor_of_information_sciences" : {
-        "overview" : [
-            "First year for a full-time student usually consists of 8 courses. Take electives** to get the total number of courses to 8.  Make sure you include courses that are prerequisites for the next level of courses you wish to study.  You can change your major up until the start of your second year and it is a good idea to keep your options open by taking courses such that you are ready to move on to several different majors. In the first year of study, you should take the following courses:",
-            "https://www.massey.ac.nz/study/courses/159101/ - 159101 Applied Programming",
-            "Statistics course - 161111 (https://www.massey.ac.nz/study/courses/161111/) Applied Statistics or 297101 (http://www.massey.ac.nz/study/courses/297101/) Statistical Data Science (297101 is recommended for Computer Science, Data Science, Software Engineering)",
-            "247112 (https://www.massey.ac.nz/study/courses/247112/) Science and Sustainability for ICT (or 247113) https://www.massey.ac.nz/study/courses/247113/",
-            "158100 (https://www.massey.ac.nz/study/courses/158100/) Information Technology Principles (required for Information Technology or Information Systems)* or an elective**",
-            "158120 (https://www.massey.ac.nz/study/courses/158120/) Web-based IT Fundamentals (required for Information Technology or Information Systems)* or an elective**",
-            "159102 (https://www.massey.ac.nz/study/courses/159102/) Computer Science and Programming (required for Computer Science, Data Science, Software Engineering)* or an elective**",
-            "Mathematics course - 160105 (https://www.massey.ac.nz/study/courses/160105/) or 160102 (https://www.massey.ac.nz/study/courses/160102) or 160101 (https://www.massey.ac.nz/study/courses/160101/) (required for Computer Science, Data Science, Software Engineering)* or an elective**",
-            "An elective course from any subject**",
-            "* Ensure that you have selected the correct courses for your major: Computer Science, Data Science and Software Engineering require 159101 (https://www.massey.ac.nz/study/courses/159101/), 159102 (https://www.massey.ac.nz/study/courses/159102/), and a maths course. Information Technology and Information Systems require 158100 and 158120 but do not require the second programming course or the maths course.",
-            "** Elective courses: Any course from any subject (including the courses listed above). Some elective courses may be available in Summer School. If you are interested in taking a minor subject there may be required 100-level courses for that minor.",
-            "In the second year, you must take at least four 200-level courses for each major. In the third year, you must take at least four 300-level courses for the major and one 300-level course for the degree. Double majors or minors will require additional courses.",
-            "Typical pattern for the Bachelor of Information Sciences - Core courses These courses are a compulsory part of your qualification.",
-            "Major courses Choose from a selection of courses appropriate for your specialisation.",
-            "Elective courses Follow your interests. Your qualification may have selection guidelines for elective courses."
-        ],
-        "year_1" : {
-            "159101" : "Applied Programming",
-            "159101_link" : "https://www.massey.ac.nz/study/courses/159101/",
-            "161111" : "Applied Statistics or 297101 (http://www.massey.ac.nz/study/courses/297101/) Statistical Data Science",
-            "161111_link" : "https://www.massey.ac.nz/study/courses/161111/",
-            "247112" : "Science and Sustainability for ICT",
-            "247112_link" : "https://www.massey.ac.nz/study/courses/247112/",
-            "158100" : "Information Technology Principles or Elective",
-            "158100_link" : "https://www.massey.ac.nz/study/courses/158100/",
-            "158120" : "Web-based IT Fundamentals or Elective",
-            "158120_link" : "https://www.massey.ac.nz/study/courses/158120/",
-            "159102" : "Computer Science and Programming",
-            "159102_link" : "https://www.massey.ac.nz/study/courses/159102/",
-            "160101" : "Calculus or 160102 (https://www.massey.ac.nz/study/courses/160102/) Algebra or 160105 (https://www.massey.ac.nz/study/courses/160105/) Methods of Mathematics or Elective",
-            "160101_link" : "https://www.massey.ac.nz/study/courses/160101/"
-        }
-    },
-    "courses_and_specialisations" : {
-        
+  "programme": "bachelor of information sciences",
+  "field": "computer",
+  "location": "palmerston north/wellington/auckland",
+  "fulltime_duration_years": 3,
+  "level": "7",
+  "points": 360,
+  "domestic_fee_nzd": 8000,
+  "course_planner": "https://course-planner.massey.ac.nz/?qualification=UBART",
+  "bachelor_of_information_sciences_website_link": "https://www.massey.ac.nz/study/all-qualifications-and-degrees/bachelor-of-information-sciences-UBINS/",
+  "bachelor_of_information_sciences_overview": [
+    "study a bachelor of information sciences – binfsc",
+    "flexible and unique study options - massey is the only university in new zealand to offer 5 ict-related majors in the same degree. this allows you to mix and match courses to suit your strengths and interests. enjoy smaller classes with individual attention from lecturers. experience the first-year courses and still be able to change your major at the start of the second year. include a double major or a minor (in any subject) or new zealand’s only minor in games programming.",
+    "generous cross credit system - massey transfers credits from a wide range of previous study. if you have a previous diploma in any area of ict, it is highly likely that you will be awarded credits towards your binfsc.",
+    "applied and technical knowledge - massey teaches students the skills and knowledge needed to succeed in the software industry. topics include:",
+    "mobile applications, graphics and games programming, networks and security, web development and internet programming, artificial intelligence, machine learning and data wrangling.",
+    "massey is the only university in new zealand specialising in the c and c++ programming languages that are highly sought after by employers. you’ll also learn java, python, sql and other languages.",
+    "join the real world of software development - massey has close ties with the innovative and rapidly expanding software companies based in north auckland. these companies offer opportunities for internships, industry projects, holiday work and possible employment offers. students are also involved in creating websites and applications for charities and voluntary organisations.",
+    "further study - once you graduate you can move on to advanced study in the postgraduate diploma in information sciences (1 year of 120 credits in taught courses) or the master of information sciences (180 credits including 120 credits of taught courses and a major professional project)."
+  ],
+  "fees_and_scholarships": {
+    "fees_overview": "fees, student loans and free fees scheme. your tuition fees may be different depending on the courses you choose. your exact fees will show once you have chosen your courses. there will also be some compulsory non-tuition fees and for some courses, there may also be charges for things such as study resources, software, trips and contact workshops.",
+    "estimate_fees_link": "https://www.massey.ac.nz/study/fees-and-funding/tuition-fees-for-domestic-and-international-students/",
+    "others": "https://www.massey.ac.nz/study/fees-and-funding/non-tuition-fees/",
+    "study_link": {
+      "study_link": "https://www.studylink.govt.nz/",
+      "fees_free": "https://www.feesfree.govt.nz/",
+      "student_portal_link": "https://smsportal.massey.ac.nz/sitsvision/wrd/siw_lgn"
     }
-
+  },
+  "entry_requirements": {
+    "link": "https://www.massey.ac.nz/study/entry-requirements-to-study-at-massey/",
+    "specific_requirements": "however for the bachelor of commercial music (music practice) you must register for an audition. you should apply for entry to this degree before registering for your audition and you will be assessed for selection into the qualification. we also recommend you join us for a consultation if you’re applying for music technology or music industry, to make sure it’s right for you. https://creative.massey.ac.nz/apply/auditions-and-consultations",
+    "ncea": {
+      "subjects": "3 subjects at level 3, made up of 14 credits in each of 3 approved subjects: https://www2.nzqa.govt.nz/ncea/understanding-secondary-quals/university-entrance/",
+      "ue_literacy": "ten credits at level 2 or above, made up of 5 credits in reading and 5 credits in writing",
+      "numeracy": "ten credits at level 1 or above, made up of specified achievement standards available through a range of subjects, or a unit standards package of 3 numeracy unit standards (numbers 26623, 26626 and 26627 – all 3 required)."
+    },
+    "cie": {
+      "overview": "you are eligible to be admitted to massey if you have: a minimum of 120 points on the nz caie tariff at a or as level, which are broadly equivalent to approved subjects for ncea, and a d grade or better in syllabuses from at least 3 different syllabus groups (excluding thinking skills).",
+      "ue_literacy": "an 'e' grade or better in any 1 of: as english language, as general english, as language and literature in english, literature in english.",
+      "numeracy": "a 'd' grade or better in: igcse, or, gcse mathematics."
+    },
+    "ib": "you qualify for admission if you have been awarded the full international baccalaureate (ib) diploma (a minimum of 24 points)."
+  },
+  "rules_and_regulations_link": "https://www.massey.ac.nz/about/university-calendar-and-regulations/qualification-regulations/bachelor-of-accountancy/",
+  "structure_of_bachelor_of_information_sciences": {
+    "overview": [
+      "first year for a full-time student usually consists of 8 courses. take electives to get the total number of courses to 8. make sure you include courses that are prerequisites for the next level of courses you wish to study. you can change your major up until the start of your second year and it is a good idea to keep your options open by taking courses such that you are ready to move on to several different majors. in the first year of study, you should take the following courses:",
+      "https://www.massey.ac.nz/study/courses/159101/ - 159101 applied programming",
+      "statistics course - 161111 applied statistics or 297101 statistical data science (297101 is recommended for computer science, data science, software engineering)",
+      "247112 science and sustainability for ict (or 247113) https://www.massey.ac.nz/study/courses/247113/",
+      "158100 information technology principles (required for information technology or information systems) or an elective",
+      "158120 web-based it fundamentals (required for information technology or information systems) or an elective",
+      "159102 computer science and programming (required for computer science, data science, software engineering) or an elective",
+      "mathematics course - 160105 or 160102 or 160101 (required for computer science, data science, software engineering) or an elective",
+      "an elective course from any subject",
+      "ensure that you have selected the correct courses for your major: computer science, data science and software engineering require 159101, 159102, and a maths course. information technology and information systems require 158100 and 158120 but do not require the second programming course or the maths course.",
+      "elective courses: any course from any subject (including the courses listed above). some elective courses may be available in summer school. if you are interested in taking a minor subject there may be required 100-level courses for that minor.",
+      "in the second year, you must take at least four 200-level courses for each major. in the third year, you must take at least four 300-level courses for the major and one 300-level course for the degree. double majors or minors will require additional courses.",
+      "typical pattern for the bachelor of information sciences - core courses these courses are a compulsory part of your qualification.",
+      "major courses choose from a selection of courses appropriate for your specialisation.",
+      "elective courses follow your interests. your qualification may have selection guidelines for elective courses."
+    ],
+    "year_1": {
+      "159101": "applied programming",
+      "159101_link": "https://www.massey.ac.nz/study/courses/159101/",
+      "161111": "applied statistics or 297101 statistical data science",
+      "161111_link": "https://www.massey.ac.nz/study/courses/161111/",
+      "247112": "science and sustainability for ict",
+      "247112_link": "https://www.massey.ac.nz/study/courses/247112/",
+      "158100": "information technology principles or elective",
+      "158100_link": "https://www.massey.ac.nz/study/courses/158100/",
+      "158120": "web-based it fundamentals or elective",
+      "158120_link": "https://www.massey.ac.nz/study/courses/158120/",
+      "159102": "computer science and programming",
+      "159102_link": "https://www.massey.ac.nz/study/courses/159102/",
+      "160101": "calculus or 160102 algebra or 160105 methods of mathematics or elective",
+      "160101_link": "https://www.massey.ac.nz/study/courses/160101/"
+    }
+  },
+  "courses_and_specialisations": {
+    "schedule_a_core_course_90_points": {
+      "247111": "science and sustainability for agriculture and horticulture - 15 credits",
+      "247111_link": "https://www.massey.ac.nz/study/courses/science-and-sustainability-for-agriculture-and-horticulture-247111/",
+      "247112": "science and sustainability for ict - 15 credits",
+      "247112_link": "https://www.massey.ac.nz/study/courses/science-and-sustainability-for-ict-247112/",
+      "247113": "science and sustainability for science - 15 credits",
+      "247113_link": "https://www.massey.ac.nz/study/courses/science-and-sustainability-for-science-247113/",
+      "161111": "applied statistics - 15 credits",
+      "161111_link": "https://www.massey.ac.nz/study/courses/applied-statistics-161111/",
+      "297101": "statistical data science - 15 credits",
+      "297101_link": "https://www.massey.ac.nz/study/courses/statistical-data-science-297101/",
+      "124103": "biophysical principles - 15 credits",
+      "124103_link": "https://www.massey.ac.nz/study/courses/biophysical-principles-124103/",
+      "160101": "calculus - 15 credits",
+      "160101_link": "https://www.massey.ac.nz/study/courses/calculus-160101/",
+      "160102": "algebra - 15 credits",
+      "160102_link": "https://www.massey.ac.nz/study/courses/algebra-160102/",
+      "160104": "introductory mathematics for science - 15 credits",
+      "160104_link": "https://www.massey.ac.nz/study/courses/introductory-mathematics-for-science-160104/",
+      "160105": "methods of mathematics - 15 credits",
+      "160105_link": "https://www.massey.ac.nz/study/courses/methods-of-mathematics-160105/"
+    },
+    "schedule_b_specialisations": {
+      "chemistry": {
+        "location": "manawatū campus (palmerston north)",
+        "description": "gain sought-after scientific, analytic, and problem-solving skills with massey's bachelor of science (chemistry)."
+      },
+      "computer_science": {
+        "location": "auckland campus, distance and online, manawatū campus (palmerston north)",
+        "description": "massey provides you with the technical skills and knowledge to take your place in the fastest-growing industry in the world. connect with the industry while you study for a head start in software development."
+      },
+      "earth_science": {
+        "location": "distance and online, manawatū campus (palmerston north)",
+        "description": "when you join the bachelor of science (earth science) you’ll join an area that’s solving geotechnical and environmental problems."
+      },
+      "ecology_and_conservation": {
+        "location": "manawatū campus (palmerston north)",
+        "description": "from molecules to forests, ecology is a broad discipline that teaches you how to make sense of the interactions between organisms and their environment."
+      },
+      "environmental_science": {
+        "location": "distance and online, manawatū campus (palmerston north)",
+        "description": "studying environmental science at massey will give you the tools and understanding needed to help create a sustainable path for new zealand and the world."
+      },
+      "human_nutrition": {
+        "location": "distance and online",
+        "description": "if you are passionate about food and nutrition and want to learn more about the science behind how diet affects health, then massey’s bachelor of science (human nutrition) is for you."
+      },
+      "mathematics": {
+        "location": "auckland campus, distance and online, manawatū campus (palmerston north)",
+        "description": "the bachelor of science (mathematics) will give you the skills to solve problems in areas such as computer programming, climate modelling, and transportation."
+      },
+      "microbiology": {
+        "location": "manawatū campus (palmerston north)",
+        "description": "join massey’s unique bachelor of science (microbiology) to explore and understand microbes in the environment, from the soil to the air, and in the human body."
+      },
+      "molecular_cell_biology": {
+        "location": "manawatū campus (palmerston north)",
+        "description": "cells and the molecules that make them are the building blocks of all life. join the molecular revolution in biology and develop sought after scientific skills in molecular cell biology."
+      },
+      "plant_science": {
+        "location": "manawatū campus (palmerston north)",
+        "description": "join the bachelor of science (plant science) at massey - the only university in new zealand where you can study the full spectrum of plant science from molecular biology and evolution, through to agriculture and horticulture."
+      },
+      "psychology": {
+        "location": "auckland campus, distance and online, manawatū campus (palmerston north)",
+        "description": "join massey’s market-leading bachelor of science (psychology) and learn how people perceive, learn, think, develop, behave, and relate to one another."
+      },
+      "statistics": {
+        "location": "distance and online, manawatū campus (palmerston north)",
+        "description": "learn how to make sense of the information that surrounds us with massey’s bachelor of science (statistics)."
+      },
+      "zoology": {
+        "location": "manawatū campus (palmerston north)",
+        "description": "let your love of animals take you into a field that is in high demand throughout new zealand. with massey's bachelor of science (zoology) you have the chance to learn everything there is to know about animals."
+      }
+    },
+    "minors": {
+      "description": "completing a minor is optional. minors increase the breadth of your degree and give you extra knowledge, attributes and capabilities. a minor must be in a different subject from your major. you may choose a minor from any university undergraduate degree that has recognised minors. if the minor is from another degree the regulations of that qualification will apply. all bsc majors are available as minors. see the bsc regulations for requirements.",
+      "minor_only_subjects": {
+        "exercise_and_sport_science": {
+          "description": "an exercise and sport science minor is ideal for you if you have a passion for sport, exercise, and health. your teachers will help you understand how the human body functions and moves in sport and exercise. they will show you how technology, nutrition and psychology can all play a key role in optimising athletic performance and health.",
+          "courses": ["234222", "234223", "234361", "151332", "234312"],
+          "availability": "distance learning"
+        },
+        "physiology": {
+          "description": "do you wonder what makes your body work? physiology is the science that explains how the molecules, cells, tissues and organs that make up the body function together. it helps us understand human and animal health, diseases and their treatments, and how organisms interact with their environment. your teachers are at the forefront of research like this. they’ll use their research expertise to ensure that your learning is relevant, engaging and up to date.",
+          "courses": ["194242", "194350", "199313", "194241", "214201"],
+          "availability": "distance learning"
+        }
+      },
+      "available_minors": [
+        "chemistry",
+        "computer_science",
+        "earth_science",
+        "ecology_and_conservation",
+        "environmental_science",
+        "exercise_and_sport_science",
+        "human_nutrition",
+        "mathematics",
+        "microbiology",
+        "molecular_cell_biology",
+        "physiology",
+        "plant_science",
+        "psychology",
+        "statistics",
+        "zoology"
+      ]
+    }
+  }
 }

@@ -45,15 +45,25 @@
         "year_1" : {
             "BIOS110" : "Biological Sciences",
             "BIOS110_link" : "https://www.lincoln.ac.nz/study/courses-2/course-search/biological-sciences/",
-            "BSC Individual List A*" : {
-                "*BSC Individual List A" : [  "Semester 1 PHSC 101 - Chemistry IA, ENSC 101 - Introduction to Earth and Ecological Sciences",
-                "Semester 2 PHSC 103 - Environmental Physics"]
+            "list" : ["BSC Individual List A*", "electives"]
         }
         },
         "year_2" : {
             "QMET201": "biometrics",
             "QMET201_link" : "https://www.lincoln.ac.nz/study/courses-2/course-search/biometrics/"
         },
-        "year_3" : ["all electives in semester 1 and 2"]
-    }
+        "year_3" : ["all electives in semester 1 and 2"],
+        "*BSC Individual List A" : {
+            "semester_1": {
+                "PHSC 101": "Chemistry IA - 15 credits",
+                "PHSC 101_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/chemistry-ia/",
+                "ENSC 101": "Introduction to Earth and Ecological Sciences - 15 credits",
+                "ENSC 101_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/introduction-to-earth-and-ecological-sciences/"
+            },
+            "semester_2": {
+                "PHSC 103": "Environmental Physics - 15 credits",
+                "PHSC 103_link": "https://www.lincoln.ac.nz/study/courses-2/course-search/environmental-physics/"
+  }
+}
+
 }

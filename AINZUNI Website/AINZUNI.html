@@ -1,69 +1,662 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>NZ Universities</title>
-<!-- CSS styles for page layout and appearance -->
-<style>
-    body {
-        background-color:#77bbc6; 
-        font-family: 'Georgia', serif; 
+    <meta charset="UTF-8">
+    <title>AINZUNI - NZ Universities</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AINZUNI - Your guide to New Zealand Universities">
+    
+    <style>
+        /* CSS Variables - Define colors once, use everywhere for easy theming */
+        :root {
+            --bg-light: #f9f9f9;
+            --bg-dark: #222;
+            --text-light: #333;
+            --text-dark: #f9f9f9;
+            --accent: #4caf50;
+            --secondary: #77bbc6;
+            --card-light: rgba(255, 255, 255, 0.9);
+            --card-dark: rgba(34, 34, 34, 0.9);
         }
-    header {
-        background-color: #6ab5c1 ;
-        padding: 20px 0;
+
+        /* Body - Full page layout with gradient background */
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background: var(--bg-light) linear-gradient(135deg, #77bbc6 0%, #6ab5c1 100%);
+            color: var(--text-light);
+            transition: all 0.3s ease;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
-    html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    body {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
-    main {
-        flex: 1;
-    }
-</style>
+
+        /* Dark mode - Applied via JavaScript class toggle */
+        .dark-mode {
+            background: var(--bg-dark) linear-gradient(135deg, #1a3a4a 0%, #2a4a5a 100%);
+            color: var(--text-dark);
+        }
+
+        /* HEADER STYLING - Contains logo, title, and navigation buttons */
+        header {
+            position: relative;                /* Allows absolute positioning of child elements */
+            background: var(--card-light);    /* Glassmorphism semi-transparent background */
+            backdrop-filter: blur(10px);      /* Blurs content behind for modern effect */
+            padding: 20px 120px 20px 120px;   /* Extra side padding for button space */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;           /* Center logo and title */
+            gap: 20px;
+        }
+
+        /* Header styling in dark mode */
+        .dark-mode header {
+            background: var(--card-dark);     /* Dark semi-transparent background */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);  /* Stronger shadow for dark theme */
+        }
+
+        /* LOGO IMAGE STYLING */
+        .logo {
+            width: 80px;                       /* Fixed width */
+            height: auto;                      /* Height adjusts proportionally */
+            border-radius: 12px;              /* Rounded corners */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+            transition: transform 0.3s ease;   /* Smooth animation for hover effect */
+        }
+
+        /* Logo hover effect - makes it slightly bigger when mouse hovers */
+        .logo:hover {
+            transform: scale(1.1);            /* Increase size by 10% */
+        }
+
+        /* MAIN BRAND TEXT STYLING */
+        .brand-text {
+            font-size: 2.2em;                 /* Large text size (em = relative to parent) */
+            font-weight: bold;                /* Bold text */
+            color: var(--accent);             /* Use accent color */
+            margin: 0;                        /* Remove default margins */
+        }
+
+        /* Brand text color in dark mode */
+        .dark-mode .brand-text {
+            color: #81c784;                   /* Lighter green for dark backgrounds */
+        }
+
+        /* HAMBURGER MENU BUTTON - Positioned in header to avoid overlap */
+        .menu-btn {
+            position: absolute;               /* Positioned relative to header */
+            top: 50%;                        /* Center vertically in header */
+            left: 20px;                      /* 20px from left edge */
+            transform: translateY(-50%);     /* Perfect vertical centering */
+            font-size: 20px;                /* Icon size */
+            background: var(--accent);      /* Green background */
+            color: #fff;                     /* White icon */
+            border: none;                    /* Clean button style */
+            border-radius: 50%;              /* Circular button */
+            padding: 12px;                   /* Internal spacing */
+            cursor: pointer;                 /* Hand cursor on hover */
+            transition: all 0.3s ease;      /* Smooth hover animations */
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        .menu-btn:hover {
+            background: #388e3c;            /* Darker green on hover */
+            transform: translateY(-50%) scale(1.1);  /* Maintain centering while scaling */
+        }
+
+        /* SETTINGS BUTTON - Also positioned in header */
+        .settings-btn {
+            position: absolute;
+            top: 50%;
+            right: 20px;                     /* Right side of header */
+            transform: translateY(-50%);
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            padding: 12px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        .settings-btn:hover {
+            background: #388e3c;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        /* NAVIGATION MENU STYLING */
+        /* Hidden by default (display: none), shown via JavaScript */
+        .menu {
+            position: fixed;                   /* Fixed positioning for overlay effect */
+            top: 80px;                        /* Below the menu button */
+            left: 20px;                       /* Aligned with menu button */
+            display: none;                    /* Hidden by default */
+            flex-direction: column;           /* Stack buttons vertically */
+            background: var(--card-light);   /* Semi-transparent background */
+            backdrop-filter: blur(15px);     /* Strong blur effect */
+            padding: 20px;                   /* Internal spacing */
+            border-radius: 16px;             /* Rounded corners */
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);  /* Large soft shadow */
+            z-index: 999;                     /* Below buttons but above content */
+            min-width: 200px;                /* Minimum width for consistency */
+        }
+
+        /* Menu styling in dark mode */
+        .dark-mode .menu {
+            background: var(--card-dark);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        /* NAVIGATION MENU BUTTONS */
+        .menu button {
+            margin: 8px 0;                    /* Vertical spacing between buttons */
+            padding: 15px 25px;              /* Internal button spacing */
+            border: none;                     /* Remove default borders */
+            border-radius: 25px;             /* Pill-shaped buttons */
+            background: var(--accent);       /* Green background */
+            color: white;                     /* White text */
+            cursor: pointer;                  /* Hand cursor */
+            font-size: 16px;                 /* Text size */
+            font-weight: 500;                /* Medium font weight */
+            transition: all 0.3s ease;       /* Smooth animations */
+            font-family: 'Georgia', serif;   /* Match site font */
+        }
+
+        /* Navigation button hover effects */
+        .menu button:hover {
+            background: #388e3c;             /* Darker green */
+            transform: translateY(-2px);     /* Move up slightly */
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);  /* Add shadow */
+        }
+
+        /* SETTINGS MENU - Similar to navigation menu but smaller */
+        .settings-menu {
+            position: fixed;
+            top: 80px;
+            right: 20px;                      /* Right side instead of left */
+            display: none;
+            flex-direction: column;
+            background: var(--card-light);
+            backdrop-filter: blur(15px);
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            min-width: 150px;                /* Smaller than main menu */
+        }
+
+        .dark-mode .settings-menu {
+            background: var(--card-dark);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Settings menu buttons - smaller than navigation buttons */
+        .settings-menu button {
+            background: var(--accent);
+            color: white;
+            padding: 12px 20px;              /* Less padding than nav buttons */
+            margin-bottom: 8px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;                 /* Smaller font */
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-family: 'Georgia', serif;
+        }
+
+        .settings-menu button:hover {
+            background: #388e3c;
+            transform: translateY(-2px);
+        }
+
+        /* MAIN CONTENT AREA */
+        main {
+            flex: 1;                          /* Takes up remaining space in flexbox */
+            padding: 40px 20px;              /* Internal spacing */
+            text-align: center;              /* Center-align content */
+            max-width: 1200px;               /* Maximum width for readability */
+            margin: 0 auto;                  /* Center the main content horizontally */
+        }
+
+        /* CHATBOT CONTAINER STYLING */
+        #chatbot-container {
+            background: var(--card-light);   /* Semi-transparent background */
+            backdrop-filter: blur(15px);     /* Glassmorphism effect */
+            border-radius: 20px;             /* Rounded corners */
+            padding: 30px;                   /* Internal spacing */
+            margin: 40px auto;               /* Center with vertical spacing */
+            max-width: 600px;                /* Limit width for better UX */
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);  /* Soft shadow */
+        }
+
+        /* Chatbot container in dark mode */
+        .dark-mode #chatbot-container {
+            background: var(--card-dark);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        /* CHAT MESSAGES DISPLAY AREA */
+        #chat-messages {
+            background: rgba(255, 255, 255, 0.5);  /* Light semi-transparent */
+            border-radius: 15px;             /* Rounded corners */
+            padding: 20px;                   /* Internal spacing */
+            margin-bottom: 20px;             /* Space below messages area */
+            min-height: 200px;               /* Minimum height even when empty */
+            max-height: 400px;               /* Maximum height before scrolling */
+            overflow-y: auto;                /* Enable vertical scrolling */
+            border: 2px solid var(--accent); /* Colored border */
+        }
+
+        /* Chat messages area in dark mode */
+        .dark-mode #chat-messages {
+            background: rgba(0, 0, 0, 0.3);  /* Dark semi-transparent */
+            border-color: #81c784;           /* Lighter border for dark mode */
+        }
+
+        /* CHAT INPUT FIELD */
+        #chat-input {
+            width: 70%;                      /* Takes up 70% of container width */
+            padding: 15px 20px;             /* Internal spacing */
+            border: 2px solid var(--accent); /* Colored border */
+            border-radius: 25px;             /* Pill shape */
+            font-size: 16px;                 /* Text size */
+            font-family: 'Georgia', serif;   /* Match site font */
+            background: white;               /* White background */
+            color: var(--text-light);       /* Text color */
+            transition: all 0.3s ease;      /* Smooth animations */
+        }
+
+        /* Chat input in dark mode */
+        .dark-mode #chat-input {
+            background: #333;                /* Dark background */
+            color: var(--text-dark);        /* Light text */
+            border-color: #81c784;          /* Light green border */
+        }
+
+        /* Chat input focus state - when user clicks/tabs to it */
+        #chat-input:focus {
+            outline: none;                   /* Remove default browser outline */
+            box-shadow: 0 0 15px rgba(76, 175, 80, 0.3);  /* Glowing effect */
+            transform: scale(1.02);          /* Slightly larger */
+        }
+
+        /* SEND BUTTON STYLING */
+        #chatbot-container button {
+            background: var(--accent);      /* Green background */
+            color: white;                    /* White text */
+            border: none;                    /* No border */
+            border-radius: 25px;            /* Pill shape */
+            padding: 15px 30px;             /* Internal spacing */
+            font-size: 16px;                /* Text size */
+            font-weight: bold;              /* Bold text */
+            cursor: pointer;                 /* Hand cursor */
+            margin-left: 10px;              /* Space from input field */
+            transition: all 0.3s ease;      /* Smooth animations */
+            font-family: 'Georgia', serif;   /* Match site font */
+        }
+
+        /* Send button hover effects */
+        #chatbot-container button:hover {
+            background: #388e3c;            /* Darker green */
+            transform: translateY(-2px);    /* Move up slightly */
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);  /* Add shadow */
+        }
+
+        /* CENTER IMAGE STYLING (for any images you might add) */
+        .center-image {
+            display: block;                  /* Block element for centering */
+            margin: 30px auto;              /* Center horizontally with vertical spacing */
+            max-width: 500px;               /* Maximum width */
+            width: 100%;                    /* Responsive width */
+            border-radius: 20px;            /* Rounded corners */
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);  /* Soft shadow */
+            transition: transform 0.3s ease; /* Smooth animation */
+        }
+
+        /* Image hover effect */
+        .center-image:hover {
+            transform: scale(1.05);         /* Slightly larger on hover */
+        }
+
+        /* FOOTER STYLING */
+        footer {
+            background: var(--card-light);  /* Semi-transparent background */
+            backdrop-filter: blur(15px);    /* Glassmorphism effect */
+            color: var(--text-light);       /* Text color */
+            text-align: center;             /* Center-aligned text */
+            padding: 30px;                  /* Internal spacing */
+            margin-top: 50px;               /* Space above footer */
+            border-radius: 20px 20px 0 0;   /* Rounded top corners only */
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);  /* Upward shadow */
+        }
+
+        /* Footer in dark mode */
+        .dark-mode footer {
+            background: var(--card-dark);
+            color: var(--text-dark);
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* PAGE TITLE STYLING */
+        .page-title {
+            font-size: 3em;                 /* Large title */
+            color: var(--accent);           /* Accent color */
+            margin-bottom: 20px;            /* Space below title */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);  /* Subtle text shadow */
+        }
+
+        /* Page title in dark mode */
+        .dark-mode .page-title {
+            color: #81c784;                 /* Lighter green */
+        }
+
+        /* SUBTITLE STYLING */
+        .subtitle {
+            font-size: 1.3em;              /* Medium size */
+            margin-bottom: 40px;            /* Space below subtitle */
+            opacity: 0.8;                   /* Slightly transparent for hierarchy */
+        }
+
+        /* RESPONSIVE DESIGN - Media Queries */
+        /* These styles apply only on smaller screens (mobile/tablet) */
+        /* Why? Desktop and mobile need different layouts for good UX */
+        @media (max-width: 768px) {
+            /* Header changes for mobile */
+            header {
+                flex-direction: column;      /* Stack logo and title vertically */
+                text-align: center;          /* Center everything */
+            }
+            
+            /* Smaller brand text on mobile */
+            .brand-text {
+                font-size: 1.8em;           /* Smaller than desktop */
+            }
+            
+            /* Smaller page title on mobile */
+            .page-title {
+                font-size: 2.2em;           /* Smaller than desktop */
+            }
+            
+            /* Narrower chat input on mobile */
+            #chat-input {
+                width: 60%;                  /* Less width to fit send button */
+            }
+            
+            /* Menu adjustments for mobile */
+            .menu, .settings-menu {
+                left: 10px;                  /* Closer to edges */
+                right: 10px;
+                top: 70px;                   /* Higher up */
+            }
+            
+            /* Chatbot container adjustments */
+            #chatbot-container {
+                margin: 20px 10px;          /* Less margin on sides */
+                padding: 20px;              /* Less internal padding */
+            }
+        }
+
+        /* UNIVERSAL BOX-SIZING */
+        /* Makes width/height calculations include padding and border */
+        /* Why? Makes responsive design calculations much easier */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* TYPING ANIMATION CLASS */
+        /* Applied to show "AI is typing" messages */
+        .typing {
+            opacity: 0.7;                   /* Semi-transparent */
+            font-style: italic;             /* Italic text */
+        }
+    </style>
 </head>
-<!-- Hamburger button -->
-<button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
-<!-- Menu content -->
-<div id="menu" class="menu-content">
-  <a href="About Me.html"><button>About</button></a>
-  <a href="Contact Me.html"><button>Contact</button></a>
-  <a href="NZ Universities.html"><button>NZ Universities Info</button></a>
-</div>
-<script>
-function toggleMenu() {
-  const menu = document.getElementById("menu");
-  menu.style.width = (menu.style.width === "250px") ? "0" : "250px";
-}
-</script>
-<!-- Header section with logo and navigation buttons -->
-<header>
-</div>
-    <!-- Logo linked to homepage -->
-    <a href="Website Digitech.html"></a>
-    <img src="C:\Users\Rishikesh\Downloads\AINZUNI 2.png" alt="AINZUNI Logo" style="display:block; margin-left:0; width:150px;">
-    </a>
-</div>
-</header>
 
-<!-- Main content: project title, description, and logo -->
 <body>
-    <!-- Project title -->
-    <p style="font-size: 1.2em; font-weight: bold;">AINZUNI</p>
-    <!-- Project description -->
-    <p style="font-size: 1.2em; font-weight: bold;">Stay Tuned for AINZUNI: Future University Insights and Information.</p>
-    <!-- Project logo image -->
-    <img src="C:\Users\Rishikesh\Downloads\Rishikesh\Digitech\Digital-Technology-Year-12-Design-Portfolio\Logo AINZUNI.jpg" alt="AINZUNI Logo" style="display:block; margin:auto; width:400px;">
-</body>
+    <!-- SETTINGS BUTTON -->
+    <!-- onclick attribute calls JavaScript function when clicked -->
+    <!-- aria-label provides description for screen readers (accessibility) -->
+    <button class="settings-btn" onclick="toggleSettings()" aria-label="Open settings">⚙️</button>
 
-<!-- Footer section: copyright notice -->
-<footer style="background-color: #333; color: #fff; text-align: center; padding: 15px; margin-top: 30px;">
-&copy; 2025 AINZUNI. All rights reserved.
-</footer> 
+    <!-- SETTINGS MENU - Hidden by default -->
+    <!-- ID allows JavaScript to find and manipulate this element -->
+    <div class="settings-menu" id="settingsMenu">
+        <button onclick="toggleDarkMode()" id="themeToggle">🌙 Dark</button>
+    </div>
+
+    <!-- HAMBURGER MENU BUTTON -->
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+
+    <!-- NAVIGATION MENU - Also hidden by default -->
+    <div class="menu" id="menu">
+        <!-- onclick with location.href navigates to different pages -->
+        <button onclick="location.href='index.html'">🏠 Home</button>
+        <button onclick="location.href='About Me.html'">👤 About</button>
+        <button onclick="location.href='NZ Universities.html'">🎓 NZ Universities</button>
+        <button onclick="location.href='Contact Me.html'">📧 Contact</button>
+    </div>
+
+    <!-- HEADER SECTION -->
+    <header>
+        <!-- Logo wrapped in link to make it clickable -->
+        <a href="Website Digitech.html">
+            <img src="C:/Users/Rishikesh/Downloads/Rishikesh/Digitech/Digital-Technology-Year-12-Design-Portfolio/AINZUNI 2.png" alt="AINZUNI Logo" class="logo">
+        </a>
+        <!-- Site title -->
+        <h1 class="brand-text">AINZUNI</h1>
+    </header>
+
+    <!-- MAIN CONTENT SECTION -->
+    <main>
+        <!-- Page title and subtitle -->
+        <h1 class="page-title">New Zealand Universities</h1>
+        <p class="subtitle">Your AI-powered guide to higher education in New Zealand</p>
+
+        <!-- CHATBOT INTERFACE CONTAINER -->
+        <div id="chatbot-container">
+            <!-- Chatbot title with inline CSS for accent color -->
+            <h3 style="margin-top: 0; color: var(--accent);">Ask me about NZ Universities!</h3>
+            
+            <!-- Messages display area with initial welcome message -->
+            <div id="chat-messages">
+                <p style="opacity: 0.7; font-style: italic;">Welcome! Ask me anything about New Zealand universities, courses, admission requirements, or campus life.</p>
+            </div>
+            
+            <!-- Input area with text field and send button -->
+            <div style="margin-top: 20px;">
+                <!-- onkeypress allows Enter key to send messages -->
+                <!-- event.key checks which key was pressed -->
+                <input type="text" id="chat-input" placeholder="Ask about universities, courses, admissions..." onkeypress="if(event.key==='Enter') sendMessage()">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+
+        <!-- PLACEHOLDER FOR CENTER IMAGE (commented out) -->
+        <!-- Uncomment and add image path when you have an image to display -->
+        <!-- <img src="your-image-path.jpg" alt="NZ Universities" class="center-image"> -->
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <p>&copy; 2025 AINZUNI. All rights reserved.</p>
+        <p style="font-size: 0.9em; opacity: 0.8;">Empowering students to find their perfect university match in New Zealand</p>
+    </footer>
+
+    <!-- JAVASCRIPT SECTION -->
+    <script>
+        // THEME LOADING ON PAGE LOAD
+        // window.onload runs when the page finishes loading
+        // This restores the user's preferred theme from previous visits
+        window.onload = function () {
+            // localStorage.getItem() retrieves saved data from browser storage
+            // This data persists even after closing the browser
+            const savedTheme = localStorage.getItem('theme');
+            
+            // Check what theme was saved and apply it
+            if (savedTheme === 'light') {
+                // Remove dark mode class if it exists
+                document.body.classList.remove('dark-mode');
+                // Update button text to show current state
+                document.getElementById('themeToggle').textContent = '🌙 Dark';
+            } else if (savedTheme === 'dark') {
+                // Add dark mode class to body element
+                document.body.classList.add('dark-mode');
+                // Update button text
+                document.getElementById('themeToggle').textContent = '☀️ Light';
+            }
+        };
+
+        // DARK/LIGHT MODE TOGGLE FUNCTION
+        function toggleDarkMode() {
+            // Check if body currently has dark-mode class
+            const isDark = document.body.classList.contains('dark-mode');
+            
+            if (isDark) {
+                // Currently dark, switch to light
+                document.body.classList.remove('dark-mode');
+                // Save preference to browser storage
+                localStorage.setItem('theme', 'light');
+                // Update button text
+                document.getElementById('themeToggle').textContent = '🌙 Dark';
+            } else {
+                // Currently light, switch to dark
+                document.body.classList.add('dark-mode');
+                // Save preference
+                localStorage.setItem('theme', 'dark');
+                // Update button text
+                document.getElementById('themeToggle').textContent = '☀️ Light';
+            }
+        }
+
+        // NAVIGATION MENU TOGGLE FUNCTION
+        function toggleMenu() {
+            // Get reference to the menu element
+            const menu = document.getElementById('menu');
+            // Check current display state and toggle it
+            // Ternary operator: condition ? valueIfTrue : valueIfFalse
+            menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+        }
+
+        // SETTINGS MENU TOGGLE FUNCTION
+        function toggleSettings() {
+            const settingsMenu = document.getElementById('settingsMenu');
+            settingsMenu.style.display = (settingsMenu.style.display === 'flex') ? 'none' : 'flex';
+        }
+
+        // CLICK OUTSIDE TO CLOSE MENUS
+        // addEventListener listens for events on the entire document
+        document.addEventListener('click', function(event) {
+            // Get references to menu elements and buttons
+            const menu = document.getElementById('menu');
+            const menuBtn = document.querySelector('.menu-btn');
+            const settingsMenu = document.getElementById('settingsMenu');
+            const settingsBtn = document.querySelector('.settings-btn');
+
+            // Check if click was outside menu AND outside menu button
+            // !element.contains(event.target) = click was NOT inside element
+            if (!menu.contains(event.target) && !menuBtn.contains(event.target)) {
+                menu.style.display = 'none';  // Hide menu
+            }
+
+            // Same check for settings menu
+            if (!settingsMenu.contains(event.target) && !settingsBtn.contains(event.target)) {
+                settingsMenu.style.display = 'none';  // Hide settings menu
+            }
+        });
+
+        // SEND MESSAGE FUNCTION
+        // async function can use 'await' for handling asynchronous operations
+        async function sendMessage() {
+            // Get references to DOM elements
+            const input = document.getElementById('chat-input');
+            const message = input.value.trim();  // .trim() removes extra whitespace
+            const chatMessages = document.getElementById('chat-messages');
+            
+            // Exit early if message is empty
+            if (!message) return;
+
+            // CREATE USER MESSAGE ELEMENT
+            // document.createElement() creates new HTML element in memory
+            const userMessage = document.createElement('div');
+            // Set CSS styling using cssText (applies multiple styles at once)
+            userMessage.style.cssText = 'text-align: right; margin: 10px 0; padding: 10px; background: var(--accent); color: white; border-radius: 15px 15px 5px 15px; display: inline-block; max-width: 80%; float: right; clear: both;';
+            // Set the text content
+            userMessage.textContent = message;
+            // Add element to the chat messages container
+            chatMessages.appendChild(userMessage);
+
+            // Clear the input field
+            input.value = '';
+
+            // CREATE TYPING INDICATOR
+            const typingDiv = document.createElement('div');
+            typingDiv.style.cssText = 'text-align: left; margin: 10px 0; padding: 10px; background: rgba(119, 187, 198, 0.3); border-radius: 15px 15px 15px 5px; display: inline-block; max-width: 80%; float: left; clear: both;';
+            typingDiv.textContent = 'AINZUNI is typing...';
+            typingDiv.className = 'typing';  // Add CSS class for styling
+            chatMessages.appendChild(typingDiv);
+
+            // Scroll to bottom to show newest messages
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            // TRY-CATCH BLOCK FOR ERROR HANDLING
+            try {
+                // ATTEMPT API CALL
+                // fetch() makes HTTP request to server
+                const response = await fetch('/chat', {
+                    method: 'POST',              // POST request to send data
+                    headers: {'Content-Type': 'application/json'},  // Tell server we're sending JSON
+                    body: JSON.stringify({message})  // Convert data to JSON string
+                });
+                
+                // Check if request was successful
+                if (response.ok) {
+                    // Parse JSON response
+                    const data = await response.json();
+                    // Display the AI response
+                    displayMessage(data.response);
+                } else {
+                    // If request failed, throw error to trigger catch block
+                    throw new Error('Network response was not ok');
+                }
+            } catch (error) {
+                // No demo responses - chatbot will remain silent without backend
+                console.log('Backend not available:', error);
+            }
+
+            // REMOVE TYPING INDICATOR
+            setTimeout(() => {
+                // Check if element still exists before removing
+                if (typingDiv.parentNode) {
+                    typingDiv.remove();  // Remove from DOM
+                }
+            }, 1000);  // Remove after 1 second
+        }
+
+        // DISPLAY MESSAGE FUNCTION
+        // This creates and displays AI responses in the chat
+        function displayMessage(message) {
+            const chatMessages = document.getElementById('chat-messages');
+            
+            // Create AI response element
+            const aiMessage = document.createElement('div');
+            aiMessage.style.cssText = 'text-align: left; margin: 10px 0; padding: 15px; background: rgba(119, 187, 198, 0.3); border-radius: 15px 15px 15px 5px; display: inline-block; max-width: 85%; float: left; clear: both;';
+            // innerHTML allows HTML content (like <strong> tags)
+            aiMessage.innerHTML = `<strong>AINZUNI:</strong> ${message}`;
+            
+            // Add the AI message to the chat container
+            chatMessages.appendChild(aiMessage);
+            
+            // Auto-scroll to bottom to show the newest message
+            // scrollTop = how far scrolled from top
+            // scrollHeight = total height of scrollable content
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+    </script>
+</body>
 </html>
