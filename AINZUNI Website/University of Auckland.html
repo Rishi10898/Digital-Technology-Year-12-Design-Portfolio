@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AINZUNI - University of Auckland</title>
+    <style>
+        /* CSS VARIABLES FOR THEME MANAGEMENT
+           Purpose: Define color schemes for light and dark modes in one place for easy maintenance
+           How: CSS custom properties that can be dynamically changed via JavaScript
+           Why: Enables consistent theming across the page and smooth theme transitions */
+        :root {
+            /* PURPOSE: CSS custom properties for consistent theming across light and dark modes
+               HOW: Variables store color values that can be easily switched between themes
+               WHY: Centralizes color management and enables smooth theme transitions */
+            --bg-light: #f9f9f9;
+            --bg-dark: #222;
+            --text-light: #333;
+            --text-dark: #f9f9f9;
+            --accent: #4caf50;
+            --card-light: #ffffff;
+            --card-dark: #333;
+        }
+
+        /* BODY STYLING WITH THEME SUPPORT
+           Purpose: Main page layout with responsive design and theme transition support
+           How: Uses CSS variables for colors and smooth transitions between themes
+           Why: Provides consistent user experience across light and dark modes */
+        body { 
+            font-family: Georgia, serif; 
+            margin: 0;
+            padding: 20px;
+            background: var(--bg-light);
+            color: var(--text-light);
+            transition: all 0.3s ease;
+            min-height: 100vh;
+        }
+
+        /* DARK MODE STYLING
+           Purpose: Override light theme colors when dark-mode class is applied to body
+           How: Uses CSS class selector to apply dark theme variables
+           Why: Provides alternative color scheme for better user experience in low-light conditions */
+        .dark-mode {
+            background: var(--bg-dark);
+            color: var(--text-dark);
+        }
+
+        .dark-mode div {
+            background: var(--card-dark) !important;
+        }
+
+        /* THEME TOGGLE BUTTON
+           Purpose: Allows users to switch between light and dark modes
+           How: Fixed positioned button with theme-aware styling and hover effects
+           Why: Essential accessibility feature for user preference and comfort */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 20px;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.3);
+        }
+
+        /* NAVIGATION LINK STYLING
+           Purpose: Styled back navigation button with theme support and hover effects
+           How: Uses accent colors with smooth transitions and responsive design
+           Why: Provides clear navigation path with consistent visual feedback */
+        .nav-link { 
+            background: var(--accent); 
+            color: white; 
+            padding: 12px 24px; 
+            text-decoration: none; 
+            border-radius: 25px; 
+            display: inline-block; 
+            margin: 20px 0; 
+            transition: all 0.3s ease;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.2);
+        }
+
+        .nav-link:hover { 
+            background: #388e3c; 
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.3);
+        }
+
+        /* HEADING STYLING WITH THEME SUPPORT
+           Purpose: University name display with accent color and theme compatibility
+           How: Uses CSS variables for color that adapts to current theme
+           Why: Maintains brand consistency while supporting user theme preferences */
+        h1 { 
+            color: var(--accent); 
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark-mode h1 {
+            color: #81c784;
+        }
+
+        /* CONTENT STYLING
+           Purpose: Main content area with readable typography and theme support
+           How: Responsive text sizing with theme-aware colors
+           Why: Ensures content readability in both light and dark modes */
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- THEME TOGGLE BUTTON
+         Purpose: Provides user control over light/dark mode preference
+         How: Button triggers JavaScript function to toggle theme classes and save preference
+         Why: Essential accessibility feature for user comfort and preference -->
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙</button>
+
+    <!-- PAGE HEADER -->
+    <h1>University of Auckland</h1>
+    
+    <!-- NAVIGATION LINK BACK TO UNIVERSITIES LIST
+         Purpose: Provides clear navigation path back to main NZ Universities page
+         How: Styled link button that redirects to NZ Universities.html
+         Why: Essential for user navigation and maintaining site structure -->
+    <a href="NZ Universities.html" class="nav-link">← Back to NZ Universities</a>
+    
+    <!-- MAIN CONTENT AREA -->
+    <p>New Zealand's largest university, renowned for research excellence and comprehensive academic programs across all disciplines.</p>
+    
+    <!-- UNIVERSITY PROGRAMS SECTION
+         Purpose: Display specific degree programs and study options available at University of Auckland
+         How it works: Organized list with external links to official university program pages
+         Why: Provides direct access to detailed program information for prospective students -->
+    <div style="background: var(--card-light); padding: 25px; border-radius: 15px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <h2 style="color: var(--accent); margin-bottom: 20px;">Study Programs & Options</h2>
+        <ul style="list-style-type: none; padding: 0;">
+            <li style="margin-bottom: 10px;"><a href="https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-engineering-honours-behons.html" style="color: var(--accent); text-decoration: none; font-weight: 500;">🔧 Engineering</a></li>
+            <li style="margin-bottom: 10px;"><a href="https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-science-bsc.html" style="color: var(--accent); text-decoration: none; font-weight: 500;">🔬 Science</a></li>
+            <li style="margin-bottom: 10px;"><a href="https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-commerce-bcom.html" style="color: var(--accent); text-decoration: none; font-weight: 500;">💼 Commerce</a></li>
+            <li style="margin-bottom: 10px;"><a href="https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-medicine-and-bachelor-of-surgery-mbchb.html" style="color: var(--accent); text-decoration: none; font-weight: 500;">🏥 Medicine</a></li>
+            <li style="margin-bottom: 10px;"><a href="https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-music-bmus.html" style="color: var(--accent); text-decoration: none; font-weight: 500;">🎵 Music</a></li>
+            <li style="margin-bottom: 10px;"><a href="https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-laws-llb.html" style="color: var(--accent); text-decoration: none; font-weight: 500;">⚖️ Law</a></li>
+            <li style="margin-bottom: 10px;"><a href="https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-arts-ba.html" style="color: var(--accent); text-decoration: none; font-weight: 500;">🎨 Arts</a></li>
+        </ul>
+    </div>
+
+    <!-- JAVASCRIPT FOR THEME FUNCTIONALITY
+         Purpose: Handles theme switching and persistence across page visits
+         How: Toggles CSS classes and saves preference to localStorage
+         Why: Provides seamless theme experience that remembers user choice -->
+    <script>
+        // THEME TOGGLE FUNCTION
+        // Purpose: Switch between light and dark modes
+        // How: Toggles dark-mode class on body and updates button icon
+        // Why: Provides immediate visual feedback and theme switching
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const themeBtn = document.getElementById('theme-btn');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                themeBtn.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeBtn.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // LOAD SAVED THEME PREFERENCE
+        // Purpose: Restore user's previously selected theme on page load
+        // How: Checks localStorage and applies appropriate theme class
+        // Why: Maintains consistent user experience across page visits
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            const themeBtn = document.getElementById('theme-btn');
+            
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                themeBtn.textContent = '☀️';
+            }
+        });
+    </script>
+</body>
+</html>

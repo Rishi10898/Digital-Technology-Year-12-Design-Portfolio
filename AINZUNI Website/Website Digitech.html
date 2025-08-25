@@ -1,71 +1,464 @@
-<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
-<html lang="en"> <!-- Root element, sets language to English -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 -->
-    <title>AINZUNI</title> <!-- Sets the page title shown in browser tab -->
+    <meta charset="UTF-8">
+    <title>AINZUNI - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AINZUNI - Your guide to New Zealand Universities">
+    
     <style>
-        /* Styles for the body: background color and font */
-        body {
-            background-color:#77bbc6; 
-            font-family: 'Georgia', serif; 
+        /* CSS VARIABLES - Global color scheme definition
+         * Purpose: Centralized color management for easy theme switching
+         * How it works: CSS custom properties (variables) that can be referenced throughout the stylesheet
+         * Why: Maintains consistency and allows for easy theme modifications */
+        :root {
+            --bg-light: #f9f9f9;        /* Light theme background color */
+            --bg-dark: #222;            /* Dark theme background color */
+            --text-light: #333;         /* Light theme text color (dark text on light bg) */
+            --text-dark: #f9f9f9;       /* Dark theme text color (light text on dark bg) */
+            --accent: #4caf50;          /* Primary accent color (green) for buttons and highlights */
+            --secondary: #77bbc6;       /* Secondary color (blue) for complementary elements */
+            --card-light: rgba(255, 255, 255, 0.9);  /* Semi-transparent white for glassmorphism effect */
+            --card-dark: rgba(34, 34, 34, 0.9);      /* Semi-transparent dark for glassmorphism effect */
         }
-        /* Styles for the header: background color and padding */
+
+        /* BODY STYLING - Main page container and layout
+         * Purpose: Establishes the foundational layout and visual design for the entire page
+         * How it works: Uses flexbox for vertical layout, CSS variables for theming, and gradient background
+         * Why: Creates a modern, responsive foundation that adapts to different screen sizes and themes */
+        body {
+            margin: 0;                    /* Remove default browser margins for full-width design */
+            font-family: 'Georgia', serif; /* Professional serif font for readability and elegance */
+            background: var(--bg-light) linear-gradient(135deg, #77bbc6 0%, #6ab5c1 100%); /* Diagonal gradient overlay */
+            color: var(--text-light);     /* Default text color using CSS variable for theme consistency */
+            transition: all 0.3s ease;    /* Smooth animation for theme changes (light/dark mode) */
+            min-height: 100vh;           /* Ensure page takes full viewport height minimum */
+            display: flex;               /* Flexbox container for vertical layout control */
+            flex-direction: column;      /* Stack elements vertically (header, main, footer) */
+        }
+
+        /* DARK MODE STYLING - Alternative color scheme
+         * Purpose: Provides a dark theme option for better user experience in low-light conditions
+         * How it works: JavaScript toggles the 'dark-mode' class on the body element
+         * Why: Improves accessibility, reduces eye strain, and offers user preference choice */
+        .dark-mode {
+            background: var(--bg-dark) linear-gradient(135deg, #1a3a4a 0%, #2a4a5a 100%); /* Dark gradient background */
+            color: var(--text-dark);      /* Light text color for contrast against dark background */
+        }
+
+        /* HEADER STYLING - Top navigation bar with logo, title, and settings
+         * Purpose: Creates a prominent header section with glassmorphism design
+         * How it works: Flexbox layout with space-between for element distribution
+         * Why: Provides clear navigation hierarchy and modern visual appeal */
         header {
-            background-color: #6ab5c1 ;
-            padding: 20px 0;
+            background: var(--card-light);        /* Semi-transparent background for glassmorphism effect */
+            backdrop-filter: blur(10px);          /* Blurs background content behind header for depth */
+            padding: 20px;                       /* Internal spacing for comfortable element positioning */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for visual separation */
+            border-radius: 0 0 20px 20px;        /* Rounded bottom corners for modern appearance */
+            margin-bottom: 30px;                 /* Space between header and main content */
+            display: flex;                       /* Flexbox for horizontal element arrangement */
+            align-items: center;                 /* Vertically center all header elements */
+            justify-content: space-between;      /* Distribute elements: logo(left), title(center), settings(right) */
+            gap: 20px;                          /* Minimum space between flex items */
         }
-        /* Ensures html and body take full height and removes default margin/padding */
-        html, body {
-            height: 100%;
+
+        /* Header styling in dark mode */
+        .dark-mode header {
+            background: var(--card-dark);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* LOGO IMAGE STYLING */
+        .logo {
+            width: 80px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        /* Logo hover effect */
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        /* MAIN BRAND TEXT STYLING - Centered in header */
+        .brand-text {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: var(--accent);
             margin: 0;
-            padding: 0;
+            flex: 1;
+            text-align: center;
         }
-        /* Makes body a flex container for vertical layout */
-        body {
-            min-height: 100vh;
+
+        /* Brand text color in dark mode */
+        .dark-mode .brand-text {
+            color: #81c784;
+        }
+
+
+        /* THEME TOGGLE BUTTON - Fixed position for scroll accessibility
+           Purpose: Simple moon/sun toggle for switching between light and dark modes
+           How: Fixed positioned button that stays visible during scroll with hover effects
+           Why: Always accessible theme switching for better user experience */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: transparent;
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 24px;
+            z-index: 1000;
+            transition: all 0.3s ease;
             display: flex;
-            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
-        /* Allows main content to expand and fill available space */
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            background: var(--accent);
+        }
+
+        /* MENU BUTTON - Fixed position for scroll accessibility
+           Purpose: Logo button that toggles navigation menu
+           How: Fixed positioned button that stays visible during scroll
+           Why: Always accessible navigation for better user experience */
+        .menu-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-btn .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .menu-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* NAVIGATION MENU STYLING */
+        .menu {
+            position: fixed;
+            top: 80px;
+            left: 20px;
+            display: none;
+            flex-direction: column;
+            background: var(--card-light);
+            backdrop-filter: blur(15px);
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            min-width: 200px;
+        }
+
+        /* Menu styling in dark mode */
+        .dark-mode .menu {
+            background: var(--card-dark);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        /* NAVIGATION MENU BUTTONS */
+        .menu button {
+            margin: 8px 0;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 25px;
+            background: var(--accent);
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-family: 'Georgia', serif;
+        }
+
+        /* Navigation button hover effects */
+        .menu button:hover {
+            background: #388e3c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        /* SETTINGS MENU */
+        .settings-menu {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            display: none;
+            flex-direction: column;
+            background: var(--card-light);
+            backdrop-filter: blur(15px);
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            min-width: 150px;
+        }
+
+        .dark-mode .settings-menu {
+            background: var(--card-dark);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Settings menu buttons */
+        .settings-menu button {
+            background: var(--accent);
+            color: white;
+            padding: 12px 20px;
+            margin-bottom: 8px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-family: 'Georgia', serif;
+        }
+
+        .settings-menu button:hover {
+            background: #388e3c;
+            transform: translateY(-2px);
+        }
+
+        /* MAIN CONTENT AREA */
         main {
             flex: 1;
+            padding: 40px 20px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* PAGE TITLE STYLING */
+        .page-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: var(--accent);
+            text-align: center;
+            margin: 30px 0 40px 0;
+            padding: 0;
+        }
+
+        /* Page title color in dark mode */
+        .dark-mode .page-title {
+            color: #81c784;
+        }
+
+        /* SUBTITLE STYLING */
+        .subtitle {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+
+        /* CONTENT CARD STYLING */
+        .content-card {
+            background: var(--card-light);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .dark-mode .content-card {
+            background: var(--card-dark);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        /* LINKS STYLING */
+        .content-card a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .content-card a:hover {
+            color: #388e3c;
+            text-decoration: underline;
+        }
+
+        .dark-mode .content-card a {
+            color: #81c784;
+        }
+
+        .dark-mode .content-card a:hover {
+            color: #a5d6a7;
+        }
+
+        /* FOOTER STYLING */
+        footer {
+            background: var(--card-light);
+            backdrop-filter: blur(15px);
+            color: var(--text-light);
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            border-radius: 20px 20px 0 0;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer in dark mode */
+        .dark-mode footer {
+            background: var(--card-dark);
+            color: var(--text-dark);
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .brand-text {
+                font-size: 1.8em;
+            }
+            
+            .page-title {
+                font-size: 2.2em;
+            }
+            
+            .menu, .settings-menu {
+                left: 10px;
+                right: 10px;
+                top: 70px;
+            }
+            
+            .content-card {
+                margin: 20px 10px;
+                padding: 20px;
+            }
+        }
+
+        /* UNIVERSAL BOX-SIZING */
+        * {
+            box-sizing: border-box;
         }
     </style>
 </head>
 <body>
-    <!-- Header section with logo and navigation buttons -->
-    <header>
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0;">
-            <!-- Logo image linking to home page -->
-            <a href="Website.Digitech.html">
-                <img src="C:\Users\Rishikesh\Downloads\AINZUNI 2.png" alt="AINZUNI Logo" style="display:block; margin-left:0; width:150px;">
-            </a>
-            <!-- Navigation bar with buttons to other pages -->
-            <nav style="display: flex; gap: 20px;">
-                <a href="About Me.html"><button style="font-family:Arial, Helvetica, sans-serif; background-color: #1874ca; color: white;">About</button></a>
-                <a href="Contact Me.html"><button style="font-family:sans-serif; background-color: #1874ca; color: rgb(251, 251, 251);">Contact</button></a>
-                <a href="AINZUNI.html"><button style="font-family:Arial, Helvetica, sans-serif; background-color: #1874ca; color: white;">AINZUNI</button></a>
-                <a href="NZ Universities.html"><button style="font-family:Arial, Helvetica, sans-serif; background-color: #1874ca; color: white;">NZ universities Bachelor Degree Information links</button></a>
-            </nav>
+    <!-- Logo Menu Button - Fixed position -->
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
+        <img src="C:\Users\Rishikesh\Downloads\Rishikesh\Digitech\Digital-Technology-Year-12-Design-Portfolio\AINZUNI 2.png" alt="AINZUNI Logo" class="logo">
+    </button>
+
+    <!-- Theme Toggle Button - Fixed position -->
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙</button>
+
+    <!-- NAVIGATION MENU - Hidden by default -->
+    <div class="menu" id="menu">
+        <button onclick="location.href='About Me.html'">👤 About</button>
+        <button onclick="location.href='AINZUNI.html'">🤖 AINZUNI</button>
+        <button onclick="location.href='NZ Universities.html'">🎓 NZ Universities</button>
+        <button onclick="location.href='Contact Me.html'">📧 Contact</button>
+    </div>
+
+    <!-- PAGE TITLE - Centered at top of page -->
+    <h1 class="page-title">Home</h1>
+
+    <!-- MAIN CONTENT SECTION -->
+    <main>
+        <div class="content-card">
+            <h3 style="color: var(--accent); margin-top: 0;">Welcome to AINZUNI!</h3>
+            <p><strong>Stay Tuned for AINZUNI: Future University Insights and Information.</strong></p>
+            
+            <h4 style="color: var(--accent);">Have you got your university plan?</h4>
+            <p>Having a university plan helps students enhance and have effective learning in their field of passion and vision for their future.</p>
+            
+            <h4 style="color: var(--accent);">University Planning Resources:</h4>
+            <ul style="line-height: 1.8;">
+                <li><a href="https://studytime.co.nz/articles/planning-your-university-studies/" target="_blank">Study Time NZ</a> - Planning your university studies</li>
+                <li><a href="https://ca.indeed.com/career-advice/career-development/college-planning" target="_blank">Indeed</a> - College planning career advice</li>
+                <li><a href="https://www.universitiesnz.ac.nz/sites/default/files/uni-nz/246656%20Student%20Directory_LR.pdf" target="_blank">Universities New Zealand (UNZ)</a> - Student directory</li>
+            </ul>
+            
+            <p style="margin-bottom: 0;"><em>Explore further information and updates of AINZUNI at other pages.</em></p>
         </div>
-    </header>
-    <!-- Main content: page heading and introductory text -->
-    <h3 style="text-align: center; font-weight:bold;">Home</h3>
-    <p>Welcome to AINZUNI !!!</p>
-    <p>Future University Insights and Information.</p>
-    <p style="font-size: 1.2em; font-weight: bold;">Stay Tuned for AINZUNI: Future University Insights and Information.</p>
-    <p>Have you got your university plan?</p>
-    <!-- Explains the importance of university planning -->
-    Having a university plan helps students enhance and have effective learning in their field of passion and vision for their future.
-    <p>Here are links to know more about university planning:-</p>
-    <!-- External resource links for university planning -->
-    <p><a href = "https://studytime.co.nz/articles/planning-your-university-studies/">Study Time NZ</a></p>
-    <p><a href = "https://ca.indeed.com/career-advice/career-development/college-planning">Indeed</a></p>
-    <p><a href = "https://www.universitiesnz.ac.nz/sites/default/files/uni-nz/246656%20Student%20Directory_LR.pdf">Universities New Zealand (UNZ)</a></p>    
-    <p>Explore further information and updates of AINZUNI at other pages.</p>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <p>&copy; 2025 AINZUNI. All rights reserved.</p>
+        <p style="font-size: 0.9em; opacity: 0.8;">Empowering students to find their perfect university match in New Zealand</p>
+    </footer>
+
+    <!-- JAVASCRIPT SECTION -->
+    <script>
+        // THEME LOADING ON PAGE LOAD
+        // Purpose: Restore user's previously selected theme preference
+        // How: Checks localStorage for saved theme and applies it on page load
+        // Why: Provides consistent theme experience across page visits
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            const themeBtn = document.getElementById('theme-btn');
+            
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                themeBtn.textContent = '☀️';
+            }
+        });
+
+        // THEME TOGGLE FUNCTION
+        // Purpose: Switch between light and dark modes with simple moon/sun icons
+        // How: Toggles dark-mode class and updates button icon accordingly
+        // Why: Provides intuitive theme switching with visual feedback
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const themeBtn = document.getElementById('theme-btn');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                themeBtn.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeBtn.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // NAVIGATION MENU TOGGLE FUNCTION
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+        }
+
+        // CLICK OUTSIDE TO CLOSE MENUS
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('menu');
+            const menuBtn = document.querySelector('.menu-btn');
+            const settingsMenu = document.getElementById('settingsMenu');
+            const settingsBtn = document.querySelector('.settings-btn');
+
+            if (!menu.contains(event.target) && !menuBtn.contains(event.target)) {
+                menu.style.display = 'none';
+            }
+
+            if (!settingsMenu.contains(event.target) && !settingsBtn.contains(event.target)) {
+                settingsMenu.style.display = 'none';
+            }
+        });
+    </script>
 </body>
-<!-- Footer section with copyright information -->
-<footer style="background-color: #333; color: #fff; text-align: center; padding: 15px; margin-top: 30px;">
-&copy; 2025 AINZUNI. All rights reserved.
-</footer>
 </html>

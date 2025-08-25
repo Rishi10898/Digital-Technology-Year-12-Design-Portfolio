@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AINZUNI - University of Canterbury</title>
+    <style>
+        :root {
+            --bg-light: #f9f9f9;
+            --bg-dark: #222;
+            --text-light: #333;
+            --text-dark: #f9f9f9;
+            --accent: #4caf50;
+            --card-light: #ffffff;
+            --card-dark: #333;
+        }
+
+        body { 
+            font-family: Georgia, serif; 
+            margin: 0;
+            padding: 20px;
+            background: var(--bg-light);
+            color: var(--text-light);
+            transition: all 0.3s ease;
+            min-height: 100vh;
+        }
+
+        .dark-mode {
+            background: var(--bg-dark);
+            color: var(--text-dark);
+        }
+
+        .dark-mode div {
+            background: var(--card-dark) !important;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 20px;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .nav-link { 
+            background: var(--accent); 
+            color: white; 
+            padding: 12px 24px; 
+            text-decoration: none; 
+            border-radius: 25px; 
+            display: inline-block; 
+            margin: 20px 0; 
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-link:hover { 
+            background: #388e3c; 
+            transform: translateY(-2px);
+        }
+
+        h1 { 
+            color: var(--accent); 
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .dark-mode h1 {
+            color: #81c784;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙</button>
+    <h1>University of Canterbury</h1>
+    <a href="NZ Universities.html" class="nav-link">← Back to NZ Universities</a>
+    <p>A leading research university known for engineering excellence, innovative teaching, and strong community connections in Christchurch.</p>
+    
+    <!-- UNIVERSITY PROGRAMS SECTION
+         Purpose: Display specific degree programs and study options available at University of Canterbury
+         How it works: Organized list with external links to official university program pages
+         Why: Provides direct access to detailed program information for prospective students -->
+    <div style="background: var(--card-light); padding: 25px; border-radius: 15px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <h2 style="color: var(--accent); margin-bottom: 20px;">Study Programs & Options</h2>
+        <ul style="list-style-type: none; padding: 0;">
+            <li style="margin-bottom: 10px;"><a href="https://www.canterbury.ac.nz/study/academic-study/engineering/" style="color: var(--accent); text-decoration: none; font-weight: 500;">🔧 Engineering</a></li>
+            <li style="margin-bottom: 10px;"><a href="https://www.canterbury.ac.nz/study/academic-study/science/" style="color: var(--accent); text-decoration: none; font-weight: 500;">🔬 Science</a></li>
+            <li style="margin-bottom: 10px;"><a href="https://www.canterbury.ac.nz/study/academic-study/business/" style="color: var(--accent); text-decoration: none; font-weight: 500;">💼 Commerce</a></li>
+            <li style="margin-bottom: 10px;"><a href="https://www.canterbury.ac.nz/study/academic-study/law/" style="color: var(--accent); text-decoration: none; font-weight: 500;">⚖️ Law</a></li>
+            <li style="margin-bottom: 10px;"><a href="https://www.canterbury.ac.nz/study/academic-study/arts/" style="color: var(--accent); text-decoration: none; font-weight: 500;">🎨 Arts</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const themeBtn = document.getElementById('theme-btn');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                themeBtn.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeBtn.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            const themeBtn = document.getElementById('theme-btn');
+            
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                themeBtn.textContent = '☀️';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AINZUNI - Contact Me</title>
+    <title>AINZUNI - About Me</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AINZUNI - Contact Information">
+    <meta name="description" content="AINZUNI - About the Creator">
     
     <style>
         /* CSS Variables - Define colors once, use everywhere for easy theming */
@@ -57,44 +57,44 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* LOGO MENU BUTTON - Clickable logo for navigation
-         * Purpose: Provides access to navigation menu through logo interaction
-         * How it works: Transparent button containing logo image, positioned fixed for consistent access
-         * Why: Clean design without separate hamburger icon, logo serves dual purpose */
+        /* MAIN BRAND TEXT STYLING - Centered in header */
+        .brand-text {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: var(--accent);
+            margin: 0;
+        }
+
+        .dark-mode .brand-text {
+            color: #81c784;
+        }
+
+        /* MENU BUTTON - Fixed position for scroll accessibility
+           Purpose: Logo button that toggles navigation menu
+           How: Fixed positioned button that stays visible during scroll
+           Why: Always accessible navigation for better user experience */
         .menu-btn {
-            position: fixed;              /* Fixed positioning for consistent placement across scroll */
-            top: 20px;                   /* Distance from top of viewport */
-            left: 20px;                  /* Distance from left of viewport */
-            background: transparent;      /* No background color for clean appearance */
-            border: none;                /* Remove default button border */
-            border-radius: 12px;         /* Rounded corners matching logo shape */
-            cursor: pointer;             /* Pointer cursor to indicate interactivity */
-            z-index: 1000;              /* High z-index to appear above other content */
-            transition: all 0.3s ease;   /* Smooth animation for hover effects */
-            width: 40px;                /* Compact width for modern design */
-            height: 40px;               /* Square dimensions for logo */
-            display: flex;              /* Flexbox for centering logo image */
-            align-items: center;        /* Vertically center logo */
-            justify-content: center;    /* Horizontally center logo */
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 1000;
+            transition: transform 0.3s ease;
         }
 
-        .dark-mode .menu-btn {
-            background: var(--card-dark);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        /* LOGO IMAGE STYLING - Brand image within menu button
-         * Purpose: Displays AINZUNI brand logo as interactive navigation trigger
-         * How it works: Square image with rounded corners and hover animation
-         * Why: Maintains brand visibility while providing intuitive navigation access */
         .menu-btn .logo {
-            width: 40px;                    /* Compact size for modern appearance */
-            height: 40px;                   /* Square aspect ratio */
-            border-radius: 12px;            /* Rounded corners for modern design */
-            transition: transform 0.3s ease; /* Smooth scaling animation */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
 
+        .menu-btn:hover {
+            transform: scale(1.1);
+        }
 
         /* NAVIGATION MENU STYLING */
         .menu {
@@ -109,7 +109,7 @@
             border-radius: 16px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             z-index: 999;
-            min-width: 200px;
+            min-width: 150px;
         }
 
         .dark-mode .menu {
@@ -135,6 +135,54 @@
             background: #388e3c;
             transform: translateY(-2px);
             box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        /* THEME TOGGLE BUTTON
+           Purpose: Simple moon/sun toggle for switching between light and dark modes
+           How: Fixed positioned button showing current theme state with hover effects
+           Why: Intuitive visual indicator for theme switching functionality */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: transparent;
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 24px;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            background: var(--accent);
+        }
+
+        /* SETTINGS BUTTON */
+        .settings-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: transparent;
+            color: var(--text);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .settings-btn:hover {
+            transform: scale(1.1);
         }
 
         /* SETTINGS MENU */
@@ -175,18 +223,6 @@
         .settings-menu button:hover {
             background: #388e3c;
             transform: translateY(-2px);
-        }
-
-        /* MAIN BRAND TEXT STYLING */
-        .brand-text {
-            font-size: 2.2em;
-            font-weight: bold;
-            color: var(--accent);
-            margin: 0;
-        }
-
-        .dark-mode .brand-text {
-            color: #81c784;
         }
 
         /* MAIN CONTENT AREA */
@@ -238,41 +274,6 @@
         .dark-mode .content-card {
             background: var(--card-dark);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-        }
-
-        .content-card a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .content-card a:hover {
-            color: #388e3c;
-            text-decoration: underline;
-        }
-
-        .dark-mode .content-card a {
-            color: #81c784;
-        }
-
-        .dark-mode .content-card a:hover {
-            color: #a5d6a7;
-        }
-
-        /* CONTACT IMAGE STYLING */
-        .contact-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin: 20px auto;
-            display: block;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease;
-        }
-
-        .contact-image:hover {
-            transform: scale(1.05);
         }
 
         /* FOOTER STYLING */
@@ -338,42 +339,49 @@
     <!-- NAVIGATION MENU -->
     <div class="menu" id="menu">
         <button onclick="location.href='Website Digitech.html'">🏠 Home</button>
-        <button onclick="location.href='About Me.html'">👤 About</button>
         <button onclick="location.href='AINZUNI.html'">🤖 AINZUNI</button>
         <button onclick="location.href='NZ Universities.html'">🎓 NZ Universities</button>
+        <button onclick="location.href='Contact Me.html'">📧 Contact</button>
     </div>
 
     <!-- PAGE TITLE - Centered at top of page -->
-    <h1 class="page-title">Contact Me</h1>
+    <h1 class="page-title">About Me</h1>
 
     <!-- MAIN CONTENT SECTION -->
     <main>
-        <p class="subtitle">Get in touch for any inquiries about AINZUNI</p>
+        <p class="subtitle">Learn more about the creator of AINZUNI</p>
 
         <div class="content-card">
-            <img src="C:\Users\Rishikesh\Downloads\Rishikesh\Digitech\Digital-Technology-Year-12-Design-Portfolio\contact.png" alt="Contact Me" class="contact-image">
+            <h3 style="color: var(--accent); margin-top: 0;">About the Creator</h3>
+            <p>Welcome to AINZUNI! I'm passionate about helping students navigate their educational journey in New Zealand.</p>
             
-            <h3 style="color: var(--accent); text-align: center; margin-top: 0;">Contact Information</h3>
-            <p style="text-align: center; font-size: 1.1em;">If you have any inquiries, please do contact me with this email address:</p>
-            <p style="text-align: center; font-size: 1.2em; font-weight: bold; color: var(--accent);">sriramr@wsc.school.nz</p>
+            <h4 style="color: var(--accent);">My Mission</h4>
+            <p>AINZUNI was created to provide comprehensive information about New Zealand universities, making it easier for prospective students to find the right educational path.</p>
             
-            <h4 style="color: var(--accent); text-align: center; margin-top: 30px;">Feedback</h4>
-            <p style="text-align: center;">Give your feedback on my website honestly:</p>
-            <p style="text-align: center;">
-                <a href="https://forms.gle/YmKBLJQxsBFBnyNP9" target="_blank">📝 Feedback Form</a>
-            </p>
+            <h4 style="color: var(--accent);">What AINZUNI Offers</h4>
+            <ul>
+                <li>Detailed information about New Zealand universities</li>
+                <li>Course and program details</li>
+                <li>Admission requirements and guidance</li>
+                <li>AI-powered assistance for university queries</li>
+            </ul>
+            
+            <h4 style="color: var(--accent);">Get in Touch</h4>
+            <p>Have questions or suggestions? Feel free to <a href="Contact Me.html" style="color: var(--accent); text-decoration: none; font-weight: bold;">contact me</a> anytime!</p>
         </div>
     </main>
 
-    <!-- FOOTER SECTION -->
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 AINZUNI. All rights reserved.</p>
-        <p style="font-size: 0.9em; opacity: 0.8;">Empowering students to find their perfect university match in New Zealand</p>
+        &copy; 2025 AINZUNI. All rights reserved.
     </footer>
 
-    <!-- JAVASCRIPT SECTION -->
+    <!-- JavaScript Functions -->
     <script>
         // THEME LOADING ON PAGE LOAD
+        // Purpose: Restore user's previously selected theme preference
+        // How: Checks localStorage for saved theme and applies it on page load
+        // Why: Provides consistent theme experience across page visits
         document.addEventListener('DOMContentLoaded', function() {
             const savedTheme = localStorage.getItem('theme');
             const themeBtn = document.getElementById('theme-btn');
@@ -385,6 +393,9 @@
         });
 
         // THEME TOGGLE FUNCTION
+        // Purpose: Switch between light and dark modes with simple moon/sun icons
+        // How: Toggles dark-mode class and updates button icon accordingly
+        // Why: Provides intuitive theme switching with visual feedback
         function toggleTheme() {
             document.body.classList.toggle('dark-mode');
             const themeBtn = document.getElementById('theme-btn');
@@ -404,14 +415,17 @@
             menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
         }
 
-        // CLICK OUTSIDE TO CLOSE MENUS
+
+        // Close menus when clicking outside
         document.addEventListener('click', function(event) {
             const menu = document.getElementById('menu');
+            const settingsMenu = document.getElementById('settingsMenu');
             const menuBtn = document.querySelector('.menu-btn');
-            if (!menu.contains(event.target) && !menuBtn.contains(event.target)) {
+            if (!menuBtn.contains(event.target) && !menu.contains(event.target)) {
                 menu.style.display = 'none';
             }
         });
     </script>
+
 </body>
 </html>

@@ -2,259 +2,514 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>NZ Universities</title>
-  <style>
-    /* === Base layout and font === */
-    body {
-      background-color: #77bbc6;               /* Light teal background */
-      font-family: 'Georgia', serif;           /* Serif font for academic style */
-      margin: 0;                               /* Remove default browser margin */
-      padding: 0;                              /* Remove default padding */
-      min-height: 100vh;                       /* Full viewport height */
-      display: flex;                           /* Use flexbox for vertical layout */
-      flex-direction: column;                 /* Stack header, main, footer vertically */
-    }
+    <title>AINZUNI - NZ Universities</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AINZUNI - New Zealand Universities Information">
+    
+    <style>
+        /* CSS Variables - Define colors once, use everywhere for easy theming */
+        :root {
+            --bg-light: #f9f9f9;
+            --bg-dark: #222;
+            --text-light: #333;
+            --text-dark: #f9f9f9;
+            --accent: #4caf50;
+            --secondary: #77bbc6;
+            --card-light: rgba(255, 255, 255, 0.9);
+            --card-dark: rgba(34, 34, 34, 0.9);
+        }
 
-    /* === Header styling === */
-    header {
-     background-color: #6ab5c1;
-     padding: 1px 10px; /* 10px top/bottom, 20px left/right */
-    }
+        /* Body - Full page layout with gradient background */
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background: var(--bg-light) linear-gradient(135deg, #77bbc6 0%, #6ab5c1 100%);
+            color: var(--text-light);
+            transition: all 0.3s ease;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
-    /* === Main content area === */
-    main {
-      flex: 1;                                 /* Expand to fill available space */
-      padding: 20px;                           /* Space around main content */
-      text-align: center;                      /* Center content horizontally */
-    }
+        /* Dark mode - Applied via JavaScript class toggle */
+        .dark-mode {
+            background: var(--bg-dark) linear-gradient(135deg, #1a3a4a 0%, #2a4a5a 100%);
+            color: var(--text-dark);
+        }
 
-    /* === Footer styling === */
-    footer {
-      background-color: #333;                  /* Dark gray background */
-      color: #fff;                             /* White text */
-      text-align: center;                      /* Centered text */
-      padding: 15px;                           /* Space inside footer */
-      margin-top: auto;                        /* Push footer to bottom */
-    }
+        /* HEADER STYLING - Contains logo, title, and settings button */
+        header {
+            background: var(--card-light);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
 
-    /* === Logo in header === */
-    .logo {
-      display: block;                          /* Block-level for layout */
-      margin-left: 0;                          /* No left margin */
-      top: 100px;                               /* Distance from top */
-      border: none;                            /* No border */
-      border-radius: 6px;                      /* Rounded corners */
-      width: 100px;                            /* Fixed width for consistency */
-    }
+        /* Header styling in dark mode */
+        .dark-mode header {
+            background: var(--card-dark);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
 
-    /* === Centered main image === */
-    .center-image {
-      display: block;                          /* Block element */
-      margin: 20px auto;                       /* 20px top/bottom, centered horizontally */
-      width: 400px;                            /* Fixed width */
-    }
+        /* LOGO MENU BUTTON - Clickable logo for navigation
+         * Purpose: Provides access to navigation menu through logo interaction
+         * How it works: Transparent button containing logo image, positioned fixed for consistent access
+         * Why: Clean design without separate hamburger icon, logo serves dual purpose */
+        .menu-btn {
+            position: fixed;              /* Fixed positioning for consistent placement across scroll */
+            top: 20px;                   /* Distance from top of viewport */
+            left: 20px;                  /* Distance from left of viewport */
+            background: transparent;      /* No background color for clean appearance */
+            border: none;                /* Remove default button border */
+            border-radius: 12px;         /* Rounded corners matching logo shape */
+            cursor: pointer;             /* Pointer cursor to indicate interactivity */
+            z-index: 1000;              /* High z-index to appear above other content */
+            transition: all 0.3s ease;   /* Smooth animation for hover effects */
+            width: 40px;                /* Compact width for modern design */
+            height: 40px;               /* Square dimensions for logo */
+            display: flex;              /* Flexbox for centering logo image */
+            align-items: center;        /* Vertically center logo */
+            justify-content: center;    /* Horizontally center logo */
+        }
 
-    /* === Hamburger Menu Button === */
-    .menu-btn {
-      position: fixed;                         /* Stays on screen when scrolling */
-      top: 1px;                               /* Distance from top */
-      left: 1px;                              /* Distance from left */
-      font-size: 20px;                         /* Big hamburger icon */
-      background: var(--accent, #0e5fc2);      /* Blue background with fallback */
-      color: #fff;                             /* White text */
-      border: none;                            /* No border */
-      border-radius: 6px;                      /* Rounded corners */
-      padding: 6px 12px;                       /* Inner spacing */
-      cursor: pointer;                         /* Pointer cursor on hover */
-      z-index: 100;                           /* Display on top of content */
-    }
+        .menu-btn:hover {
+            transform: scale(1.1);
+        }
 
-    /* === Hidden Menu Styling === */
-    .menu {
-      position: fixed;                         /* Fixed relative to viewport */
-      top: 60px;                               /* Appears below menu button */
-      left: 20px;                              /* Aligned with button */
-      display: none;                           /* Hidden by default */
-      flex-direction: column;                 /* Stack menu items vertically */
-      background: rgba(255, 255, 255, 0.9);    /* Slightly transparent white background */
-      padding: 12px;                           /* Inner padding */
-      border-radius: 8px;                      /* Rounded corners */
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);/* Shadow for depth */
-      z-index: 999;                            /* Slightly below menu button */
-    }
+        /* LOGO IMAGE STYLING - Brand image within menu button
+         * Purpose: Displays AINZUNI brand logo as interactive navigation trigger
+         * How it works: Square image with rounded corners and hover animation
+         * Why: Maintains brand visibility while providing intuitive navigation access */
+        .logo {
+            width: 40px;                    /* Compact size for modern appearance */
+            height: 40px;                   /* Square aspect ratio */
+            border-radius: 12px;            /* Rounded corners for modern design */
+            transition: transform 0.3s ease; /* Smooth scaling animation */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
 
-    /* === Menu buttons === */
-    .menu button {
-      margin: 6px 0;                           /* Vertical spacing between buttons */
-      padding: 10px 20px;                      /* Button padding */
-      border: none;                            /* No border */
-      border-radius: 6px;                      /* Rounded corners */
-      background: var(--accent,  #e4e9ed);      /* Green background fallback */
-      color: #10a8db;                             /* White text */
-      cursor: pointer;                         /* Pointer cursor */
-      font-size: 16px;                         /* Font size */
-      transition: background 0.2s;             /* Smooth hover transition */
-    }
+        .logo:hover {
+            transform: scale(1.1);
+        }
 
-    .menu button:hover {
-      background: #021e03;                     /* Darker green on hover */
-    }
+        /* NAVIGATION MENU STYLING */
+        .menu {
+            position: fixed;
+            top: 80px;
+            left: 20px;
+            display: none;
+            flex-direction: column;
+            background: var(--card-light);
+            backdrop-filter: blur(15px);
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            min-width: 150px;
+        }
 
-    /* === Dark Mode Styles === */
-    .dark-mode {
-      background: var(--bg-dark, #222)         /* Dark fallback background */
-                  url('images/flute-5.jpg')    /* Optional background image */
-                  center/cover no-repeat;      /* Centered and scaled to cover */
-      color: var(--text-dark, #fff);           /* White text */
-    }
+        .dark-mode .menu {
+            background: var(--card-dark);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
 
-    /* === Dark Mode Toggle Button === */
-    .toggle-btn {
-      position: fixed;                         /* Fixed top-right */
-      top: 20px;
-      right: 30px;
-      background: var(--accent, #0e5fc2);      /* Blue background */
-      color: #fff;                             /* White text */
-      border: none;                            /* No border */
-      border-radius: 20px;                     /* Rounded pill shape */
-      padding: 8px 18px;                       /* Padding inside button */
-      cursor: pointer;                         /* Pointer cursor */
-      font-size: 16px;                         /* Font size */
-      transition: background 0.2s ease;        /* Smooth hover effect */
-      z-index: 1000;                           /* On top of page elements */
-    }
+        .menu a {
+            margin: 8px 0;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 25px;
+            background: var(--accent);
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-family: 'Georgia', serif;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
 
-    .toggle-btn:hover {
-      background: #021e03;                     /* Darker background on hover */
-    }
+        .menu a:hover {
+            background: #388e3c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        /* THEME TOGGLE BUTTON - Fixed position for scroll accessibility
+         * Purpose: Simple moon/sun toggle for switching between light and dark modes
+         * How: Fixed positioned button that stays visible during scroll with hover effects
+         * Why: Always accessible theme switching for better user experience */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: transparent;
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 24px;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            background: var(--accent);
+        }
+
+        /* MAIN BRAND TEXT STYLING */
+        .brand-text {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: var(--accent);
+            margin: 0;
+        }
+
+        .dark-mode .brand-text {
+            color: #81c784;
+        }
+
+        /* MAIN CONTENT AREA */
+        main {
+            flex: 1;
+            padding: 40px 20px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* PAGE TITLE STYLING - Centered page title
+         * Purpose: Clean, centered title at top of page without header background
+         * How: Large, bold text with accent color and proper spacing
+         * Why: Simplified design focusing on content rather than complex headers */
+        .page-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: var(--accent);
+            text-align: center;
+            margin: 30px 0 40px 0;
+            padding: 0;
+        }
+
+        /* Page title color in dark mode */
+        .dark-mode .page-title {
+            color: #81c784;
+        }
+
+        /* SUBTITLE STYLING */
+        .subtitle {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+
+        /* CONTENT CARD STYLING */
+        .content-card {
+            background: var(--card-light);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .dark-mode .content-card {
+            background: var(--card-dark);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .content-card a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .content-card a:hover {
+            color: #388e3c;
+            text-decoration: underline;
+        }
+
+        .dark-mode .content-card a {
+            color: #81c784;
+        }
+
+        .dark-mode .content-card a:hover {
+            color: #a5d6a7;
+        }
+
+        /* FOOTER STYLING */
+        footer {
+            background: var(--card-light);
+            backdrop-filter: blur(15px);
+            color: var(--text-light);
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            border-radius: 20px 20px 0 0;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark-mode footer {
+            background: var(--card-dark);
+            color: var(--text-dark);
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* UNIVERSITY CARD HOVER EFFECTS
+           Purpose: Enhance user interaction with visual feedback when hovering over university cards
+           How it works: CSS transforms and box-shadow changes create smooth animations on hover
+           Why: Provides intuitive visual feedback that cards are interactive and clickable */
+        .university-card {
+            background: var(--card-light);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .university-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .dark-mode .university-card {
+            background: var(--card-dark);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .dark-mode .university-card:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+
+        /* UNIVERSITY CARD BUTTON STYLING
+           Purpose: Consistent styling for all university navigation buttons
+           How it works: Full-width buttons with hover effects and smooth transitions
+           Why: Creates uniform user experience across all university cards */
+        .university-btn {
+            background: var(--accent);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-family: 'Georgia', serif;
+        }
+
+        .university-btn:hover {
+            background: #388e3c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .brand-text {
+                font-size: 1.8em;
+            }
+            
+            .page-title {
+                font-size: 2.2em;
+            }
+            
+            .menu, .settings-menu {
+                left: 10px;
+                right: 10px;
+                top: 70px;
+            }
+            
+            .content-card {
+                margin: 20px 10px;
+                padding: 20px;
+            }
+
+            /* MOBILE UNIVERSITY CARD ADJUSTMENTS
+               Purpose: Optimize university cards for mobile viewing
+               How it works: Reduces padding and adjusts grid for smaller screens
+               Why: Ensures cards remain readable and accessible on mobile devices */
+            .university-card {
+                padding: 20px;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
   </style>
 </head>
 <body>
-<!-- Hamburger Menu Button -->
-  <button class="menu-btn" onclick="toggleMenu()">☰</button>
-  <!-- When clicked, shows or hides the menu -->
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙</button>
 
-  <!-- Dark Mode Toggle Button -->
-  <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Dark</button>
-  <!-- When clicked, toggles dark/light theme -->
+    <!-- Logo Menu Button -->
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
+        <img src="C:\Users\Rishikesh\Downloads\Rishikesh\Digitech\Digital-Technology-Year-12-Design-Portfolio\AINZUNI 2.png" alt="AINZUNI Logo" class="logo">
+    </button>
 
-  <!-- Navigation Menu (hidden by default) -->
-  <div class="menu" id="menu">
-    <button onclick="location.href='index.html'">Home</button>
-    <button onclick="location.href='NZ Universities.html'">About</button>
-    <button onclick="location.href='AINZUNI.html'">AINZUNI</button>
-    <button onclick="location.href='Contact Me.html'">Contact</button>
-  </div>
+    <!-- Navigation Menu -->
+    <nav id="menu" class="menu">
+        <a href="Website Digitech.html"> 🏠 Home</a>
+        <a href="About Me.html">👤 About Me</a>
+        <a href="AINZUNI.html">🤖 AINZUNI</a>
+        <a href="Contact Me.html">📧 Contact Me</a>
+    </nav>
 
-  <!-- Header Section -->
-  <header>
-    <a href="Website Digitech.html">
-      <img src="C:\Users\Rishikesh\Downloads\Rishikesh\Digitech\Digital-Technology-Year-12-Design-Portfolio\AINZUNI 2.png" alt="AINZUNI Logo" class="logo">
-      <!-- Logo linking to homepage -->
-    </a>
-  </header>
+    <!-- PAGE TITLE - Centered at top of page -->
+    <h1 class="page-title">NZ Universities</h1>
+
+    <!-- Main Content -->
+    <main>
+        <p class="subtitle">Explore the top universities in New Zealand and find the perfect fit for your academic journey.</p>
+        
+        <!-- UNIVERSITY CARDS GRID LAYOUT
+             Purpose: Display all New Zealand universities in an organized card format with direct links to individual university pages
+             How it works: CSS Grid creates responsive layout that adapts to screen size, each card contains university info and navigation button
+             Why: Provides clean, modern interface for users to easily browse and access detailed university information -->
+        <div class="content-card">
+            <h2>New Zealand Universities</h2>
+            <p style="margin-bottom: 30px;">Click on any university below to explore detailed information about their programs, admissions, and more.</p>
+            
+            <!-- RESPONSIVE GRID CONTAINER
+                 Purpose: Creates flexible grid layout that automatically adjusts number of columns based on screen size
+                 How it works: CSS Grid with auto-fit and minmax ensures cards maintain minimum width while filling available space
+                 Why: Ensures optimal viewing experience across all devices from mobile to desktop -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-top: 20px;">
+                
+                <!-- UNIVERSITY OF AUCKLAND CARD
+                     Purpose: Provides overview and navigation to University of Auckland detailed page
+                     How it works: Card contains title, description, and clickable button that redirects to university-specific HTML page
+                     Why: Allows users to quickly identify and access comprehensive university information -->
+                <div class="university-card">
+                    <h3 style="color: var(--accent); margin-bottom: 15px; font-size: 1.3em;">University of Auckland</h3>
+                    <p style="margin-bottom: 20px; line-height: 1.6;">New Zealand's largest university, renowned for research excellence and comprehensive academic programs across all disciplines.</p>
+                    <button onclick="location.href='University of Auckland.html'" class="university-btn">Explore University</button>
+                </div>
+                
+                <!-- AUCKLAND UNIVERSITY OF TECHNOLOGY CARD -->
+                <div class="university-card">
+                    <h3 style="color: var(--accent); margin-bottom: 15px; font-size: 1.3em;">Auckland University of Technology</h3>
+                    <p style="margin-bottom: 20px; line-height: 1.6;">A modern university focused on innovation, practical learning, and strong industry connections with contemporary facilities.</p>
+                    <button onclick="location.href='Auckland University of Technology.html'" class="university-btn">Explore University</button>
+                </div>
+                
+                <!-- UNIVERSITY OF OTAGO CARD -->
+                <div class="university-card">
+                    <h3 style="color: var(--accent); margin-bottom: 15px; font-size: 1.3em;">University of Otago</h3>
+                    <p style="margin-bottom: 20px; line-height: 1.6;">New Zealand's oldest university, famous for medical programs, research excellence, and vibrant student life in Dunedin.</p>
+                    <button onclick="location.href='Otago University.html'" class="university-btn">Explore University</button>
+                </div>
+                
+                <!-- UNIVERSITY OF CANTERBURY CARD -->
+                <div class="university-card">
+                    <h3 style="color: var(--accent); margin-bottom: 15px; font-size: 1.3em;">University of Canterbury</h3>
+                    <p style="margin-bottom: 20px; line-height: 1.6;">Leading engineering and science programs with strong research focus and beautiful campus in Christchurch.</p>
+                    <button onclick="location.href='University of Cantenbury.html'" class="university-btn">Explore University</button>
+                </div>
+                
+                <!-- UNIVERSITY OF WAIKATO CARD -->
+                <div class="university-card">
+                    <h3 style="color: var(--accent); margin-bottom: 15px; font-size: 1.3em;">University of Waikato</h3>
+                    <p style="margin-bottom: 20px; line-height: 1.6;">Known for business, computer science, and education programs with innovative teaching methods and research.</p>
+                    <button onclick="location.href='University of Waikato.html'" class="university-btn">Explore University</button>
+                </div>
+                
+                <!-- MASSEY UNIVERSITY CARD -->
+                <div class="university-card">
+                    <h3 style="color: var(--accent); margin-bottom: 15px; font-size: 1.3em;">Massey University</h3>
+                    <p style="margin-bottom: 20px; line-height: 1.6;">Multi-campus university excelling in agriculture, veterinary science, business, and creative arts with flexible study options.</p>
+                    <button onclick="location.href='Massey University.html'" class="university-btn">Explore University</button>
+                </div>
+                
+                <!-- VICTORIA UNIVERSITY OF WELLINGTON CARD -->
+                <div class="university-card">
+                    <h3 style="color: var(--accent); margin-bottom: 15px; font-size: 1.3em;">Victoria University of Wellington</h3>
+                    <p style="margin-bottom: 20px; line-height: 1.6;">Located in the capital city, renowned for law, public policy, creative writing, and strong government connections.</p>
+                    <button onclick="location.href='Victoria University of Wellington.html'" class="university-btn">Explore University</button>
+                </div>
+                
+                <!-- LINCOLN UNIVERSITY CARD -->
+                <div class="university-card">
+                    <h3 style="color: var(--accent); margin-bottom: 15px; font-size: 1.3em;">Lincoln University</h3>
+                    <p style="margin-bottom: 20px; line-height: 1.6;">Specializing in agriculture, environment, and land-based studies with world-class research and practical learning approaches.</p>
+                    <button onclick="location.href='Lincoln University.html'" class="university-btn">Explore University</button>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 AINZUNI. All rights reserved.
+    </footer>
+
+    <!-- JavaScript Functions -->
+    <script>
+        // Toggle the visibility of the navigation menu
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+        }
+
+        // Toggle theme between light and dark modes
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const themeBtn = document.getElementById('theme-btn');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                themeBtn.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeBtn.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Load saved theme preference
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            const themeBtn = document.getElementById('theme-btn');
+            
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                themeBtn.textContent = '☀️';
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('menu');
+            const menuBtn = document.querySelector('.menu-btn');
+
+            if (!menuBtn.contains(event.target) && !menu.contains(event.target)) {
+                menu.style.display = 'none';
+            }
+        });
+    </script>
+
 </body>
-<!-- 
-    This section lists NZ universities and their undergraduate degree options.
-    Each university is introduced with a bold paragraph, followed by a set of links to their main study options and popular bachelor degrees.
-    The structure uses <ul> for the whole list, with <p> for university names and <li> for degree links.
--->
-<ul>
-    <!-- University of Auckland (UOA) -->
-    <p style="font-size: 1.2em; font-weight: bold;">University of Auckland (UOA)</p>  
-    <p>Here are some popular undergraduate degrees offered by the Universities in New Zealand:</p>
-    <li><a href="https://www.auckland.ac.nz/en.html">Undergraduate Study Options</a></li>
-
-    <li><a href="https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-engineering-honours-behons.html">Bachelor of Engineering(Honours)</a></li>
-    <li><a href="https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-commerce-bcom.html">Bachelor of Commerce (BCom)</a></li>
-    <li><a href="https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-music-bmus.html">Bachelor of Music (BMus)</a></li>
-    <li><a href="https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-arts-ba.html">Bachelor of Arts (BA)</a></li>
-    <li><a href="https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-science-bsc.html">Bachelor of Science(BSc)</a></li>
-    <li><a href="https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-medicine-and-bachelor-of-surgery-mbchb.html">Bachelor of Medicine and Bachelor of Surgery (MBChB)</a></li>
-    <li><a href="https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-laws-llb.html">Bachelor of Laws (LLB)</a></li>
-    <!-- University of Otago -->
-    <p style="font-size: 1.2em; font-weight: bold;">University of Otago</p>
-    <li><a href="https://www.otago.ac.nz/study/qualifications">Study Options</a></li>
-    <li><a href="https://www.otago.ac.nz/study/qualifications/ba">Bachelor of Arts (BA)</a></li>
-    <li><a href="https://www.otago.ac.nz/study/qualifications/musb">Bachelor of Music (BMus)</a></li>
-    <li><a href="https://www.otago.ac.nz/study/qualifications/bcom">Bachelor of Commerce (BCom)</a></li>
-    <li><a href="https://www.otago.ac.nz/study/qualifications/llb">Bachelor of Laws (LLB)</a></li>
-    <li><a href="https://www.otago.ac.nz/study/qualifications/llbhons">Bachelor of Laws (Honours)</a></li>
-    <li><a href="https://www.otago.ac.nz/study/qualifications/mbchb">Bachelor of Medicine and Bachelor of Surgery (MBChB)</a></li>
-    <li><a href="https://www.otago.ac.nz/study/qualifications/bsc">Bachelor of Science (BSc)</a></li>
-    <!-- University of Canterbury (UC) -->
-    <p style="font-size: 1.2em; font-weight: bold;">University of Cantenbury (UC)</p>
-    <li><a href="https://www.canterbury.ac.nz/study/academic-study/qualifications?s=%21PadreNull&MBL=300&profile=qualifications-results-page&num_ranks=20&f.Qualification+type%7CucQualificationType=Bachelor%27s+degree&sort=title&collection=university-of-canterbury%7Esp-aem-qualifications">Undergraguate Options</a></li>
-    <li><a href="https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-arts">Bachelor of Arts (BA)</a></li>
-    <li><a href="https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-arts-specialisations#accordion-9a1b3066e1-item-54e008fd0a-button">Bachelor of Arts(Specialisations)</a></li>
-    <li><a href="https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-commerce">Bachelor of Commerce (BCom)</a></li>
-    <li><a href="https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-data-science">Bachelor of Data Science (BDataSc)</a></li> 
-    <li><a href="https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-engineering-with-honours">Bachelor of Engineering (Honours)</a></li>
-    <li><a href="https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-laws">Bachelor of Laws (LLB)</a></li>
-    <li><a href="https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-music">Bachelor of Music (BMus)</a></li>
-    <li><a href="https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-science">Bachelor of Science (BSc)</a></li>
-    <!-- University of Waikato (UOW) -->
-    <p style="font-size: 1.2em; font-weight: bold;">University of Waikato (UOW)</p>
-    <li><a href="https://www.waikato.ac.nz/study/options/undergraduate/">Undergraduate Study Options</a></li>
-    <li><a href="https://www.waikato.ac.nz/study/qualifications/bachelor-of-arts/">Bachelor of Arts (BA)</a></li>
-    <li><a href="https://www.waikato.ac.nz/study/qualifications/bachelor-of-business/">Bachelor of Buisness (BBus)</a></li>
-    <li><a href="https://www.waikato.ac.nz/study/qualifications/bachelor-of-engineering-with-honours/">Bachelor of Engineering (Honours)</a></li>
-    <li><a href="https://www.waikato.ac.nz/study/qualifications/bachelor-of-laws/">Bachelor of Laws (LLB)</a></li>
-    <li><a href="https://www.waikato.ac.nz/study/qualifications/bachelor-of-applied-computing/">Bachelor of Applied Computing (BAppComp)</a></li>
-    <li><a href="https://www.waikato.ac.nz/study/qualifications/bachelor-of-computer-science/">Bachelor of Computer Science (BCompSc)</a>
-    <li><a href="https://www.waikato.ac.nz/study/qualifications/bachelor-of-banking-finance-and-technology/">Bachelor of Banking, Finance and Technology (BBFinTech)</a></li>
-    <li><a href="https://www.waikato.ac.nz/study/qualifications/bachelor-of-music/">Bachelor of Music (BMus)</a></li>
-    <li><a href="https://www.waikato.ac.nz/study/qualifications/bachelor-of-science/">Bachelor of Science (BSc)</a></li>
-    <li><a href="https://www.waikato.ac.nz/study/qualifications/bachelor-of-science-technology/">Bachelor of Science (Technology) (BSc-Tech)</a></li>
-    <!-- Massey University -->
-    <p style="font-size: 1.2em; font-weight: bold;">Massey University</p>
-    <li><a href="https://www.massey.ac.nz/study/all-qualifications-and-degrees/bachelor-of-accountancy-UBACC/">Bachelor of Accountancy (BAcc)</a></li>
-    <li><a href="https://www.massey.ac.nz/study/all-qualifications-and-degrees/bachelor-of-arts-UBART/">Bachelor of Arts (BA)</a></li>
-    <li><a href="https://www.massey.ac.nz/study/all-qualifications-and-degrees/bachelor-of-business-UBBSS/">Bachelor of Buisness (BBus)</a></li>
-    <li><a href="https://www.massey.ac.nz/study/all-qualifications-and-degrees/bachelor-of-science-UBSCN/">Bachelor of Science (BSc)</a></li>
-    <!-- Victoria University of Wellington (VUW) -->
-    <p style="font-size: 1.2em; font-weight: bold;">Victoria University of Wellington (VUW)</p>
-    <li><a href="https://www.wgtn.ac.nz/study/programmes-courses/undergraduate">Undergraduate Qualifications Finder</a></li>
-    <li><a href="https://www.wgtn.ac.nz/explore/degrees/arts/overview">Bachelor of Arts (BA)</a></li>
-    <li><a href="https://www.wgtn.ac.nz/explore/degrees/commerce/overview">Bachelor of Commerce (BCom)</a></li>
-    <li><a href="https://www.wgtn.ac.nz/">Bachelor of Engineering (Honours)</a></li>
-    <li><a href="https://www.wgtn.ac.nz/explore/degrees/laws-with-honours/overview">Bachelor of Laws with Honours (LLB Hons)</a></li>
-    <li><a href="https://www.wgtn.ac.nz/explore/degrees/laws/overview">Bachelor of Laws (LLB)</a></li>
-    <li><a href="https://www.wgtn.ac.nz/explore/degrees/music/overview">Bachelor of Music (BMus)</a></li>
-    <li><a href="https://www.wgtn.ac.nz/explore/degrees/science/overview">Bachelor of Science (BSc)</a></li>     
-    <!-- Lincoln University -->
-    <p style="font-size: 1.2em; font-weight: bold;">Lincoln University</p>
-    <li><a href="https://www.lincoln.ac.nz/study/study-programmes/programme-search/?term6=90">Bachelors Study Options Search</a></li>
-    <li><a href="https://www.lincoln.ac.nz/study/study-programmes/programme-search/?term6=90">Bachelor of Commerce (BCom) with different Specialisations and Majors list</a></li>
-    <li><a href="https://www.lincoln.ac.nz/study/study-programmes/programme-search/?term6=90&term4=87">Bachelor of Science (BSc) with different Specialisations and Majors list </a></li>
-    <!-- Auckland University of Technology (AUT) -->
-    <p style="font-size: 1.2em; font-weight: bold;">Auckland University of Technology (AUT)</p>
-    <li><a href="https://www.aut.ac.nz/study/study-options/compare-aut-degrees">Bachelor degress at AUT</a></li>
-    <li><a href="https://www.aut.ac.nz/courses/bachelor-of-arts?source=/compare-aut-degrees">Bachelor of Arts (BA)</a></li>
-    <li><a href="https://www.aut.ac.nz/study/study-options/business/courses/bachelor-of-business">Bachelor of Buisness (BBus)</a></li>
-    <li><a href="https://www.aut.ac.nz/courses/bachelor-of-engineering-honours?source=/compare-aut-degrees">Bachelor of Engineering (Honours)</a></li>
-    <li><a href="https://www.aut.ac.nz/study/study-options/law/courses/bachelor-of-laws">Bachelor of Laws (LLB)</a></li>
-    <li><a href="https://www.aut.ac.nz/courses/bachelor-of-science?source=/compare-aut-degrees">Bachelor of Science</a></li>
-    <li><a href="https://www.aut.ac.nz/study/study-options/engineering-computer-and-mathematical-sciences/courses/bachelor-of-engineering-technology">Bachelor of Engineering Technology</a></li>
-</ul>
-</body>
-<footer style="background-color: #333; color: #fff; text-align: center; padding: 15px; margin-top: 30px;">
-    &copy; 2025 AINZUNI. All rights reserved.
-</footer>
-  <!-- JavaScript Functions -->
-  <script>
-    // Toggle the visibility of the menu
-    function toggleMenu() {
-      const menu = document.getElementById('menu');
-      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
-    }
-
-    // Toggle dark mode and update button text
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-      const toggleBtn = document.querySelector('.toggle-btn');
-      toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light' : '🌙 Dark';
-    }
-  </script>
-
 </html>
