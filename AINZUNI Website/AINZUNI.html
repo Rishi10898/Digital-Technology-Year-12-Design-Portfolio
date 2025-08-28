@@ -385,53 +385,98 @@
                 menu.style.display = 'none';
             }
         });
-  // Map your existing elements. Change selectors to match your page.
-  const form = document.querySelector('#chat-form');  // Your message form
-  const input = document.querySelector('#prompt');    // Your text input
-  const messages = document.querySelector('#messages'); // Your chat container
 
-  // Keep a running chat context so the model sees history.
-  const conversation = [];
+        // ===== AINZUNI Chat: Real-time streaming with Phi-4 14B via local backend =====
+        const chatMessagesEl = document.getElementById('chat-messages');
+        const chatInputEl = document.getElementById('chat-input');
+        const conversation = [];
 
-  // Small helper to show messages in your chat box.
-  function append(role, text) {
-    const div = document.createElement('div');
-    div.className = role;              // e.g., "user" or "assistant" for styling
-    div.textContent = text;            // show the text
-    messages.appendChild(div);         // add to chat
-    messages.scrollTop = messages.scrollHeight; // scroll to bottom
-  }
+        function appendMessage(role, text) {
+            const p = document.createElement('p');
+            p.textContent = text;
+            p.style.whiteSpace = 'pre-wrap';
+            p.style.margin = '8px 0';
+            if (role === 'user') {
+                p.style.fontWeight = '600';
+            }
+            chatMessagesEl.appendChild(p);
+            chatMessagesEl.scrollTop = chatMessagesEl.scrollHeight;
+            return p;
+        }
 
-  // Send the prompt to the model via Ollama's chat API.
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();                      // stop page reload
-    const text = input.value.trim();         // read what you typed
-    if (!text) return;                       // ignore empty
-    append('user', text);                    // show your message immediately
-    input.value = '';                        // clear the input
+        async function sendMessage() {
+            const text = chatInputEl.value.trim();
+            if (!text) return;
+            appendMessage('user', text);
+            chatInputEl.value = '';
 
-    // Add your message to the model's conversation context.
-    conversation.push({ role: 'user', content: text });
+            conversation.push({ role: 'user', content: text });
 
-    try {
-      const resp = await fetch('http://127.0.0.1:11434/api/chat', {
-        method: 'POST',                                      // chat is a POST
-        headers: { 'Content-Type': 'application/json' },     // send JSON
-        body: JSON.stringify({
-          model: '',                                 // your model name
-          messages: conversation,                            // full chat history
-          stream: false                                      // one complete reply
-        })
-      });
+            // Placeholder assistant message that we'll stream into
+            const assistantEl = appendMessage('assistant', 'AINZUNI is thinking');
+            assistantEl.classList.add('typing');
 
-      const data = await resp.json();                        // parse JSON reply
-      const reply = data?.message?.content ?? '';            // extract assistant text
-      conversation.push({ role: 'assistant', content: reply }); // keep context
-      append('assistant', reply);                            // show the reply
-    } catch (err) {
-      append('assistant', 'Error: ' + err.message);          // show any error
-    }
-  })
+            try {
+                // Talk to our Flask backend which proxies to Ollama with NDJSON streaming
+                const resp = await fetch('http://127.0.0.1:5000/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        model: 'phi4:14b',
+                        messages: conversation,
+                        stream: true
+                    })
+                });
+
+                if (!resp.ok) {
+                    const errText = await resp.text();
+                    assistantEl.textContent = 'Error: ' + errText;
+                    assistantEl.classList.remove('typing');
+                    return;
+                }
+
+                const reader = resp.body.getReader();
+                const decoder = new TextDecoder('utf-8');
+                let buffer = '';
+                let finalText = '';
+
+                while (true) {
+                    const { value, done } = await reader.read();
+                    if (done) break;
+                    buffer += decoder.decode(value, { stream: true });
+
+                    let newlineIndex;
+                    while ((newlineIndex = buffer.indexOf('\n')) !== -1) {
+                        const line = buffer.slice(0, newlineIndex).trim();
+                        buffer = buffer.slice(newlineIndex + 1);
+                        if (!line) continue;
+                        try {
+                            const json = JSON.parse(line);
+                            // Ollama chat stream yields partial chunks in json.message.content
+                            const chunk = json?.message?.content ?? '';
+                            if (chunk) {
+                                finalText += chunk;
+                                assistantEl.textContent = finalText;
+                                chatMessagesEl.scrollTop = chatMessagesEl.scrollHeight;
+                            }
+                            if (json?.done) {
+                                conversation.push({ role: 'assistant', content: finalText });
+                            }
+                        } catch (e) {
+                            // Ignore non-JSON lines safely
+                        }
+                    }
+                }
+
+                assistantEl.classList.remove('typing');
+                if (!finalText) {
+                    assistantEl.textContent = 'No response received.';
+                }
+            } catch (err) {
+                assistantEl.textContent = 'Error: ' + (err?.message || String(err));
+                assistantEl.classList.remove('typing');
+            }
+        }
     </script>
 </body>
 </html>
