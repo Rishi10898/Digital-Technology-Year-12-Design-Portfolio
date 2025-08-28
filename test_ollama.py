@@ -10,7 +10,7 @@ import sys
 
 # CONFIGURATION - Ollama settings
 OLLAMA_BASE_URL = "http://localhost:11434"  # Ollama API endpoint
-MODEL_NAME = "llama3.1:8b"                  # Target model to test
+MODEL_NAME = "phi4:14b"                     # Target model to test
 
 def test_ollama_connection():
     """
