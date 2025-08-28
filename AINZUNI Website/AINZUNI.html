@@ -385,82 +385,53 @@
                 menu.style.display = 'none';
             }
         });
+  // Map your existing elements. Change selectors to match your page.
+  const form = document.querySelector('#chat-form');  // Your message form
+  const input = document.querySelector('#prompt');    // Your text input
+  const messages = document.querySelector('#messages'); // Your chat container
 
-        // MAIN CHAT FUNCTION - Handle sending messages to AI
-        async function sendMessage() {
-            const input = document.getElementById('chat-input');
-            const message = input.value.trim();
-            const chatMessages = document.getElementById('chat-messages');
+  // Keep a running chat context so the model sees history.
+  const conversation = [];
 
-            // Don't send empty messages
-            if (!message) return;
+  // Small helper to show messages in your chat box.
+  function append(role, text) {
+    const div = document.createElement('div');
+    div.className = role;              // e.g., "user" or "assistant" for styling
+    div.textContent = text;            // show the text
+    messages.appendChild(div);         // add to chat
+    messages.scrollTop = messages.scrollHeight; // scroll to bottom
+  }
 
-            // CREATE USER MESSAGE - Right-aligned green bubble
-            const userMessage = document.createElement('div');
-            userMessage.style.cssText = 'text-align: right; margin: 10px 0; padding: 10px; background: var(--accent); color: white; border-radius: 15px 15px 5px 15px; display: inline-block; max-width: 80%; float: right; clear: both;';
-            userMessage.textContent = message;
-            chatMessages.appendChild(userMessage);
-            input.value = '';
+  // Send the prompt to the model via Ollama's chat API.
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();                      // stop page reload
+    const text = input.value.trim();         // read what you typed
+    if (!text) return;                       // ignore empty
+    append('user', text);                    // show your message immediately
+    input.value = '';                        // clear the input
 
-            // CREATE LOADING INDICATOR - Left-aligned with animated dots
-            const typingDiv = document.createElement('div');
-            typingDiv.style.cssText = 'text-align: left; margin: 10px 0; padding: 10px; background: rgba(119, 187, 198, 0.3); border-radius: 15px 15px 15px 5px; display: inline-block; max-width: 80%; float: left; clear: both;';
-            typingDiv.innerHTML = '<span class="loading-dots">AINZUNI is thinking</span>';
-            typingDiv.className = 'typing';
-            chatMessages.appendChild(typingDiv);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
+    // Add your message to the model's conversation context.
+    conversation.push({ role: 'user', content: text });
 
-            try {
-                // SEND REQUEST TO FLASK SERVER - Connect to local AI backend
-                const response = await fetch("http://localhost:5000/api/chat", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ message: message })
-                });
+    try {
+      const resp = await fetch('http://127.0.0.1:11434/api/chat', {
+        method: 'POST',                                      // chat is a POST
+        headers: { 'Content-Type': 'application/json' },     // send JSON
+        body: JSON.stringify({
+          model: '',                                 // your model name
+          messages: conversation,                            // full chat history
+          stream: false                                      // one complete reply
+        })
+      });
 
-                if (response.ok) {
-                    const data = await response.json();
-                    typingDiv.remove();
-                    
-                    if (data.error) {
-                        // SHOW ERROR MESSAGE - Red bubble for errors
-                        const errorMessage = document.createElement('div');
-                        errorMessage.style.cssText = 'text-align: left; margin: 10px 0; padding: 10px; background: rgba(244, 67, 54, 0.2); border-radius: 15px 15px 15px 5px; display: inline-block; max-width: 80%; float: left; clear: both; color: #d32f2f;';
-                        errorMessage.innerHTML = `<strong>⚠️ AI Error:</strong> ${data.message || data.error}`;
-                        chatMessages.appendChild(errorMessage);
-                    } else {
-                        // SHOW AI RESPONSE - Left-aligned blue bubble
-                        const botMessage = document.createElement('div');
-                        botMessage.style.cssText = 'text-align: left; margin: 10px 0; padding: 10px; background: rgba(119, 187, 198, 0.3); border-radius: 15px 15px 15px 5px; display: inline-block; max-width: 80%; float: left; clear: both;';
-                        botMessage.textContent = data.response;
-                        chatMessages.appendChild(botMessage);
-                    }
-                    chatMessages.scrollTop = chatMessages.scrollHeight;
-                } else {
-                    // HANDLE HTTP ERRORS - Parse error response
-                    const errorData = await response.json().catch(() => ({}));
-                    throw new Error(errorData.message || `Server error: ${response.status}`);
-                }
-            } catch (err) {
-                // SHOW CONNECTION ERROR - Helpful troubleshooting message
-                typingDiv.remove();
-                
-                const errorMessage = document.createElement('div');
-                errorMessage.style.cssText = 'text-align: left; margin: 10px 0; padding: 10px; background: rgba(244, 67, 54, 0.2); border-radius: 15px 15px 15px 5px; display: inline-block; max-width: 80%; float: left; clear: both; color: #d32f2f;';
-                errorMessage.innerHTML = `
-                    <strong>⚠️ Connection Error</strong><br>
-                    Please ensure:<br>
-                    1. Ollama is running: <code>ollama serve</code><br>
-                    2. Llama 3.1:8b is installed: <code>ollama pull llama3.1:8b</code><br>
-                    3. Flask server is running: <code>python llama_server.py</code><br><br>
-                    <strong>Debug Info:</strong><br>
-                    Error: ${err.message}<br>
-                    <a href="http://localhost:5000/api/test" target="_blank">Test Connection</a>
-                `;
-                chatMessages.appendChild(errorMessage);
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-            }
-        }
+      const data = await resp.json();                        // parse JSON reply
+      const reply = data?.message?.content ?? '';            // extract assistant text
+      conversation.push({ role: 'assistant', content: reply }); // keep context
+      append('assistant', reply);                            // show the reply
+    } catch (err) {
+      append('assistant', 'Error: ' + err.message);          // show any error
+    }
+  })
     </script>
 </body>
 </html>
