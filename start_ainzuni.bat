@@ -1,5 +1,5 @@
 @echo off
-echo 🚀 Starting AINZUNI Chatbot with Llama 3.1:8b...
+echo 🚀 Starting AINZUNI Chatbot with Phi-4 14B...
 echo.
 
 REM Check if Python is installed

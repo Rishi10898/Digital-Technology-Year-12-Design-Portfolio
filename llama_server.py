@@ -22,7 +22,7 @@ CORS(app)  # Enable cross-origin requests for frontend
 
 # CONFIGURATION - Server settings and model parameters (OPTIMIZED FOR SPEED)
 OLLAMA_BASE_URL = "http://localhost:11434"  # Ollama API endpoint
-MODEL_NAME = "llama3.1:8b"                  # AI model to use
+MODEL_NAME = "phi4:14b"                     # AI model to use
 DEFAULT_TEMPERATURE = 0.5                   # Reduced for faster, more focused responses
 DEFAULT_TOP_P = 0.8                         # Optimized for speed
 DEFAULT_MAX_TOKENS = 300                    # Reduced for faster responses
@@ -266,7 +266,7 @@ def chat():
         if not get_cached_ollama_status():
             return jsonify({
                 "error": "Ollama not available",
-                "message": "Please make sure Ollama is running and the llama3.1:8b model is installed."
+                "message": "Please make sure Ollama is running and the phi4:14b model is installed."
             }), 503
         
         # Generate AI response using real Llama model with optimized parameters
@@ -389,7 +389,7 @@ if __name__ == '__main__':
         print("   Please ensure:")
         print("   1. Ollama is installed: https://ollama.ai")
         print("   2. Ollama is running: ollama serve")
-        print("   3. Model is downloaded: ollama pull llama3.1:8b")
+        print("   3. Model is downloaded: ollama pull phi4:14b")
     
     # DISPLAY SERVER INFORMATION
     print("\nServer will be available at: http://localhost:5000")
