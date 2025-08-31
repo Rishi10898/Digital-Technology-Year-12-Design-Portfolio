@@ -1,15 +1,15 @@
 # AINZUNI - AI-Powered NZ Universities Chatbot
 
-AINZUNI is an intelligent chatbot interface that provides information about New Zealand universities using Llama 3.1:8b. The chatbot features a full-page interface and integrates with Ollama for local AI processing.
+AINZUNI is an intelligent chatbot interface that provides information about New Zealand universities using locally hosted AI models via Ollama. The chatbot features a full-page interface and integrates with Ollama for real-time, private AI processing.
 
 ## 🌟 Features
 
-- **Full-Page Chat Interface**: Modern, responsive design that fills the entire page
-- **Llama 3.1:8b Integration**: Powered by Meta's latest language model
+- **Full-Page Chat Interface**: Modern, responsive design
+- **Ollama Integration**: Supports any Ollama-compatible model (e.g., phi4:14b, Llama 3, etc.)
 - **NZ Universities Specialization**: Expert knowledge about New Zealand's 8 universities
-- **Real-time Responses**: Fast, intelligent responses to user queries
-- **Dark/Light Theme**: Toggle between themes for better user experience
-- **Responsive Design**: Works on desktop, tablet, and mobile devices
+- **Real-time Responses**: Fast, intelligent answers from your local model
+- **Dark/Light Theme**: Toggle for user comfort
+- **Responsive Design**: Works on desktop, tablet, and mobile
 
 ## 🏫 Supported Universities
 
@@ -25,60 +25,57 @@ AINZUNI is an intelligent chatbot interface that provides information about New 
 ## 📋 Prerequisites
 
 - Python 3.8 or higher
-- Ollama (for running Llama 3.1:8b locally)
+- Ollama (for running local AI models, e.g., phi4:14b)
 - Modern web browser
 
 ## 🚀 Quick Setup
 
-### Option 1: Automated Setup (Recommended)
+### 1. Install Ollama and Your Model
 
-1. **Run the setup script**:
-   ```bash
-   python setup.py
-   ```
+- Download Ollama: [https://ollama.ai](https://ollama.ai)
+- Install the desired model (example for phi4:14b):
+  ```bash
+  ollama pull phi4:14b
+  ```
+- Start Ollama:
+  ```bash
+  ollama serve
+  ```
 
-2. **Start the server**:
-   ```bash
-   python llama_server.py
-   ```
+### 2. Install Python Dependencies
 
-3. **Open your browser** to `http://localhost:5000`
+```bash
+pip install -r requirements.txt
+```
 
-### Option 2: Manual Setup
+### 3. Start the Chat Proxy Server
 
-1. **Install Python dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+This server connects your website to Ollama securely.
 
-2. **Install Ollama**:
-   - Visit [https://ollama.ai](https://ollama.ai)
-   - Download and install for your operating system
+```bash
+python chat_proxy_example.py
+```
+- By default, it connects to Ollama at `http://localhost:11434` and uses the model name you specify (e.g., `phi4:14b`).
 
-3. **Download Llama 3.1:8b model**:
-   ```bash
-   ollama pull llama3.1:8b
-   ```
+### 4. Serve the Website
 
-4. **Start Ollama service**:
-   ```bash
-   ollama serve
-   ```
+```bash
+python -m http.server 8001
+```
+- Open your browser to: [http://localhost:8001/AINZUNI.html](http://localhost:8001/AINZUNI.html)
 
-5. **Start the Flask server**:
-   ```bash
-   python llama_server.py
-   ```
+### 5. Configure the Frontend Chat API (in browser console)
 
-6. **Open your browser** to `http://localhost:5000`
+```javascript
+localStorage.setItem('chat_api_url', 'http://127.0.0.1:8000/api/chat');
+location.reload();
+```
 
 ## 🎯 Usage
 
-1. **Open the chatbot** in your web browser
-2. **Type your question** about NZ universities in the chat input
-3. **Press Enter** or click "Send" to get an AI-powered response
-4. **Toggle themes** using the moon/sun button in the top-right corner
-5. **Navigate** using the menu button in the top-left corner
+1. **Open the chatbot** in your browser
+2. **Type your question** about NZ universities
+3. **Press Enter** or click "Send" for an AI-powered response
 
 ## 💬 Example Questions
 
@@ -92,87 +89,72 @@ AINZUNI is an intelligent chatbot interface that provides information about New 
 
 ### Architecture
 
-- **Frontend**: HTML5, CSS3, JavaScript (Vanilla)
-- **Backend**: Python Flask server
-- **AI Model**: Llama 3.1:8b via Ollama
-- **API**: RESTful API with JSON responses
+- **Frontend**: HTML5, CSS3, JavaScript
+- **Backend**: Python Flask proxy server (`chat_proxy_example.py`)
+- **AI Model**: Any Ollama-compatible model (e.g., phi4:14b, Llama 3, etc.)
+- **API**: RESTful `/api/chat` endpoint
 
 ### File Structure
 
 ```
 ├── AINZUNI Website/
 │   └── AINZUNI.html          # Main chatbot interface
-├── llama_server.py           # Flask backend server
+│   └── chat_proxy_example.py # Python proxy server for Ollama
 ├── requirements.txt          # Python dependencies
-├── setup.py                  # Automated setup script
-├── start_ainzuni.sh         # Startup script (Unix/Linux)
-└── README.md                # This file
+└── README.md                 # This file
 ```
 
 ### API Endpoints
 
-- `GET /` - Main chatbot interface
-- `POST /api/chat` - Send message and get AI response
-- `GET /api/status` - Check server and Ollama status
-- `GET /api/models` - List available Ollama models
+- `POST /api/chat` - Send message and get AI response (via Ollama)
+- (Other endpoints may be added for status or model listing)
 
 ## 🔧 Configuration
 
 ### Environment Variables
 
-You can customize the server behavior by setting these environment variables:
+Set these before starting the proxy server:
 
 ```bash
-export OLLAMA_BASE_URL="http://localhost:11434"  # Ollama server URL
-export MODEL_NAME="llama3.1:8b"                  # AI model name
-export FLASK_PORT=5000                           # Flask server port
+export MODEL_PROVIDER="ollama"
+export MODEL_NAME="phi4:14b"           # Or your installed model name
+export OLLAMA_API_URL="http://localhost:11434"  # Default Ollama API URL
 ```
 
 ### Model Parameters
 
-The AI model parameters can be adjusted in `llama_server.py`:
-
-```python
-DEFAULT_TEMPERATURE = 0.7    # Creativity (0.0-1.0)
-DEFAULT_TOP_P = 0.9          # Response diversity
-DEFAULT_MAX_TOKENS = 500     # Maximum response length
-```
+You can adjust parameters in `chat_proxy_example.py` (temperature, max tokens, etc.).
 
 ## 🐛 Troubleshooting
 
 ### Common Issues
 
 1. **"Ollama not available" error**:
-   - Make sure Ollama is installed and running
-   - Run `ollama serve` in a separate terminal
+   - Make sure Ollama is installed and running (`ollama serve`)
    - Check if the model is downloaded: `ollama list`
 
-2. **"Flask server not available" error**:
-   - Ensure the Flask server is running: `python llama_server.py`
-   - Check if port 5000 is available
-   - Try a different port if needed
+2. **"Proxy server not available" error**:
+   - Ensure `chat_proxy_example.py` is running
+   - Check if port 8000 is available
 
-3. **Slow responses**:
-   - The first response may be slow as the model loads
-   - Subsequent responses should be faster
-   - Consider using a smaller model for faster responses
-
-4. **Model not found**:
-   - Download the model: `ollama pull llama3.1:8b`
+3. **"Model not found"**:
+   - Download the model: `ollama pull phi4:14b`
    - Check available models: `ollama list`
+
+4. **Connection refused**:
+   - Make sure both Ollama and the proxy server are running
+   - Serve the website via HTTP, not file://
 
 ### Performance Tips
 
-- **GPU Acceleration**: Install CUDA drivers for faster inference
-- **Model Size**: Consider using smaller models for faster responses
-- **Memory**: Ensure sufficient RAM (8GB+ recommended for 8B models)
+- **Model Size**: Use smaller models for faster responses
+- **Memory**: Ensure sufficient RAM (8GB+ recommended for large models)
 
 ## 🔒 Security
 
-- The chatbot runs locally on your machine
-- No data is sent to external servers (except Ollama API calls)
-- All conversations are processed locally
-- No user data is stored or logged
+- All AI processing is local
+- No data sent to external servers (except Ollama API calls)
+- No user data stored or logged
 
 ## 🤝 Contributing
 
@@ -184,22 +166,20 @@ DEFAULT_MAX_TOKENS = 500     # Maximum response length
 
 ## 📄 License
 
-This project is open source and available under the MIT License.
+MIT License
 
 ## 🙏 Acknowledgments
 
-- **Meta AI** for Llama 3.1:8b
-- **Ollama** for the local AI inference framework
+- **Ollama** for local AI inference
+- **Meta AI** and other model providers
 - **Flask** for the web framework
-- **New Zealand Universities** for the educational content
+- **New Zealand Universities** for educational content
 
 ## 📞 Support
 
-If you encounter any issues or have questions:
-
-1. Check the troubleshooting section above
-2. Review the Ollama documentation: [https://ollama.ai/docs](https://ollama.ai/docs)
-3. Open an issue on the project repository
+- Review the troubleshooting section above
+- See Ollama docs: [https://ollama.ai/docs](https://ollama.ai/docs)
+- Open an issue on the project repository
 
 ---
 
