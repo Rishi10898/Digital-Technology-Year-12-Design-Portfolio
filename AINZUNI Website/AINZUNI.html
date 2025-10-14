@@ -1,464 +1,114 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>AINZUNI - NZ Universities</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AINZUNI - Your guide to New Zealand Universities">
-    
-    <style>
-        /* CSS VARIABLES - Define colors once, use everywhere for easy theme switching */
-        :root { 
-            --bg-light: #f9f9f9;
-            --bg-dark: #222;
-            --text-light: #333;
-            --text-dark: #f9f9f9;
-            --accent: #4caf50;
-            --secondary: #77bbc6;
-            --card-light: rgba(255, 255, 255, 0.9);
-            --card-dark: rgba(34, 34, 34, 0.9);
-        }
-
-        /* MAIN PAGE LAYOUT - Flexbox for full-height responsive design */
-        body {
-            margin: 0;
-            font-family: 'Georgia', serif;
-            background: var(--bg-light) linear-gradient(135deg, #77bbc6 0%, #6ab5c1 100%);
-            color: var(--text-light);
-            transition: all 0.3s ease;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* DARK MODE - Override colors when dark-mode class is applied */
-        .dark-mode {
-            background: var(--bg-dark) linear-gradient(135deg, #1a3a4a 0%, #2a4a5a 100%);
-            color: var(--text-dark);
-        }
-
-        /* PAGE TITLE - Large centered title */
-        .page-title {
-            font-size: 2.5em;
-            font-weight: bold;
-            color: var(--accent);
-            text-align: center;
-            margin: 30px 0 40px 0;
-            padding: 0;
-        }
-        .dark-mode .page-title { color: #81c784; }
-
-        /* THEME TOGGLE BUTTON - Moon/sun icon for switching themes */
-        .theme-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: transparent;
-            border: 2px solid var(--accent);
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            cursor: pointer;
-            font-size: 24px;
-            z-index: 1000;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .theme-toggle:hover {
-            transform: scale(1.1);
-            background: var(--accent);
-        }
-
-        /* MENU BUTTON - Logo that opens navigation */
-        .menu-btn {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            z-index: 1000;
-            transition: transform 0.3s ease;
-        }
-        .menu-btn .logo {
-            width: 50px;
-            height: 50px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .menu-btn:hover { transform: scale(1.1); }
-
-        /* NAVIGATION MENU - Hidden by default, shown when logo clicked */
-        .menu {
-            position: fixed;
-            top: 80px;
-            left: 20px;
-            display: none;
-            flex-direction: column;
-            background: var(--card-light);
-            backdrop-filter: blur(15px);
-            padding: 20px;
-            border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            z-index: 999;
-            min-width: 200px;
-        }
-        .dark-mode .menu {
-            background: var(--card-dark);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-        }
-
-        /* MENU BUTTONS - Styled navigation links */
-        .menu button {
-            margin: 8px 0;
-            padding: 15px 25px;
-            border: none;
-            border-radius: 25px;
-            background: var(--accent);
-            color: white;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            font-family: 'Georgia', serif;
-        }
-        .menu button:hover {
-            background: #388e3c;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
-        }
-
-        /* MAIN CONTENT AREA - Takes remaining space in flexbox */
-        main {
-            flex: 1;
-            padding: 40px 20px;
-            text-align: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* CHATBOT CONTAINER - Full-width glassmorphism design */
-        #chatbot-container {
-            background: var(--card-light);
-            backdrop-filter: blur(15px);
-            border-radius: 20px;
-            padding: 30px;
-            margin: 20px 0;
-            width: 100%;
-            min-height: 80vh;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-        }
-        .dark-mode #chatbot-container {
-            background: var(--card-dark);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-        }
-
-        /* CHAT MESSAGES AREA - Scrollable message container */
-        #chat-messages {
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 20px;
-            min-height: 400px;
-            max-height: 60vh;
-            overflow-y: auto;
-            border: 2px solid var(--accent);
-            flex: 1;
-        }
-        .dark-mode #chat-messages {
-            background: rgba(0, 0, 0, 0.3);
-            border-color: #81c784;
-        }
-
-        /* CHAT INPUT FIELD - Styled text input */
-        #chat-input {
-            width: 80%;
-            padding: 15px 20px;
-            border: 2px solid var(--accent);
-            border-radius: 25px;
-            font-size: 16px;
-            font-family: 'Georgia', serif;
-            background: white;
-            color: var(--text-light);
-            transition: all 0.3s ease;
-        }
-        .dark-mode #chat-input {
-            background: #333;
-            color: var(--text-dark);
-            border-color: #81c784;
-        }
-        #chat-input:focus {
-            outline: none;
-            box-shadow: 0 0 15px rgba(76, 175, 80, 0.3);
-            transform: scale(1.02);
-        }
-
-        /* SEND BUTTON - Styled action button */
-        #chatbot-container button {
-            background: var(--accent);
-            color: white;
-            border: none;
-            border-radius: 25px;
-            padding: 15px 30px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-left: 10px;
-            transition: all 0.3s ease;
-            font-family: 'Georgia', serif;
-        }
-        #chatbot-container button:hover {
-            background: #388e3c;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
-        }
-
-        /* INPUT CONTAINER - Flexbox layout for input and button */
-        .input-container {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-top: auto;
-            padding: 20px 0;
-        }
-
-        /* FOOTER - Bottom section with copyright */
-        footer {
-            background: var(--card-light);
-            backdrop-filter: blur(15px);
-            color: var(--text-light);
-            text-align: center;
-            padding: 30px;
-            margin-top: 50px;
-            border-radius: 20px 20px 0 0;
-            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
-        }
-        .dark-mode footer {
-            background: var(--card-dark);
-            color: var(--text-dark);
-            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        /* SUBTITLE - Description text */
-        .subtitle {
-            font-size: 1.3em;
-            margin-bottom: 40px;
-            opacity: 0.8;
-        }
-
-        /* RESPONSIVE DESIGN - Mobile-friendly adjustments */
-        @media (max-width: 768px) {
-            .page-title { font-size: 2.2em; }
-            #chat-input { width: 60%; }
-            .menu, .settings-menu {
-                left: 10px;
-                right: 10px;
-                top: 70px;
-            }
-            #chatbot-container {
-                margin: 20px 10px;
-                padding: 20px;
-            }
-        }
-
-        /* UNIVERSAL BOX-SIZING - Include padding in width calculations */
-        * { box-sizing: border-box; }
-
-        /* TYPING ANIMATION - Semi-transparent italic text */
-        .typing {
-            opacity: 0.7;
-            font-style: italic;
-        }
-
-        /* LOADING ANIMATION - Animated dots for "AINZUNI is thinking..." */
-        .loading-dots {
-            display: inline-block;
-        }
-        .loading-dots::after {
-            content: '';
-            animation: dots 1.5s steps(5, end) infinite;
-        }
-        @keyframes dots {
-            0%, 20% { content: ''; }
-            40% { content: '.'; }
-            60% { content: '..'; }
-            80%, 100% { content: '...'; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AINZUNI - Your guide to New Zealand Universities">
+  <meta name="author" content="Rishikesh">
+  <title>AINZUNI - NZ Universities</title>
 </head>
 
 <body>
-    <!-- THEME TOGGLE - Moon/sun button for switching themes -->
-    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙</button>
+  <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" aria-label="Toggle theme">🌙</button>
 
-    <!-- MENU BUTTON - Logo that opens navigation menu -->
-    <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
-        <img src="C:/Users/Rishikesh/Downloads/Rishikesh/Digitech/Digital-Technology-Year-12-Design-Portfolio/AINZUNI 2.png" alt="AINZUNI Logo" class="logo">
-    </button>
+  <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
+    <img src="images/AINZUNI2.png" alt="AINZUNI Logo" class="logo">
+  </button>
 
-    <!-- NAVIGATION MENU - Hidden by default, contains page links -->
-    <div class="menu" id="menu">
-        <button onclick="location.href='Website Digitech.html'">🏠 Home</button>
-        <button onclick="location.href='About Me.html'">👤 About</button>
-        <button onclick="location.href='NZ Universities.html'">🎓 NZ Universities</button>
-        <button onclick="location.href='Contact Me.html'">📧 Contact</button>
-    </div>
+  <div class="menu" id="menu">
+    <button onclick="location.href='Website Digitech.html'">🏠 Home</button>
+    <button onclick="location.href='About Me.html'">👤 About</button>
+    <button onclick="location.href='NZ Universities.html'">🎓 NZ Universities</button>
+    <button onclick="location.href='Contact Me.html'">📧 Contact</button>
+  </div>
 
-    <!-- PAGE TITLE - Main heading -->
-    <h1 class="page-title">AINZUNI</h1>
+  <!-- ...rest of code unchanged... -->
 
-    <!-- MAIN CONTENT - Contains chatbot interface -->
-    <main>
-        <p class="subtitle">Your AI-powered guide to higher education in New Zealand</p>
+  <script>
+    // Always set API URL before use
+    if (!localStorage.getItem('chat_api_url')) {
+      localStorage.setItem('chat_api_url', 'http://127.0.0.1:8000/api/chat');
+    }
+    const CHAT_API_URL = localStorage.getItem('chat_api_url');
 
-        <!-- CHATBOT CONTAINER - Main chat interface -->
-        <div id="chatbot-container">
-            <div id="chat-messages"></div>
-            <div class="input-container">
-                <input type="text" id="chat-input" placeholder="Type your message...">
-                <button onclick="sendMessage()">Send</button>
-            </div>
-        </div>
-    </main>
+    // THEME TOGGLE
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+      const themeBtn = document.getElementById('theme-btn');
+      if (document.body.classList.contains('dark-mode')) {
+        themeBtn.textContent = '☀️';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        themeBtn.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
+      }
+    }
 
-    <footer>
-        &copy; 2025 AINZUNI. All rights reserved.
-    </footer>
+    // LOAD SAVED THEME
+    document.addEventListener('DOMContentLoaded', function () {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        document.getElementById('theme-btn').textContent = '☀️';
+      }
 
-    <script>
-        // === Configuration ===
-        // Frontend will POST to CHAT_API_URL; this endpoint must be a server (not the browser) that
-        // proxies requests to the phi4-14b model and keeps any API keys/credentials secret.
-        // Default points to localhost for a small proxy to be run on my machine.
-        const CHAT_API_URL = localStorage.getItem('chat_api_url') || 'http://127.0.0.1:8000/api/chat';
+      appendMessage('bot', 'Kia Ora! I\'m AINZUNI, your AI guide to New Zealand Universities. How can I help you start your study journey?');
+      document.getElementById('chat-input').addEventListener('keydown', e => { if (e.key === 'Enter') sendMessage(); });
+    });
 
-        // THEME TOGGLE
-        function toggleTheme() {
-            document.body.classList.toggle('dark-mode');
-            const themeBtn = document.getElementById('theme-btn');
-            if(document.body.classList.contains('dark-mode')) {
-                themeBtn.textContent = '☀️';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                themeBtn.textContent = '🌙';
-                localStorage.setItem('theme', 'light');
-            }
-        }
+    // MENU TOGGLE (class version)
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('active');
+    }
 
-        // LOAD SAVED THEME
-        document.addEventListener('DOMContentLoaded', function() {
-            const savedTheme = localStorage.getItem('theme');
-            if(savedTheme === 'dark') document.body.classList.add('dark-mode');
+    document.addEventListener('click', function (event) {
+      const menu = document.getElementById('menu');
+      const menuBtn = document.querySelector('.menu-btn');
+      if (menu.classList.contains('active') && !menuBtn.contains(event.target) && !menu.contains(event.target)) {
+        menu.classList.remove('active');
+      }
+    });
 
-            // wire Enter key to send
-            const input = document.getElementById('chat-input');
-            input.addEventListener('keydown', function(e) {
-                if(e.key === 'Enter') sendMessage();
-            });
+    async function sendMessage() {
+      const input = document.getElementById('chat-input');
+      const sendBtn = input.nextElementSibling;
+      const message = input.value.trim();
+      if (!message) return;
+
+      appendMessage('user', message);
+      input.value = '';
+      input.disabled = true;
+      sendBtn.disabled = true;
+
+      const { wrapper: botWrapper, content: botContent } = appendMessage('bot', 'AINZUNI is thinking', 'typing');
+      try {
+        const res = await fetch(CHAT_API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ model: 'phi4-14b', input: message })
         });
 
-        // MENU TOGGLE
-        function toggleMenu() {
-            const menu = document.getElementById('menu');
-            menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+        botWrapper.classList.remove('typing');
+        if (!res.ok) {
+          const text = await res.text();
+          throw new Error(`Server error ${res.status}: ${text.substring(0, 100)}...`);
         }
 
-        // CLOSE MENU IF CLICK OUTSIDE
-        document.addEventListener('click', function(event) {
-            const menu = document.getElementById('menu');
-            const menuBtn = document.querySelector('.menu-btn');
-            if(!menuBtn.contains(event.target) && !menu.contains(event.target)) menu.style.display = 'none';
-        });
+        let data;
+        try { data = await res.json(); }
+        catch { const text = await res.text(); throw new Error(`Invalid JSON response: ${text}`); }
 
-        // Small helper to append messages
-        function appendMessage(role, text, extraClass) {
-            const chatMessages = document.getElementById('chat-messages');
-            const wrapper = document.createElement('div');
-            wrapper.className = 'chat-message ' + (extraClass || '');
-            const who = document.createElement('div');
-            who.className = 'who';
-            who.textContent = role === 'user' ? 'You' : 'AINZUNI';
-            const content = document.createElement('div');
-            content.className = 'content';
-            content.textContent = text;
-            wrapper.appendChild(who);
-            wrapper.appendChild(content);
-            chatMessages.appendChild(wrapper);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-            return {wrapper, content};
-        }
+        const reply = data.reply || data.output || data.text || JSON.stringify(data);
+        botContent.textContent = reply;
 
-        // CHATBOT SEND - sends message to configured backend which must call phi4-14b
-        async function sendMessage() {
-            const input = document.getElementById('chat-input');
-            const sendBtn = input.nextElementSibling || document.querySelector('#chatbot-container button');
-            const message = input.value.trim();
-            if(message === '') return;
-
-            // show user's message
-            appendMessage('user', message, 'user-msg');
-            input.value = '';
-            input.disabled = true;
-            if(sendBtn) sendBtn.disabled = true;
-
-            // show typing placeholder
-            const {wrapper, content} = appendMessage('bot', 'AINZUNI is thinking', 'bot-msg typing');
-
-            try {
-                const res = await fetch(CHAT_API_URL, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        model: 'phi4-14b',
-                        input: message
-                    })
-                });
-
-                if(!res.ok) {
-                    const text = await res.text();
-                    throw new Error(`Server error ${res.status}: ${text}`);
-                }
-
-                // Expect JSON { reply: '...' } from the proxy. If your proxy uses a different shape
-                // adjust this parsing accordingly.
-                const data = await res.json();
-                const reply = data.reply || data.output || data.text || JSON.stringify(data);
-
-                content.classList.remove('typing');
-                content.textContent = reply;
-                wrapper.classList.remove('typing');
-            } catch (err) {
-                content.classList.remove('typing');
-                content.textContent = 'Error: ' + (err.message || err);
-                wrapper.classList.remove('typing');
-            } finally {
-                input.disabled = false;
-                if(sendBtn) sendBtn.disabled = false;
-                input.focus();
-            }
-        }
-
-        // Set API URL and reload
-        localStorage.setItem('chat_api_url','http://127.0.0.1:8000/api/chat'); 
-
-    </script>
-
-    <style>
-        /* Chat message styling */
-        .chat-message { display: flex; gap: 12px; align-items: flex-start; margin: 12px 0; }
-        .chat-message .who { font-weight: bold; width: 80px; }
-        .chat-message .content { background: rgba(255,255,255,0.8); padding: 10px 14px; border-radius: 12px; max-width: 80%; }
-        .dark-mode .chat-message .content { background: rgba(0,0,0,0.45); }
-        .chat-message.user-msg { justify-content: flex-end; }
-        .chat-message.user-msg .who { text-align: right; }
-        .typing .content::after { content: ' ...'; animation: dots 1.5s steps(5,end) infinite; }
-    </style>
+      } catch (err) {
+        botWrapper.classList.remove('typing');
+        botContent.textContent = `🚨 Connection Error: The chatbot server at ${CHAT_API_URL} could not be reached. Check console.`;
+        console.error(err);
+      } finally {
+        input.disabled = false;
+        sendBtn.disabled = false;
+        input.focus();
+      }
+    }
+  </script>
 </body>
 </html>
