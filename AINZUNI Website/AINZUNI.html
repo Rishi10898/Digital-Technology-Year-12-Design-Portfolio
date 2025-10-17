@@ -358,93 +358,131 @@
 
   <!-- ...rest of code unchanged... -->
 
-  <script>
-    // Always set API URL before use
-    if (!localStorage.getItem('chat_api_url')) {
-      localStorage.setItem('chat_api_url', 'http://127.0.0.1:8000/api/chat');
-    }
-    const CHAT_API_URL = localStorage.getItem('chat_api_url');
+ <script>
+    // === Configuration ===
+    // Ollama runs locally on port 11434. Change if you expose it differently.
+    const CHAT_API_URL = 'http://localhost:11434/api/chat';
 
-    // THEME TOGGLE
+    // Chat history to maintain context (array of messages)
+    let chatHistory = [];
+
+    // THEME TOGGLE (unchanged)
     function toggleTheme() {
-      document.body.classList.toggle('dark-mode');
-      const themeBtn = document.getElementById('theme-btn');
-      if (document.body.classList.contains('dark-mode')) {
-        themeBtn.textContent = '☀️';
-        localStorage.setItem('theme', 'dark');
-      } else {
-        themeBtn.textContent = '🌙';
-        localStorage.setItem('theme', 'light');
-      }
-    }
-
-    // LOAD SAVED THEME
-    document.addEventListener('DOMContentLoaded', function () {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'dark') {
-        document.body.classList.add('dark-mode');
-        document.getElementById('theme-btn').textContent = '☀️';
-      }
-
-      appendMessage('bot', 'Kia Ora! I\'m AINZUNI, your AI guide to New Zealand Universities. How can I help you start your study journey?');
-      document.getElementById('chat-input').addEventListener('keydown', e => { if (e.key === 'Enter') sendMessage(); });
-    });
-
-    // MENU TOGGLE (class version)
-    function toggleMenu() {
-      document.getElementById('menu').classList.toggle('active');
-    }
-
-    document.addEventListener('click', function (event) {
-      const menu = document.getElementById('menu');
-      const menuBtn = document.querySelector('.menu-btn');
-      if (menu.classList.contains('active') && !menuBtn.contains(event.target) && !menu.contains(event.target)) {
-        menu.classList.remove('active');
-      }
-    });
-
-    async function sendMessage() {
-      const input = document.getElementById('chat-input');
-      const sendBtn = input.nextElementSibling;
-      const message = input.value.trim();
-      if (!message) return;
-
-      appendMessage('user', message);
-      input.value = '';
-      input.disabled = true;
-      sendBtn.disabled = true;
-
-      const { wrapper: botWrapper, content: botContent } = appendMessage('bot', 'AINZUNI is thinking', 'typing');
-      try {
-        const res = await fetch(CHAT_API_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ model: 'phi4-14b', input: message })
-        });
-
-        botWrapper.classList.remove('typing');
-        if (!res.ok) {
-          const text = await res.text();
-          throw new Error(`Server error ${res.status}: ${text.substring(0, 100)}...`);
+        document.body.classList.toggle('dark-mode');
+        const themeBtn = document.getElementById('theme-btn');
+        if (document.body.classList.contains('dark-mode')) {
+            themeBtn.textContent = '☀️';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            themeBtn.textContent = '🌙';
+            localStorage.setItem('theme', 'light');
         }
-
-        let data;
-        try { data = await res.json(); }
-        catch { const text = await res.text(); throw new Error(`Invalid JSON response: ${text}`); }
-
-        const reply = data.reply || data.output || data.text || JSON.stringify(data);
-        botContent.textContent = reply;
-
-      } catch (err) {
-        botWrapper.classList.remove('typing');
-        botContent.textContent = `🚨 Connection Error: The chatbot server at ${CHAT_API_URL} could not be reached. Check console.`;
-        console.error(err);
-      } finally {
-        input.disabled = false;
-        sendBtn.disabled = false;
-        input.focus();
-      }
     }
-  </script>
+
+    // LOAD SAVED THEME (unchanged)
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') document.body.classList.add('dark-mode');
+
+        // Wire Enter key to send
+        const input = document.getElementById('chat-input');
+        input.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') sendMessage();
+        });
+    });
+
+    // MENU TOGGLE (unchanged)
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+    }
+
+    // CLOSE MENU IF CLICK OUTSIDE (unchanged)
+    document.addEventListener('click', function(event) {
+        const menu = document.getElementById('menu');
+        const menuBtn = document.querySelector('.menu-btn');
+        if (!menuBtn.contains(event.target) && !menu.contains(event.target)) menu.style.display = 'none';
+    });
+
+    // Append message to chat (updated to support history)
+    function appendMessage(role, text, extraClass) {
+        const chatMessages = document.getElementById('chat-messages');
+        const wrapper = document.createElement('div');
+        wrapper.className = 'chat-message ' + (extraClass || '');
+        const who = document.createElement('div');
+        who.className = 'who';
+        who.textContent = role === 'user' ? 'You' : 'AINZUNI';
+        const content = document.createElement('div');
+        content.className = 'content';
+        content.textContent = text;
+        wrapper.appendChild(who);
+        wrapper.appendChild(content);
+        chatMessages.appendChild(wrapper);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        return { wrapper, content };
+    }
+
+    // CHATBOT SEND - Connects directly to Ollama's /api/chat
+    async function sendMessage() {
+        const input = document.getElementById('chat-input');
+        const sendBtn = input.nextElementSibling || document.querySelector('#chatbot-container button');
+        const message = input.value.trim();
+        if (message === '') return;
+
+        // Add user message to history and display
+        chatHistory.push({ role: 'user', content: message });
+        appendMessage('user', message, 'user-msg');
+        input.value = '';
+        input.disabled = true;
+        if (sendBtn) sendBtn.disabled = true;
+
+        // Show typing placeholder
+        const { wrapper, content } = appendMessage('bot', 'AINZUNI is thinking...', 'bot-msg typing');
+
+        try {
+            const res = await fetch(CHAT_API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    model: 'phi4:14b',  // Your model name
+                    messages: chatHistory,  // Send full history for context
+                    stream: false  // Disable streaming for simple response
+                })
+            });
+
+            if (!res.ok) {
+                const errorText = await res.text();
+                console.error(`Ollama error ${res.status}: ${errorText}`);
+                throw new Error(`Failed to query model: ${res.status} - ${errorText}`);
+            }
+
+            const data = await res.json();
+            const reply = data.message?.content || 'No response from model';
+
+            // Add bot response to history and display
+            chatHistory.push({ role: 'assistant', content: reply });
+            content.classList.remove('typing');
+            content.textContent = reply;
+            wrapper.classList.remove('typing');
+        } catch (err) {
+            console.error('Chat error:', err);
+            content.classList.remove('typing');
+            content.textContent = `Error: ${err.message}. Ensure Ollama is running with 'ollama run phi4:14b' and try again.`;
+            wrapper.classList.remove('typing');
+        } finally {
+            input.disabled = false;
+            if (sendBtn) sendBtn.disabled = false;
+            input.focus();
+        }
+    }
+
+    // Optional: Clear history button (add to HTML if desired)
+    // <button onclick="clearHistory()">Clear Chat</button>
+    function clearHistory() {
+        chatHistory = [];
+        document.getElementById('chat-messages').innerHTML = '';
+        appendMessage('bot', 'Chat cleared. Ask me anything about NZ universities!', 'bot-msg');
+    }
+</script>
 </body>
 </html>
