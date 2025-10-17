@@ -397,54 +397,46 @@
 
         // CHATBOT SEND - sends message to configured backend which must call phi4-14b
         async function sendMessage() {
-            const input = document.getElementById('chat-input');
-            const sendBtn = input.nextElementSibling || document.querySelector('#chatbot-container button');
-            const message = input.value.trim();
-            if(message === '') return;
+    const input = document.getElementById('chat-input');
+    const sendBtn = input.nextElementSibling || document.querySelector('#chatbot-container button');
+    const message = input.value.trim();
+    if (message === '') return;
 
-            // show user's message
-            appendMessage('user', message, 'user-msg');
-            input.value = '';
-            input.disabled = true;
-            if(sendBtn) sendBtn.disabled = true;
+    // show user's message
+    appendMessage('user', message, 'user-msg');
+    input.value = '';
+    input.disabled = true;
+    if (sendBtn) sendBtn.disabled = true;
 
-            // show typing placeholder
-            const {wrapper, content} = appendMessage('bot', 'AINZUNI is thinking', 'bot-msg typing');
+    // show typing placeholder
+    const {wrapper, content} = appendMessage('bot', 'AINZUNI is thinking', 'bot-msg typing');
 
-            try {
-                const res = await fetch(CHAT_API_URL, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        model: 'phi4 : 14b',
-                        input: message
-                    })
-                });
+    try {
+        // Simulate delay
+        await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 1000));
 
-                if(!res.ok) {
-                    const text = await res.text();
-                    throw new Error(`Server error ${res.status}: ${text}`);
-                }
+        // Generate a simple simulated reply
+        let reply = 'I am a local simulation. You said: "' + message + '"';
 
-                // Expect JSON { reply: '...' } from the proxy. If your proxy uses a different shape
-                // adjust this parsing accordingly.
-                const data = await res.json();
-                const reply = data.reply || data.output || data.text || JSON.stringify(data);
+        // You can add some keyword-based responses for testing
+        const msgLower = message.toLowerCase();
+        if (msgLower.includes('university')) reply = 'There are 8 major universities in New Zealand.';
+        if (msgLower.includes('courses')) reply = 'I can guide you on courses offered in NZ universities.';
+        if (msgLower.includes('hello') || msgLower.includes('hi')) reply = 'Hello! How can I help you with NZ universities today?';
 
-                content.classList.remove('typing');
-                content.textContent = reply;
-                wrapper.classList.remove('typing');
-            } catch (err) {
-                content.classList.remove('typing');
-                content.textContent = 'Error: ' + (err.message || err);
-                wrapper.classList.remove('typing');
-            } finally {
-                input.disabled = false;
-                if(sendBtn) sendBtn.disabled = false;
-                input.focus();
-            }
-        }
-
+        content.classList.remove('typing');
+        content.textContent = reply;
+        wrapper.classList.remove('typing');
+    } catch (err) {
+        content.classList.remove('typing');
+        content.textContent = 'Error: ' + (err.message || err);
+        wrapper.classList.remove('typing');
+    } finally {
+        input.disabled = false;
+        if (sendBtn) sendBtn.disabled = false;
+        input.focus();
+    }
+}
         // Set API URL and reload
         localStorage.setItem('chat_api_url','http://127.0.0.1:8000/api/chat'); 
 
