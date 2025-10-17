@@ -1,3 +1,339 @@
+<style>
+    /* CSS VARIABLES - Define colors once, use everywhere for easy theme switching */
+    :root {
+        --bg-light: #f9f9f9;
+        --bg-dark: #222;
+        --text-light: #333;
+        --text-dark: #f9f9f9;
+        --accent: #4caf50;
+        --secondary: #77bbc6;
+        --card-light: rgba(255, 255, 255, 0.9);
+        --card-dark: rgba(34, 34, 34, 0.9);
+    }
+
+    /* MAIN PAGE LAYOUT - Flexbox for full-height responsive design */
+    body {
+        margin: 0;
+        font-family: 'Georgia', serif;
+        background: var(--bg-light) linear-gradient(135deg, #77bbc6 0%, #6ab5c1 100%);
+        color: var(--text-light);
+        transition: all 0.3s ease;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* DARK MODE - Override colors when dark-mode class is applied */
+    .dark-mode {
+        background: var(--bg-dark) linear-gradient(135deg, #1a3a4a 0%, #2a4a5a 100%);
+        color: var(--text-dark);
+    }
+
+    /* PAGE TITLE - Large centered title */
+    .page-title {
+        font-size: 2.5em;
+        font-weight: bold;
+        color: var(--accent);
+        text-align: center;
+        margin: 30px 0 40px 0;
+        padding: 0;
+    }
+    .dark-mode .page-title { color: #81c784; }
+
+    /* THEME TOGGLE BUTTON - Moon/sun icon for switching themes */
+    .theme-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: transparent;
+        border: 2px solid var(--accent);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        font-size: 24px;
+        z-index: 1000;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .theme-toggle:hover {
+        transform: scale(1.1);
+        background: var(--accent);
+    }
+
+    /* MENU BUTTON - Logo that opens navigation */
+    .menu-btn {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 1000;
+        transition: transform 0.3s ease;
+    }
+    .menu-btn .logo {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    .menu-btn:hover { transform: scale(1.1); }
+
+    /* NAVIGATION MENU - Hidden by default, shown when logo clicked */
+    .menu {
+        position: fixed;
+        top: 80px;
+        left: 20px;
+        display: none;
+        flex-direction: column;
+        background: var(--card-light);
+        backdrop-filter: blur(15px);
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        min-width: 200px;
+    }
+    .dark-mode .menu {
+        background: var(--card-dark);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    /* MENU BUTTONS - Styled navigation links */
+    .menu button {
+        margin: 8px 0;
+        padding: 15px 25px;
+        border: none;
+        border-radius: 25px;
+        background: var(--accent);
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        font-family: 'Georgia', serif;
+    }
+    .menu button:hover {
+        background: #388e3c;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+    }
+
+    /* MAIN CONTENT AREA - Takes remaining space in flexbox */
+    main {
+        flex: 1;
+        padding: 40px 20px;
+        text-align: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* CHATBOT CONTAINER - Larger, more prominent design */
+    #chatbot-container {
+        background: var(--card-light);
+        backdrop-filter: blur(15px);
+        border-radius: 20px;
+        padding: 40px;
+        margin: 30px auto;
+        max-width: 1000px; /* Increased width */
+        min-height: 85vh; /* Slightly taller */
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15); /* Stronger shadow for prominence */
+        display: flex;
+        flex-direction: column;
+        border: 2px solid var(--accent); /* Subtle border to match theme */
+    }
+    .dark-mode #chatbot-container {
+        background: var(--card-dark);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        border-color: #81c784;
+    }
+
+    /* CHAT MESSAGES AREA - Larger scrollable area */
+    #chat-messages {
+        background: rgba(255, 255, 255, 0.7); /* Slightly more opaque for readability */
+        border-radius: 15px;
+        padding: 25px;
+        margin-bottom: 30px;
+        min-height: 500px; /* Increased height */
+        max-height: 65vh; /* Adjusted for larger screens */
+        overflow-y: auto;
+        border: 2px solid var(--accent);
+        flex: 1;
+        font-size: 1.1em; /* Slightly larger text */
+        line-height: 1.6; /* Improved readability */
+    }
+    .dark-mode #chat-messages {
+        background: rgba(0, 0, 0, 0.5);
+        border-color: #81c784;
+    }
+
+    /* CHAT MESSAGE STYLING - Enhanced for readability */
+    .chat-message {
+        display: flex;
+        gap: 15px;
+        align-items: flex-start;
+        margin: 15px 0;
+    }
+    .chat-message .who {
+        font-weight: bold;
+        width: 100px; /* Wider for better alignment */
+        font-size: 1.1em;
+    }
+    .chat-message .content {
+        background: rgba(255, 255, 255, 0.85);
+        padding: 12px 18px;
+        border-radius: 15px;
+        max-width: 75%; /* Slightly reduced for better layout */
+        font-size: 1.1em;
+        line-height: 1.5;
+    }
+    .dark-mode .chat-message .content {
+        background: rgba(0, 0, 0, 0.55);
+    }
+    .chat-message.user-msg {
+        justify-content: flex-end;
+    }
+    .chat-message.user-msg .who {
+        text-align: right;
+    }
+    .typing .content::after {
+        content: ' ...';
+        animation: dots 1.5s steps(5, end) infinite;
+    }
+
+    /* CHAT INPUT FIELD - Larger and more prominent */
+    #chat-input {
+        width: 70%; /* Wider input field */
+        padding: 18px 25px; /* Increased padding */
+        border: 2px solid var(--accent);
+        border-radius: 25px;
+        font-size: 1.1em; /* Larger text */
+        font-family: 'Georgia', serif;
+        background: white;
+        color: var(--text-light);
+        transition: all 0.3s ease;
+    }
+    .dark-mode #chat-input {
+        background: #333;
+        color: var(--text-dark);
+        border-color: #81c784;
+    }
+    #chat-input:focus {
+        outline: none;
+        box-shadow: 0 0 20px rgba(76, 175, 80, 0.4);
+        transform: scale(1.02);
+    }
+
+    /* SEND BUTTON - Larger and consistent with theme */
+    #chatbot-container button {
+        background: var(--accent);
+        color: white;
+        border: none;
+        border-radius: 25px;
+        padding: 18px 40px; /* Larger button */
+        font-size: 1.1em; /* Larger text */
+        font-weight: bold;
+        cursor: pointer;
+        margin-left: 15px;
+        transition: all 0.3s ease;
+        font-family: 'Georgia', serif;
+    }
+    #chatbot-container button:hover {
+        background: #388e3c;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 20px rgba(76, 175, 80, 0.4);
+    }
+
+    /* INPUT CONTAINER - Adjusted for larger elements */
+    .input-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-top: auto;
+        padding: 25px 0;
+    }
+
+    /* FOOTER - Bottom section with copyright */
+    footer {
+        background: var(--card-light);
+        backdrop-filter: blur(15px);
+        color: var(--text-light);
+        text-align: center;
+        padding: 30px;
+        margin-top: 50px;
+        border-radius: 20px 20px 0 0;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    }
+    .dark-mode footer {
+        background: var(--card-dark);
+        color: var(--text-dark);
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* SUBTITLE - Description text */
+    .subtitle {
+        font-size: 1.3em;
+        margin-bottom: 40px;
+        opacity: 0.8;
+    }
+
+    /* RESPONSIVE DESIGN - Mobile-friendly adjustments */
+    @media (max-width: 768px) {
+        .page-title { font-size: 2.2em; }
+        #chatbot-container {
+            margin: 20px 10px;
+            padding: 25px;
+            max-width: 100%; /* Full width on mobile */
+        }
+        #chat-messages {
+            min-height: 400px; /* Slightly smaller on mobile */
+            max-height: 55vh;
+        }
+        #chat-input {
+            width: 65%; /* Adjusted for mobile */
+            font-size: 1em;
+        }
+        #chatbot-container button {
+            padding: 15px 30px;
+            font-size: 1em;
+        }
+        .menu, .settings-menu {
+            left: 10px;
+            right: 10px;
+            top: 70px;
+        }
+    }
+
+    /* UNIVERSAL BOX-SIZING - Include padding in width calculations */
+    * { box-sizing: border-box; }
+
+    /* TYPING ANIMATION - Semi-transparent italic text */
+    .typing {
+        opacity: 0.7;
+        font-style: italic;
+    }
+
+    /* LOADING ANIMATION - Animated dots for "AINZUNI is thinking..." */
+    .loading-dots {
+        display: inline-block;
+    }
+    .loading-dots::after {
+        content: '';
+        animation: dots 1.5s steps(5, end) infinite;
+    }
+    @keyframes dots {
+        0%, 20% { content: ''; }
+        40% { content: '.'; }
+        60% { content: '..'; }
+        80%, 100% { content: '...'; }
+    }
+</style>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
