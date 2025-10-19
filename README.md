@@ -1,45 +1,38 @@
-# AINZUNI — NZ Universities Chatbot
+AINZUNI – AI-Powered University Guidance Website
+Project Overview
 
-Lightweight local chatbot UI that uses Ollama-hosted models (e.g., phi4:14b) to answer questions about New Zealand universities.
+AINZUNI is an AI-powered educational website designed to guide students and parents through undergraduate study options in New Zealand universities. The project aims to provide personalized, reliable, and easy-to-access information about programs, entry requirements, fees, and career pathways.
 
-## Prerequisites
-- Python 3.8+
-- Ollama installed and running
-- Modern browser
+This project was developed as part of a Year 12 Digital Technologies (Level 2) portfolio, demonstrating advanced digital media and programming processes.
 
-## Quick start
-1. Pull model and run Ollama:
-```bash
-ollama pull phi4:14b
-ollama serve
-```
-2. Install Python deps:
-```bash
-pip install -r requirements.txt
-```
-3. Start the proxy (point to your Ollama model):
-```powershell
-$env:MODEL_PROVIDER='ollama'
-$env:MODEL_NAME='phi4:14b'
-.\.venv\Scripts\python.exe chat_proxy_example.py
-```
-4. Serve the site and open:
-```bash
-python -m http.server 8001
-# Open http://127.0.0.1:8001/AINZUNI.html
-```
-5. Point frontend to proxy (browser console):
-```javascript
-localStorage.setItem('chat_api_url','http://127.0.0.1:8000/api/chat'); location.reload();
-```
+Features
 
-## Usage
-Type questions about NZ universities and press Enter. Model replies are served from your local Ollama instance.
+Fully navigable website with multiple pages for different universities and degree programs.
 
-## Troubleshooting (brief)
-- If proxy returns mock: restart proxy with MODEL_PROVIDER=ollama and correct MODEL_NAME.
-- If connection refused: ensure Ollama (`localhost:11434`) and proxy (`localhost:8000`) are running and site served over HTTP.
-- Check `ollama list` to confirm model name.
+Dark/Light mode toggle for better accessibility and user experience.
 
-## License
-MIT
+Hoverboard info cards on pages for quick, contextual information.
+
+AI guidance via Google Gemini Gems, acting as a university assistant:
+
+Compares universities
+
+Explains entry requirements
+
+Suggests career pathways
+
+Data-driven structure using JSON files for each university’s courses.
+
+Designed with ethical considerations, privacy, accessibility, and usability in mind.
+
+Technologies Used
+
+HTML, CSS, JavaScript – Frontend structure, styling, and interactivity.
+
+Google Gemini Gems  AI assistant for personalized guidance.
+
+This repository is for educational purposes only.
+
+Visual Studio Code – Development IDE.
+
+Project Management Tools: Trello for task tracking, milestones, and iterative development.
