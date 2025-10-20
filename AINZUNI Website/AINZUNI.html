@@ -5,6 +5,7 @@
     <title>AINZUNI - NZ Universities</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="AINZUNI - Your guide to New Zealand Universities">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
@@ -57,6 +58,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: all 0.3s ease;
         }
         .theme-toggle:hover {
             transform: scale(1.1);
@@ -77,6 +79,13 @@
             height: 50px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
         }
 
         .menu {
@@ -145,6 +154,272 @@
             transform: scale(1.05);
         }
 
+        /* Chatbot Styles */
+        .chat-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 28px;
+            box-shadow: 0 4px 20px rgba(76, 175, 80, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .chat-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(76, 175, 80, 0.6);
+        }
+
+        .chat-container {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 400px;
+            max-width: calc(100vw - 60px);
+            height: 600px;
+            max-height: calc(100vh - 150px);
+            background: var(--card-light);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            display: none;
+            flex-direction: column;
+            z-index: 999;
+            overflow: hidden;
+        }
+        .dark-mode .chat-container {
+            background: var(--card-dark);
+        }
+        .chat-container.open {
+            display: flex;
+        }
+
+        .chat-header {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 20px 20px 0 0;
+        }
+        .chat-header h3 {
+            margin: 0;
+            font-size: 1.3em;
+        }
+        .chat-header button {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .chat-header button:hover {
+            transform: scale(1.2);
+        }
+
+        .chat-controls {
+            display: flex;
+            gap: 10px;
+            padding: 10px 20px;
+            background: rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode .chat-controls {
+            background: rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .voice-btn, .translate-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .voice-btn:hover, .translate-btn:hover {
+            background: #388e3c;
+            transform: translateY(-2px);
+        }
+        .voice-btn.recording {
+            background: #f44336;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .language-select {
+            padding: 8px;
+            border-radius: 10px;
+            border: 1px solid var(--accent);
+            background: white;
+            font-size: 14px;
+        }
+        .dark-mode .language-select {
+            background: #333;
+            color: white;
+        }
+
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .message {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .message.user {
+            flex-direction: row-reverse;
+        }
+
+        .message-avatar {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        .message.user .message-avatar {
+            background: var(--accent);
+            color: white;
+        }
+        .message.bot .message-avatar {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .message-content {
+            max-width: 70%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            line-height: 1.5;
+            font-size: 15px;
+        }
+        .message.user .message-content {
+            background: var(--accent);
+            color: white;
+            border-radius: 18px 18px 0 18px;
+        }
+        .message.bot .message-content {
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 18px 18px 18px 0;
+        }
+        .dark-mode .message.bot .message-content {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .typing-indicator {
+            display: none;
+            padding: 12px 16px;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 18px;
+            width: fit-content;
+        }
+        .dark-mode .typing-indicator {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .typing-indicator.show {
+            display: block;
+        }
+        .typing-indicator span {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+            margin: 0 2px;
+            animation: typing 1.4s infinite;
+        }
+        .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+        .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes typing {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-10px); }
+        }
+
+        .chat-input {
+            padding: 20px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 10px;
+        }
+        .dark-mode .chat-input {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 12px 18px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 25px;
+            font-size: 15px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        .dark-mode .chat-input input {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        .chat-input input:focus {
+            border-color: var(--accent);
+        }
+
+        .chat-input button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .chat-input button:hover {
+            background: #388e3c;
+            transform: scale(1.1);
+        }
+
         footer {
             background: var(--card-light);
             backdrop-filter: blur(15px);
@@ -157,6 +432,15 @@
             background: var(--card-dark);
             color: var(--text-dark);
         }
+
+        @media (max-width: 768px) {
+            .chat-container {
+                width: calc(100vw - 40px);
+                height: calc(100vh - 120px);
+                right: 20px;
+                bottom: 90px;
+            }
+        }
     </style>
 </head>
 
@@ -164,28 +448,124 @@
     <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙</button>
 
     <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
-        <img src="C:/Users/Rishikesh/Downloads/Rishikesh/Digitech/Digital-Technology-Year-12-Design-Portfolio/AINZUNI 2.png" alt="AINZUNI Logo" class="logo">
+        <div class="logo">AI</div>
     </button>
 
     <div class="menu" id="menu">
-        <button onclick="location.href='Website Digitech.html'">🏠 Home</button>
-        <button onclick="location.href='About Me.html'">👤 About</button>
-        <button onclick="location.href='NZ Universities.html'">🎓 NZ Universities</button>
-        <button onclick="location.href='Contact Me.html'">📧 Contact</button>
+        <button onclick="location.href='ainzuni.html'">🏠 Home</button>
+        <button onclick="location.href='#'">👤 About</button>
+        <button onclick="location.href='#'">🎓 NZ Universities</button>
+        <button onclick="location.href='#'">📧 Contact</button>
     </div>
 
     <h1 class="page-title">AINZUNI</h1>
 
     <main>
-        <p class="subtitle">AINZUNI is now available on Gemini Gems! Click below to access the full AI experience.</p>
-        <button class="redirect-btn" onclick="window.location.href='https://gemini.google.com/gem/1-w7Tosky3w1HJnDgU8f9OI0AAXI4HFV1?usp=drive_link'">
-            Open AINZUNI Gemini Gems
+        <p class="subtitle">Your AI-powered guide to New Zealand Universities. Ask me anything about undergraduate programs, entry requirements, fees, and more!</p>
+        <button class="redirect-btn" onclick="document.querySelector('.chat-button').click()">
+            💬 Start Chat with AINZUNI AI
         </button>
     </main>
+
+    <!-- Chat Button -->
+    <button class="chat-button" onclick="toggleChat()" data-testid="chat-toggle-btn">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Chat Container -->
+    <div class="chat-container" id="chatContainer" data-testid="chat-container">
+        <div class="chat-header">
+            <h3><i class="fas fa-robot"></i> AINZUNI Assistant</h3>
+            <button onclick="toggleChat()" data-testid="close-chat-btn">×</button>
+        </div>
+
+        <div class="chat-controls">
+            <button class="voice-btn" id="voiceBtn" onclick="toggleVoiceInput()" data-testid="voice-btn">
+                <i class="fas fa-microphone"></i> Voice
+            </button>
+            <select class="language-select" id="languageSelect" data-testid="language-select">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="zh">中文</option>
+                <option value="hi">हिन्दी</option>
+                <option value="ar">العربية</option>
+                <option value="pt">Português</option>
+                <option value="de">Deutsch</option>
+                <option value="ja">日本語</option>
+                <option value="ko">한국어</option>
+            </select>
+        </div>
+
+        <div class="chat-messages" id="chatMessages" data-testid="chat-messages">
+            <div class="message bot">
+                <div class="message-avatar">🎓</div>
+                <div class="message-content">
+                    Kia ora! I'm AINZUNI, your AI guide to New Zealand universities. I can help you:
+                    <br><br>
+                    • Compare universities across 7 key fields<br>
+                    • Check entry requirements & fees<br>
+                    • Find scholarships<br>
+                    • Explore career pathways<br>
+                    • Get personalized recommendations<br>
+                    <br>
+                    What would you like to know?
+                </div>
+            </div>
+            <div class="typing-indicator" id="typingIndicator">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+
+        <div class="chat-input">
+            <input 
+                type="text" 
+                id="messageInput" 
+                placeholder="Ask about universities, programs, fees..." 
+                data-testid="message-input"
+                onkeypress="handleKeyPress(event)"
+            />
+            <button onclick="sendMessage()" data-testid="send-btn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
 
     <footer>&copy; 2025 AINZUNI. All rights reserved.</footer>
 
     <script>
+        const BACKEND_URL = 'BACKEND_URL_PLACEHOLDER';
+        const API = `${BACKEND_URL}/api`;
+        let sessionId = null;
+        let recognition = null;
+        let isRecording = false;
+
+        // Initialize Speech Recognition
+        if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            recognition = new SpeechRecognition();
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            
+            recognition.onresult = (event) => {
+                const transcript = event.results[0][0].transcript;
+                document.getElementById('messageInput').value = transcript;
+                isRecording = false;
+                document.getElementById('voiceBtn').classList.remove('recording');
+            };
+            
+            recognition.onerror = (event) => {
+                console.error('Speech recognition error:', event.error);
+                isRecording = false;
+                document.getElementById('voiceBtn').classList.remove('recording');
+            };
+            
+            recognition.onend = () => {
+                isRecording = false;
+                document.getElementById('voiceBtn').classList.remove('recording');
+            };
+        }
+
         function toggleTheme() {
             document.body.classList.toggle('dark-mode');
             const themeBtn = document.getElementById('theme-btn');
@@ -203,9 +583,117 @@
             menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
         }
 
+        function toggleChat() {
+            const chatContainer = document.getElementById('chatContainer');
+            chatContainer.classList.toggle('open');
+            
+            if (chatContainer.classList.contains('open')) {
+                document.getElementById('messageInput').focus();
+            }
+        }
+
+        function toggleVoiceInput() {
+            if (!recognition) {
+                alert('Speech recognition is not supported in your browser. Please use Chrome or Edge.');
+                return;
+            }
+            
+            if (isRecording) {
+                recognition.stop();
+                isRecording = false;
+                document.getElementById('voiceBtn').classList.remove('recording');
+            } else {
+                const lang = document.getElementById('languageSelect').value;
+                recognition.lang = lang === 'en' ? 'en-US' : lang === 'es' ? 'es-ES' : lang === 'fr' ? 'fr-FR' : 
+                                  lang === 'zh' ? 'zh-CN' : lang === 'hi' ? 'hi-IN' : lang === 'ar' ? 'ar-SA' :
+                                  lang === 'pt' ? 'pt-BR' : lang === 'de' ? 'de-DE' : lang === 'ja' ? 'ja-JP' :
+                                  lang === 'ko' ? 'ko-KR' : 'en-US';
+                recognition.start();
+                isRecording = true;
+                document.getElementById('voiceBtn').classList.add('recording');
+            }
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        function addMessage(message, isUser = false) {
+            const messagesContainer = document.getElementById('chatMessages');
+            const typingIndicator = document.getElementById('typingIndicator');
+            
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user' : 'bot'}`;
+            
+            const avatar = document.createElement('div');
+            avatar.className = 'message-avatar';
+            avatar.textContent = isUser ? '👤' : '🎓';
+            
+            const content = document.createElement('div');
+            content.className = 'message-content';
+            content.innerHTML = message.replace(/\n/g, '<br>');
+            
+            messageDiv.appendChild(avatar);
+            messageDiv.appendChild(content);
+            
+            messagesContainer.insertBefore(messageDiv, typingIndicator);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById('messageInput');
+            const message = input.value.trim();
+            
+            if (!message) return;
+            
+            // Add user message
+            addMessage(message, true);
+            input.value = '';
+            
+            // Show typing indicator
+            const typingIndicator = document.getElementById('typingIndicator');
+            typingIndicator.classList.add('show');
+            
+            try {
+                const language = document.getElementById('languageSelect').value;
+                
+                const response = await fetch(`${API}/chat`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: message,
+                        session_id: sessionId,
+                        language: language
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    sessionId = data.session_id;
+                    addMessage(data.response, false);
+                } else {
+                    addMessage('Sorry, I encountered an error. Please try again.', false);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                addMessage('Sorry, I\'m having trouble connecting. Please try again.', false);
+            } finally {
+                typingIndicator.classList.remove('show');
+            }
+        }
+
+        // Initialize on load
         document.addEventListener('DOMContentLoaded', () => {
             const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark') document.body.classList.add('dark-mode');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                document.getElementById('theme-btn').textContent = '☀️';
+            }
         });
     </script>
 </body>
